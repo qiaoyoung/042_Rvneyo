@@ -11,7 +11,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.F68AA557ST</key>
-		<string>comF68AA557ST_mac</string>
+		<string>com.F68AA557ST_mac</string>
 	</dict>
 	<key>signingCertificate</key>
 	<string>Apple Distribution</string>
