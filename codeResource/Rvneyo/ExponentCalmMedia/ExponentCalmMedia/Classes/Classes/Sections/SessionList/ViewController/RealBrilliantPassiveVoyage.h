@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  RealBrilliantPassiveVoyage.h
 //  NIMDemo
@@ -6,16 +8,24 @@
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
+//: @interface RealBrilliantPassiveVoyage : CalibrateOptimalStitchUpdate
 @interface RealBrilliantPassiveVoyage : CalibrateOptimalStitchUpdate
 
-@property (nonatomic,strong) UILabel *emptyTipLabel;
+//: @property (nonatomic,strong) UIImageView *emptyImageView;
+@property (nonatomic,strong) UIImageView *calendar;
 
-@property (nonatomic,strong) UIImageView *emptyImageView;
+//: @property (nonatomic,strong) UIButton *addBtn;
+@property (nonatomic,strong) UIButton *hero;
 
-@property (nonatomic,strong) UIButton *addBtn;
+//: @property (nonatomic,strong) UILabel *emptyTipLabel;
+@property (nonatomic,strong) UILabel *changeFabric;
 
-- (void)setUpNavItem;
+//: - (void)setUpNavItem;
+- (void)urban;
 
+//: @end
 @end

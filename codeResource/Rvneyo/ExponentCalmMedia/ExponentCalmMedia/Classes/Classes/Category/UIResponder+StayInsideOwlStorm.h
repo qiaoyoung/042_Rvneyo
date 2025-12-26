@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  UIResponder+StayInsideOwlStorm.h
 //  NIM
@@ -6,12 +8,18 @@
 //  Copyright © 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
+//: @interface UIResponder (StayInsideOwlStorm)
 @interface UIResponder (StayInsideOwlStorm)
 
-+ (instancetype)currentFirstResponder;
+//: + (instancetype)currentSecondResponder;
++ (instancetype)sure;
 
-+ (instancetype)currentSecondResponder;
+//: + (instancetype)currentFirstResponder;
++ (instancetype)cartTribe;
 
+//: @end
 @end

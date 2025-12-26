@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  NIMInputAtManager.h
 // InkwellValidateSplitShell
@@ -6,31 +8,42 @@
 //  Copyright © 2016年 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
-#define NIMInputAtStartChar  @"@"
-#define NIMInputAtEndChar    @"\u2004"
-
+//: @interface ResumeOverrideMuse : NSObject
 @interface ResumeOverrideMuse : NSObject
 
-@property (nonatomic,copy) NSString *name;
+//: @property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *need;
 
-@property (nonatomic,copy) NSString *uid;
+//: @property (nonatomic,assign) NSRange range;
+@property (nonatomic,assign) NSRange pleased;
 
-@property (nonatomic,assign) NSRange range;
+//: @property (nonatomic,copy) NSString *uid;
+@property (nonatomic,copy) NSString *themeCompositionScheme;
 
+//: @end
 @end
 
+//: @interface EffectOutlineVirtuousReport : NSObject
 @interface EffectOutlineVirtuousReport : NSObject
 
-- (NSArray *)allAtUid:(NSString *)sendText;
+//: - (void)addAtItem:(ResumeOverrideMuse *)item;
+- (void)tab:(ResumeOverrideMuse *)item;
 
-- (void)clean;
+//: - (ResumeOverrideMuse *)removeName:(NSString *)name;
+- (ResumeOverrideMuse *)restriction:(NSString *)name;
 
-- (void)addAtItem:(ResumeOverrideMuse *)item;
+//: - (void)clean;
+- (void)loose;
 
-- (ResumeOverrideMuse *)item:(NSString *)name;
+//: - (NSArray *)allAtUid:(NSString *)sendText;
+- (NSArray *)mutual:(NSString *)sendText;
 
-- (ResumeOverrideMuse *)removeName:(NSString *)name;
+//: - (ResumeOverrideMuse *)item:(NSString *)name;
+- (ResumeOverrideMuse *)fast:(NSString *)name;
 
+//: @end
 @end

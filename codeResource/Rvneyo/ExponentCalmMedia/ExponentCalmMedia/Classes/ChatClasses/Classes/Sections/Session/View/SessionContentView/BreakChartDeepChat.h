@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  BreakChartDeepChat.h
 // InkwellValidateSplitShell
@@ -6,11 +8,17 @@
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "SearchPublishMeasuredSize.h"
 #import "SearchPublishMeasuredSize.h"
+//: #import "CircuitProudArtifactToastTrace.h"
 #import "CircuitProudArtifactToastTrace.h"
 
+//: @interface BreakChartDeepChat : SearchPublishMeasuredSize
 @interface BreakChartDeepChat : SearchPublishMeasuredSize
 
-@property (nonatomic, strong) CosineTransformableReflectBlueprint *textLabel;
+//: @property (nonatomic, strong) CosineTransformableReflectBlueprint *textLabel;
+@property (nonatomic, strong) CosineTransformableReflectBlueprint *agent;
 
+//: @end
 @end

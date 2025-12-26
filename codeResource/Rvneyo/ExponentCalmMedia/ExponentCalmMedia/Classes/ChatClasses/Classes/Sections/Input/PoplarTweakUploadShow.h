@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  PoplarTweakUploadShow.h
 // InkwellValidateSplitShell
@@ -6,10 +8,19 @@
 //  Copyright © 2015年 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+
+//: typedef NS_ENUM(NSInteger,InsightAnnotateSearch){
 typedef NS_ENUM(NSInteger,InsightAnnotateSearch){
-    InsightAnnotateSearchVoice,         //录音文本切换按钮
+    //: InsightAnnotateSearchVoice, 
+    InsightAnnotateSearchVoice, //录音文本切换按钮
+    //: InsightAnnotateSearchTextAndRecord, 
     InsightAnnotateSearchTextAndRecord, //文本输入框或录音按钮
-    InsightAnnotateSearchEmoticon,      //表情贴图
-    InsightAnnotateSearchMore,          //更多菜单
-    InsightAnnotateSearchSend,          //发送
+    //: InsightAnnotateSearchEmoticon, 
+    InsightAnnotateSearchEmoticon, //表情贴图
+    //: InsightAnnotateSearchMore, 
+    InsightAnnotateSearchMore, //更多菜单
+    //: InsightAnnotateSearchSend, 
+    InsightAnnotateSearchSend, //发送
+//: };
 };

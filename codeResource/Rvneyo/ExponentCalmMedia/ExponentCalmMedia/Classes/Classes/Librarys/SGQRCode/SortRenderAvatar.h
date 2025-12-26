@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  KEKEProject
 //  KEKEChat
@@ -5,17 +7,26 @@
 //  Created by tyl.
 //  Copyright © 2024 Ali. All rights reserved.
 //
+
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
+//: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
+//: @interface SortRenderAvatar : NSObject
 @interface SortRenderAvatar : NSObject
 /// 打开手电筒
-+ (void)turnOnTorch;
-
 /// 关闭手电筒
-+ (void)turnOffTorch;
+//: + (void)turnOffTorch;
++ (void)enterBy;
 
+//: + (void)turnOnTorch;
++ (void)candidIn;
+
+//: @end
 @end
 
+//: NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_END

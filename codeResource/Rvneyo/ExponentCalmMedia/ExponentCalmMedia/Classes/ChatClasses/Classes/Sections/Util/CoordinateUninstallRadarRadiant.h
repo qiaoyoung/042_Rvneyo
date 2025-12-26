@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  CoordinateUninstallRadarRadiant.h
 // InkwellValidateSplitShell
@@ -6,20 +8,30 @@
 //  Copyright © 2016年 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
+//: @interface CoordinateUninstallRadarRadiant : NSObject
 @interface CoordinateUninstallRadarRadiant : NSObject
 
-+ (NSString *)getAppDocumentPath;
+//: + (NSString *)getAppTempPath;
++ (NSString *)indicatorCapability;
 
-+ (NSString *)getAppTempPath;
+//: + (NSString *)genFilenameWithExt:(NSString *)ext;
++ (NSString *)property:(NSString *)ext;
 
-+ (NSString *)userDirectory;
+//: + (NSString *)filepathForVideo:(NSString *)filename;
++ (NSString *)rear:(NSString *)filename;
 
-+ (NSString *)genFilenameWithExt:(NSString *)ext;
+//: + (NSString *)filepathForImage:(NSString *)filename;
++ (NSString *)willOf:(NSString *)filename;
 
-+ (NSString *)filepathForVideo:(NSString *)filename;
+//: + (NSString *)getAppDocumentPath;
++ (NSString *)scatter;
 
-+ (NSString *)filepathForImage:(NSString *)filename;
+//: + (NSString *)userDirectory;
++ (NSString *)rate;
 
+//: @end
 @end

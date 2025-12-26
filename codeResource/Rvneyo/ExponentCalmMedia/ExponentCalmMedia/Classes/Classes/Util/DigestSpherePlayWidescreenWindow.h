@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  DigestSpherePlayWidescreenWindow.h
 //  NIM
@@ -6,25 +8,33 @@
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
-#define ImageExt   (@"jpg")
-
-
+//: @interface DigestSpherePlayWidescreenWindow : NSObject
 @interface DigestSpherePlayWidescreenWindow : NSObject
 
-+ (NSString *)getAppDocumentPath;
+//: + (NSString *)filepathForImage:(NSString *)filename;
++ (NSString *)constraintArchitecture:(NSString *)filename;
 
-+ (NSString *)getAppTempPath;
+//: + (NSString *)genFilenameWithExt:(NSString *)ext;
++ (NSString *)drain:(NSString *)ext;
 
-+ (NSString *)userDirectory;
+//: + (NSString *)filepathForMergeForwardFile:(NSString *)filename;
++ (NSString *)genToGifted:(NSString *)filename;
 
-+ (NSString *)genFilenameWithExt:(NSString *)ext;
+//: + (NSString *)getAppDocumentPath;
++ (NSString *)exposeToExpert;
 
-+ (NSString *)filepathForVideo:(NSString *)filename;
+//: + (NSString *)getAppTempPath;
++ (NSString *)towardAction;
 
-+ (NSString *)filepathForImage:(NSString *)filename;
+//: + (NSString *)filepathForVideo:(NSString *)filename;
++ (NSString *)dot:(NSString *)filename;
 
-+ (NSString *)filepathForMergeForwardFile:(NSString *)filename;
+//: + (NSString *)userDirectory;
++ (NSString *)elevator;
 
+//: @end
 @end

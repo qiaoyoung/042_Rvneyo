@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  NSBundle+InkwellValidateSplitShell.h
 // InkwellValidateSplitShell
@@ -6,22 +8,33 @@
 //  Copyright © 2019 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
+//: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
+//: @interface NSBundle (InkwellValidateSplitShell)
 @interface NSBundle (InkwellValidateSplitShell)
 
-+ (NSBundle *)nim_defaultEmojiBundle;
+//: + (NSString *)nim_EmojiPlistFile;
++ (NSString *)sequence;
 
-+ (nullable NSBundle *)nim_defaultLanguageBundle;
+//: + (nullable NSBundle *)nim_defaultLanguageBundle;
++ (nullable NSBundle *)density;
 
-+ (NSString *)nim_EmojiPlistFile;
+//: + (NSBundle *)nim_defaultEmojiBundle;
++ (NSBundle *)upon;
 
-+ (NSString *)nim_EmojiGifPlistFile;
+//: + (NSString *)nim_EmojiGifPlistFile;
++ (NSString *)kind;
 
-+ (NSString *)nim_EmojiImage:(NSString *)imageName;
+//: + (NSString *)nim_EmojiImage:(NSString *)imageName;
++ (NSString *)phone:(NSString *)imageName;
 
+//: @end
 @end
 
+//: NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_END

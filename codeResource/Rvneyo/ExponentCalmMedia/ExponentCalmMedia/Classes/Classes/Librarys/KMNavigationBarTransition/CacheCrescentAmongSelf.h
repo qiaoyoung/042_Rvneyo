@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  CacheCrescentAmongSelf.h
 //
@@ -20,15 +22,20 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
-
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-
 //! Project version number for CacheCrescentAmongSelf.
+
+// __M_A_C_R_O__
+
+//: FOUNDATION_EXPORT double CacheCrescentAmongSelfVersionNumber;
 FOUNDATION_EXPORT double CacheCrescentAmongSelfVersionNumber;
 
 //! Project version string for CacheCrescentAmongSelf.
+//: FOUNDATION_EXPORT const unsigned char CacheCrescentAmongSelfVersionString[];
 FOUNDATION_EXPORT const unsigned char CacheCrescentAmongSelfVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CacheCrescentAmongSelf/PublicHeader.h>
 
+//: #import <CacheCrescentAmongSelf/UINavigationController+CacheCrescentAmongSelf.h>
 #import <CacheCrescentAmongSelf/UINavigationController+CacheCrescentAmongSelf.h>

@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  UIButton+ObjectSpawnSend.h
 //  ImagePickerDemo
@@ -6,33 +8,50 @@
 //  Copyright (c) 2012年 raozhongxiong. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
- 
+
+//: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
- 
+
+//: @interface UIButton (ObjectSpawnSend)
 @interface UIButton (ObjectSpawnSend)
- 
-@property (strong, nonatomic) UILabel *badge;
- 
+
 // Badge value to be display
-@property (nonatomic) NSString *badgeValue;
-// Badge background color
-@property (nonatomic) UIColor *badgeBGColor;
-// Badge text color
-@property (nonatomic) UIColor *badgeTextColor;
-// Badge font
-@property (nonatomic) UIFont *badgeFont;
-// Padding value for the badge
-@property (nonatomic) CGFloat badgePadding;
-// Minimum size badge to small
-@property (nonatomic) CGFloat badgeMinSize;
-// Values for offseting the badge over the BarButtonItem you picked
-@property (nonatomic) CGFloat badgeOriginX;
-@property (nonatomic) CGFloat badgeOriginY;
+//: @property (nonatomic) NSString *badgeValue;
+@property (nonatomic) NSString *additional;
+
 // In case of numbers, remove the badge when reaching zero
-@property BOOL shouldHideBadgeAtZero;
+//: @property BOOL shouldHideBadgeAtZero;
+@property BOOL sort;
+// Padding value for the badge
+//: @property (nonatomic) CGFloat badgePadding;
+@property (nonatomic) CGFloat denseDisappear;
 // Badge has a bounce animation when value changes
-@property BOOL shouldAnimateBadge;
+//: @property BOOL shouldAnimateBadge;
+@property BOOL signal;
+// Minimum size badge to small
+//: @property (nonatomic) CGFloat badgeMinSize;
+@property (nonatomic) CGFloat mildKey;
+// Values for offseting the badge over the BarButtonItem you picked
+//: @property (nonatomic) CGFloat badgeOriginX;
+@property (nonatomic) CGFloat beginStroke;
+//: @property (nonatomic) CGFloat badgeOriginY;
+@property (nonatomic) CGFloat mirrorCreative;
+// Badge background color
+//: @property (nonatomic) UIColor *badgeBGColor;
+@property (nonatomic) UIColor *array;
+// Badge text color
+//: @property (nonatomic) UIColor *badgeTextColor;
+@property (nonatomic) UIColor *rearMostChief;
+//: @property (strong, nonatomic) UILabel *badge;
+@property (strong, nonatomic) UILabel *resolveMinimal;
+// Badge font
+//: @property (nonatomic) UIFont *badgeFont;
+@property (nonatomic) UIFont *norm;
+//: @end
 @end
- 
+
+//: NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_END

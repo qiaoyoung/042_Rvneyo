@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  HarmonicFinishPresenterRandomize.h
 //  NIM
@@ -5,29 +7,43 @@
 //  Created by chris on 15/8/18.
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
-
-#import <UIKit/UIKit.h>
-
 //@class ContactDataMember;
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
+
+//: @interface HarmonicFinishPresenterRandomize : UIViewController
 @interface HarmonicFinishPresenterRandomize : UIViewController
 
-@property (nonatomic ,strong) NSDictionary *teamSetingConfig;
+//: @property (nonatomic ,strong) NSDictionary *teamSetingConfig;
+@property (nonatomic ,strong) NSDictionary *attribute;
 
-@property (nonatomic,strong) NSDictionary *groupDict;
+//: @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITableView *acceptable;
 
-@property (nonatomic, strong) UITableView *tableView;
+//: @property (nonatomic,strong) NSDictionary *groupDict;
+@property (nonatomic,strong) NSDictionary *honest;
 
-- (instancetype)initWithUserId:(NSString *)userId;
+//: -(void)addFriend;
+-(void)expressionVolume;
 
-- (void)onActionEditAlias:(id)sender;
+//: - (void)onActionEditAlias:(id)sender;
+- (void)border:(id)sender;
 
--(void)onActionGroup:(id)sender;
+//: - (instancetype)initWithUserId:(NSString *)userId;
+- (instancetype)initWithNo:(NSString *)userId;
 
-- (void)onActionNeedNotifyValueChange:(id)sender;
-- (void)onActionBlackListValueChange:(id)sender;
+//: - (void)onActionBlackListValueChange:(id)sender;
+- (void)spoting:(id)sender;
+//: - (void)onActionNeedNotifyValueChange:(id)sender;
+- (void)computering:(id)sender;
 
-- (void)chat;
-- (void)deleteFriend;
--(void)addFriend;
+//: -(void)onActionGroup:(id)sender;
+-(void)error:(id)sender;
+//: - (void)chat;
+- (void)asOdd;
+//: - (void)deleteFriend;
+- (void)offLogical;
+//: @end
 @end

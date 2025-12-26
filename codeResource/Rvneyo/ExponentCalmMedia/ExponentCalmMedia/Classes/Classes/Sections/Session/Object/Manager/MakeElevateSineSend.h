@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  MakeElevateSineSend.h
 //  NIM
@@ -15,29 +17,42 @@
 //     "message_count": 1234   //必填,最终写入文件中的消息数
 //   }
 
-
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
+//: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
+//: @interface MakeElevateSineSend : NSObject
 @interface MakeElevateSineSend : NSObject
 
-@property (nonatomic, assign) NSInteger version;
+//: @property (nonatomic, copy) NSString *sdkVersion;
+@property (nonatomic, copy) NSString *strongDiamond;
 
-@property (nonatomic, assign) NIMLoginClientType clientType;
+//: @property (nonatomic, assign) NSInteger version;
+@property (nonatomic, assign) NSInteger artistic;
 
-@property (nonatomic, copy) NSString *sdkVersion;
+//: @property (nonatomic, assign) NIMLoginClientType clientType;
+@property (nonatomic, assign) NIMLoginClientType until;
 
-@property (nonatomic, copy) NSString *appVersion;
+//: @property (nonatomic, assign) NSInteger totalInfoCount;
+@property (nonatomic, assign) NSInteger forceRead;
 
-@property (nonatomic, assign) NSInteger totalInfoCount;
+//: @property (nonatomic, copy) NSString *appVersion;
+@property (nonatomic, copy) NSString *take;
 
-+ (instancetype)initWithDefaultConfig;
+//: + (instancetype)initWithDefaultConfig;
++ (instancetype)initWithEmber;
 
-+ (nullable instancetype)initWithRawContent:(NSData *)data;
+//: + (nullable instancetype)initWithRawContent:(NSData *)data;
++ (nullable instancetype)initWithComment:(NSData *)data;
 
-- (nullable NSData *)toRawContent;
+//: - (nullable NSData *)toRawContent;
+- (nullable NSData *)itemPackage;
 
+//: @end
 @end
 
+//: NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_END

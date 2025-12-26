@@ -1,3 +1,14 @@
+
+#import <Foundation/Foundation.h>
+
+NSString *StringFromProperData(Byte *data);        
+
+
+//: bg-gradient
+Byte themeGuidePlatform[] = {28, 11, 87, 10, 29, 122, 194, 116, 215, 242, 11, 16, 214, 16, 27, 10, 13, 18, 14, 23, 29, 79};
+
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  RebuildConnectChart.m
 //  PlayfulDigestChallengeFence
@@ -6,6 +17,11 @@
 //  Copyright (c) 2015年 GSD. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "RebuildConnectChart.h"
+#import "RebuildConnectChart.h"
+//: #import "UIView+StandPathAuditFocusedLocation.h"
+#import "UIView+StandPathAuditFocusedLocation.h"
 
 /*
  
@@ -30,97 +46,167 @@
  */
 
 
-#import "RebuildConnectChart.h"
-#import "UIView+StandPathAuditFocusedLocation.h"
 
+
+
+//: @interface RebuildConnectChart ()
 @interface RebuildConnectChart ()
 
-@property (nonatomic, strong) UIImageView *gradientImageView;
+//: @property (nonatomic, strong) UIImageView *gradientImageView;
+@property (nonatomic, strong) UIImageView *recover;
 
+//: @end
 @end
 
+//: @implementation RebuildConnectChart
 @implementation RebuildConnectChart
 {
+    //: __weak UILabel *_titleLabel;
     __weak UILabel *_titleLabel;
 }
 
 
+//: - (void)layoutSubviews
+- (void)layoutSubviews
+{
+    //: [super layoutSubviews];
+    [super layoutSubviews];
+
+    //: _imageView.frame = self.bounds;
+    _invite.frame = self.bounds;
+
+    //: CGFloat titleLabelW = self.sd_width;
+    CGFloat titleLabelW = self.rule;
+    //: CGFloat titleLabelH = _titleLabelHeight;
+    CGFloat titleLabelH = _packageRoundDisturbing;
+    //: CGFloat titleLabelX = 0;
+    CGFloat titleLabelX = 0;
+    //: CGFloat titleLabelY = self.sd_height - titleLabelH;
+    CGFloat titleLabelY = self.mountain - titleLabelH;
+    //: _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
+    _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
+    //: _titleLabel.hidden = !_titleLabel.text;
+    _titleLabel.hidden = !_titleLabel.text;
+
+    //: self.gradientImageView.frame = CGRectMake(0, self.sd_height-90, self.sd_width, 90);
+    self.recover.frame = CGRectMake(0, self.mountain-90, self.rule, 90);
+}
+
+//: - (instancetype)initWithFrame:(CGRect)frame
 - (instancetype)initWithFrame:(CGRect)frame
 {
+    //: if (self = [super initWithFrame:frame]) {
     if (self = [super initWithFrame:frame]) {
-        [self setupImageView];
-        [self setupTitleLabel];
+        //: [self setupImageView];
+        [self forbid];
+        //: [self setupTitleLabel];
+        [self media];
     }
-    
+
+    //: return self;
     return self;
 }
 
-- (void)setTitleLabelBackgroundColor:(UIColor *)titleLabelBackgroundColor
+//: - (void)setTitleLabelTextFont:(UIFont *)titleLabelTextFont
+- (void)setSolution:(UIFont *)titleLabelTextFont
 {
-    _titleLabelBackgroundColor = titleLabelBackgroundColor;
-    _titleLabel.backgroundColor = titleLabelBackgroundColor;
-}
-
-- (void)setTitleLabelTextColor:(UIColor *)titleLabelTextColor
-{
-    _titleLabelTextColor = titleLabelTextColor;
-    _titleLabel.textColor = titleLabelTextColor;
-}
-
-- (void)setTitleLabelTextFont:(UIFont *)titleLabelTextFont
-{
-    _titleLabelTextFont = titleLabelTextFont;
+    //: _titleLabelTextFont = titleLabelTextFont;
+    _solution = titleLabelTextFont;
+    //: _titleLabel.font = titleLabelTextFont;
     _titleLabel.font = titleLabelTextFont;
 }
 
-- (void)setupImageView
+//: - (void)setTitle:(NSString *)title
+- (void)setFaint:(NSString *)title
 {
-    UIImageView *imageView = [[UIImageView alloc] init];
-    _imageView = imageView;
-    [self.contentView addSubview:imageView];
-    
-    
-    self.gradientImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg-gradient"]];
-    self.gradientImageView.hidden = YES;
-    [self.contentView addSubview:self.gradientImageView];
-    
-}
-
-- (void)setShowGradient:(BOOL)showGradient
-{
-    _showGradient = showGradient;
-    self.gradientImageView.hidden = !showGradient;
-}
-
-- (void)setupTitleLabel
-{
-    UILabel *titleLabel = [[UILabel alloc] init];
-    _titleLabel = titleLabel;
-    _titleLabel.hidden = YES;
-    [self.contentView addSubview:titleLabel];
-}
-
-- (void)setTitle:(NSString *)title
-{
-    _title = [title copy];
+    //: _title = [title copy];
+    _faint = [title copy];
+    //: _titleLabel.text = [NSString stringWithFormat:@"   %@", title];
     _titleLabel.text = [NSString stringWithFormat:@"   %@", title];
 }
 
-
-- (void)layoutSubviews
+//: - (void)setShowGradient:(BOOL)showGradient
+- (void)setBrief:(BOOL)showGradient
 {
-    [super layoutSubviews];
-    
-    _imageView.frame = self.bounds;
-    
-    CGFloat titleLabelW = self.sd_width;
-    CGFloat titleLabelH = _titleLabelHeight;
-    CGFloat titleLabelX = 0;
-    CGFloat titleLabelY = self.sd_height - titleLabelH;
-    _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
-    _titleLabel.hidden = !_titleLabel.text;
-    
-    self.gradientImageView.frame = CGRectMake(0, self.sd_height-90, self.sd_width, 90);
+    //: _showGradient = showGradient;
+    _brief = showGradient;
+    //: self.gradientImageView.hidden = !showGradient;
+    self.recover.hidden = !showGradient;
 }
 
+//: - (void)setTitleLabelTextColor:(UIColor *)titleLabelTextColor
+- (void)setWorld:(UIColor *)titleLabelTextColor
+{
+    //: _titleLabelTextColor = titleLabelTextColor;
+    _world = titleLabelTextColor;
+    //: _titleLabel.textColor = titleLabelTextColor;
+    _titleLabel.textColor = titleLabelTextColor;
+}
+
+//: - (void)setupImageView
+- (void)forbid
+{
+    //: UIImageView *imageView = [[UIImageView alloc] init];
+    UIImageView *imageView = [[UIImageView alloc] init];
+    //: _imageView = imageView;
+    _invite = imageView;
+    //: [self.contentView addSubview:imageView];
+    [self.contentView addSubview:imageView];
+
+
+    //: self.gradientImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg-gradient"]];
+    self.recover = [[UIImageView alloc] initWithImage:[UIImage imageNamed:StringFromProperData(themeGuidePlatform)]];
+    //: self.gradientImageView.hidden = YES;
+    self.recover.hidden = YES;
+    //: [self.contentView addSubview:self.gradientImageView];
+    [self.contentView addSubview:self.recover];
+
+}
+
+//: - (void)setupTitleLabel
+- (void)media
+{
+    //: UILabel *titleLabel = [[UILabel alloc] init];
+    UILabel *titleLabel = [[UILabel alloc] init];
+    //: _titleLabel = titleLabel;
+    _titleLabel = titleLabel;
+    //: _titleLabel.hidden = YES;
+    _titleLabel.hidden = YES;
+    //: [self.contentView addSubview:titleLabel];
+    [self.contentView addSubview:titleLabel];
+}
+
+
+//: - (void)setTitleLabelBackgroundColor:(UIColor *)titleLabelBackgroundColor
+- (void)setAccount:(UIColor *)titleLabelBackgroundColor
+{
+    //: _titleLabelBackgroundColor = titleLabelBackgroundColor;
+    _account = titleLabelBackgroundColor;
+    //: _titleLabel.backgroundColor = titleLabelBackgroundColor;
+    _titleLabel.backgroundColor = titleLabelBackgroundColor;
+}
+
+//: @end
 @end
+
+Byte * ProperDataToCache(Byte *data) {
+    int cropCivic = data[0];
+    int dryThick = data[1];
+    Byte gravity = data[2];
+    int with = data[3];
+    if (!cropCivic) return data + with;
+    for (int i = with; i < with + dryThick; i++) {
+        int value = data[i] + gravity;
+        if (value > 255) {
+            value -= 256;
+        }
+        data[i] = value;
+    }
+    data[0] = 0;
+    data[with + dryThick] = 0;
+    return data + with;
+}
+
+NSString *StringFromProperData(Byte *data) {
+    return [NSString stringWithUTF8String:(char *)ProperDataToCache(data)];
+}

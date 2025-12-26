@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  MultiplyInferenceInflate.h
 //  MultiplyInferenceInflate
@@ -5,6 +7,12 @@
 //  Created by AndyPang on 16/8/12.
 //  Copyright © 2016年 AndyPang. All rights reserved.
 //
+
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
+#import <Foundation/Foundation.h>
+//: #import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
 
 /*
  *********************************************************************************
@@ -25,195 +33,78 @@
  * version: 0.8.0
  *********************************************************************************
  */
-
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
-#ifndef kIsNetwork
-#define kIsNetwork     [MultiplyInferenceInflate isNetwork]  // 一次性判断是否有网的宏
-#endif
-
-#ifndef kIsWWANNetwork
-#define kIsWWANNetwork [MultiplyInferenceInflate isWWANNetwork]  // 一次性判断是否为手机网络的宏
-#endif
-
-#ifndef kIsWiFiNetwork
-#define kIsWiFiNetwork [MultiplyInferenceInflate isWiFiNetwork]  // 一次性判断是否为WiFi网络的宏
-#endif
-
+//: typedef NS_ENUM(NSUInteger, MultiplyInferenceInflateStatusType) {
 typedef NS_ENUM(NSUInteger, MultiplyInferenceInflateStatusType) {
     /// 未知网络
+    //: MultiplyInferenceInflateStatusUnknown,
     MultiplyInferenceInflateStatusUnknown,
     /// 无网络
+    //: MultiplyInferenceInflateStatusNotReachable,
     MultiplyInferenceInflateStatusNotReachable,
     /// 手机网络
+    //: MultiplyInferenceInflateStatusReachableViaWWAN,
     MultiplyInferenceInflateStatusReachableViaWWAN,
     /// WIFI网络
+    //: MultiplyInferenceInflateStatusReachableViaWiFi
     MultiplyInferenceInflateStatusReachableViaWiFi
+//: };
 };
 
+//: typedef NS_ENUM(NSUInteger, MultiplyInferenceInflateRequestSerializer) {
 typedef NS_ENUM(NSUInteger, MultiplyInferenceInflateRequestSerializer) {
     /// 设置请求数据为JSON格式
+    //: MultiplyInferenceInflateRequestSerializerJSON,
     MultiplyInferenceInflateRequestSerializerJSON,
     /// 设置请求数据为二进制格式
+    //: MultiplyInferenceInflateRequestSerializerHTTP,
     MultiplyInferenceInflateRequestSerializerHTTP,
+//: };
 };
 
+//: typedef NS_ENUM(NSUInteger, MultiplyInferenceInflateResponseSerializer) {
 typedef NS_ENUM(NSUInteger, MultiplyInferenceInflateResponseSerializer) {
     /// 设置响应数据为JSON格式
+    //: MultiplyInferenceInflateResponseSerializerJSON,
     MultiplyInferenceInflateResponseSerializerJSON,
     /// 设置响应数据为二进制格式
+    //: MultiplyInferenceInflateResponseSerializerHTTP,
     MultiplyInferenceInflateResponseSerializerHTTP,
+//: };
 };
 
 /// 请求成功的Block
+//: typedef void(^YLHttpRequestSuccess)(id responseObject);
 typedef void(^YLHttpRequestSuccess)(id responseObject);
 
 /// 请求失败的Block
+//: typedef void(^YLHttpRequestFailed)(NSError *error);
 typedef void(^YLHttpRequestFailed)(NSError *error);
 
 /// 缓存的Block
+//: typedef void(^YLHttpRequestCache)(id responseCache);
 typedef void(^YLHttpRequestCache)(id responseCache);
 
 /// 上传或者下载的进度, Progress.completedUnitCount:当前大小 - Progress.totalUnitCount:总大小
+//: typedef void (^YLHttpProgress)(NSProgress *progress);
 typedef void (^YLHttpProgress)(NSProgress *progress);
 
 /// 网络状态的Block
+//: typedef void(^MultiplyInferenceInflateStatus)(MultiplyInferenceInflateStatusType status);
 typedef void(^MultiplyInferenceInflateStatus)(MultiplyInferenceInflateStatusType status);
 
+//: @class AFHTTPSessionManager;
 @class AFHTTPSessionManager;
+//: @interface MultiplyInferenceInflate : NSObject
 @interface MultiplyInferenceInflate : NSObject
 
 /// 有网YES, 无网:NO
-+ (BOOL)isNetwork;
-
-/// 手机网络:YES, 反之:NO
-+ (BOOL)isWWANNetwork;
-
-/// WiFi网络:YES, 反之:NO
-+ (BOOL)isWiFiNetwork;
-
-/// 取消所有HTTP请求
-+ (void)cancelAllRequest;
-
-/// 实时获取网络状态,通过Block回调实时获取(此方法可多次调用)
-+ (void)networkStatusWithBlock:(MultiplyInferenceInflateStatus)networkStatus;
-
-/// 取消指定URL的HTTP请求
-+ (void)cancelRequestWithURL:(NSString *)URL;
-
-/// 开启日志打印 (Debug级别)
-+ (void)openLog;
-
-/// 关闭日志打印,默认关闭
-+ (void)closeLog;
-
-
 /**
- *  GET请求,无缓存
+ *  是否打开网络状态转圈菊花:默认打开
  *
- *  @param URL        请求地址
- *  @param parameters 请求参数
- *  @param success    请求成功的回调
- *  @param failure    请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
+ *  @param open YES(打开), NO(关闭)
  */
-+ (__kindof NSURLSessionTask *)GET:(NSString *)URL
-                        parameters:(id)parameters
-                           success:(YLHttpRequestSuccess)success
-                           failure:(YLHttpRequestFailed)failure;
-
-/**
- *  GET请求,自动缓存
- *
- *  @param URL           请求地址
- *  @param parameters    请求参数
- *  @param responseCache 缓存数据的回调
- *  @param success       请求成功的回调
- *  @param failure       请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
- */
-+ (__kindof NSURLSessionTask *)GET:(NSString *)URL
-                        parameters:(id)parameters
-                     responseCache:(YLHttpRequestCache)responseCache
-                           success:(YLHttpRequestSuccess)success
-                           failure:(YLHttpRequestFailed)failure;
-
-/**
- *  POST请求,无缓存
- *
- *  @param URL        请求地址
- *  @param parameters 请求参数
- *  @param success    请求成功的回调
- *  @param failure    请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
- */
-+ (__kindof NSURLSessionTask *)POST:(NSString *)URL
-                         parameters:(id)parameters
-                            success:(YLHttpRequestSuccess)success
-                            failure:(YLHttpRequestFailed)failure;
-
-/**
- *  POST请求,自动缓存
- *
- *  @param URL           请求地址
- *  @param parameters    请求参数
- *  @param responseCache 缓存数据的回调
- *  @param success       请求成功的回调
- *  @param failure       请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
- */
-+ (__kindof NSURLSessionTask *)POST:(NSString *)URL
-                         parameters:(id)parameters
-                      responseCache:(YLHttpRequestCache)responseCache
-                            success:(YLHttpRequestSuccess)success
-                            failure:(YLHttpRequestFailed)failure;
-
-/**
- *  上传文件
- *
- *  @param URL        请求地址
- *  @param parameters 请求参数
- *  @param name       文件对应服务器上的字段
- *  @param filePath   文件本地的沙盒路径
- *  @param progress   上传进度信息
- *  @param success    请求成功的回调
- *  @param failure    请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
- */
-+ (__kindof NSURLSessionTask *)uploadFileWithURL:(NSString *)URL
-                                      parameters:(id)parameters
-                                            name:(NSString *)name
-                                        filePath:(NSString *)filePath
-                                        progress:(YLHttpProgress)progress
-                                         success:(YLHttpRequestSuccess)success
-                                         failure:(YLHttpRequestFailed)failure;
-
-/**
- *  朋友圈上传视频文件和视频缩略图
- *
- *  @param URL        请求地址
- *  @param parameters 请求参数
- *  @param video      视频文件
- *  @param thumb      缩略图
- *  @param progress   上传进度信息
- *  @param success    请求成功的回调
- *  @param failure    请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
- */
-+ (__kindof NSURLSessionTask *)uploadVideoWithURL:(NSString *)URL
-                                       parameters:(id)parameters
-                                            video:(NSString *)videoPath
-                                            thumb:(UIImage *)thumb
-                                         progress:(YLHttpProgress)progress
-                                          success:(YLHttpRequestSuccess)success
-                                          failure:(YLHttpRequestFailed)failure;
+//: + (void)openNetworkActivityIndicator:(BOOL)open;
++ (void)constantDown:(BOOL)open;
 
 /**
  *  上传多个文件
@@ -227,12 +118,122 @@ typedef void(^MultiplyInferenceInflateStatus)(MultiplyInferenceInflateStatusType
  *
  *  @return 返回的对象可取消请求,调用cancel方法
  */
-+ (__kindof NSURLSessionTask *)uploadFilesWithURL:(NSString *)URL
-                                       parameters:(id)parameters
-                                            files:(NSDictionary<NSString*, NSString*> *)files
-                                         progress:(YLHttpProgress)progress
-                                          success:(YLHttpRequestSuccess)success
-                                          failure:(YLHttpRequestFailed)failure;
+//: + (__kindof NSURLSessionTask *)uploadFilesWithURL:(NSString *)URL
++ (__kindof NSURLSessionTask *)between:(NSString *)URL
+                                       //: parameters:(id)parameters
+                                       skilled:(id)parameters
+                                            //: files:(NSDictionary<NSString*, NSString*> *)files
+                                            task:(NSDictionary<NSString*, NSString*> *)files
+                                         //: progress:(YLHttpProgress)progress
+                                         mission:(YLHttpProgress)progress
+                                          //: success:(YLHttpRequestSuccess)success
+                                          identityRadio:(YLHttpRequestSuccess)success
+                                          //: failure:(YLHttpRequestFailed)failure;
+                                          candid:(YLHttpRequestFailed)failure;
+/**
+ *  POST请求,无缓存
+ *
+ *  @param URL        请求地址
+ *  @param parameters 请求参数
+ *  @param success    请求成功的回调
+ *  @param failure    请求失败的回调
+ *
+ *  @return 返回的对象可取消请求,调用cancel方法
+ */
+//: + (__kindof NSURLSessionTask *)POST:(NSString *)URL
++ (__kindof NSURLSessionTask *)fragmentElevator:(NSString *)URL
+                         //: parameters:(id)parameters
+                         notice:(id)parameters
+                            //: success:(YLHttpRequestSuccess)success
+                            magicTo:(YLHttpRequestSuccess)success
+                            //: failure:(YLHttpRequestFailed)failure;
+                            flat:(YLHttpRequestFailed)failure;
+/// 关闭日志打印,默认关闭
+//: + (void)closeLog;
++ (void)submit;
+
+/// 取消指定URL的HTTP请求
+//: + (void)cancelRequestWithURL:(NSString *)URL;
++ (void)strong:(NSString *)URL;
+
+/**
+ 配置自建证书的Https请求, 参考链接: http://blog.csdn.net/syg90178aw/article/details/52839103
+
+ @param cerPath 自建Https证书的路径
+ @param validatesDomainName 是否需要验证域名，默认为YES. 如果证书的域名与请求的域名不一致，需设置为NO; 即服务器使用其他可信任机构颁发
+        的证书，也可以建立连接，这个非常危险, 建议打开.validatesDomainName=NO, 主要用于这种情况:客户端请求的是子域名, 而证书上的是另外
+        一个域名。因为SSL证书上的域名是独立的,假如证书上注册的域名是www.google.com, 那么mail.google.com是无法验证通过的.
+ */
+//: + (void)setSecurityPolicyWithCerPath:(NSString *)cerPath validatesDomainName:(BOOL)validatesDomainName;
++ (void)ting:(NSString *)cerPath hydrateOrigin:(BOOL)validatesDomainName;
+
+/**
+ *  GET请求,无缓存
+ *
+ *  @param URL        请求地址
+ *  @param parameters 请求参数
+ *  @param success    请求成功的回调
+ *  @param failure    请求失败的回调
+ *
+ *  @return 返回的对象可取消请求,调用cancel方法
+ */
+//: + (__kindof NSURLSessionTask *)GET:(NSString *)URL
++ (__kindof NSURLSessionTask *)underTask:(NSString *)URL
+                        //: parameters:(id)parameters
+                        level:(id)parameters
+                           //: success:(YLHttpRequestSuccess)success
+                           extent:(YLHttpRequestSuccess)success
+                           //: failure:(YLHttpRequestFailed)failure;
+                           constraint:(YLHttpRequestFailed)failure;
+/**
+ *  GET请求,自动缓存
+ *
+ *  @param URL           请求地址
+ *  @param parameters    请求参数
+ *  @param responseCache 缓存数据的回调
+ *  @param success       请求成功的回调
+ *  @param failure       请求失败的回调
+ *
+ *  @return 返回的对象可取消请求,调用cancel方法
+ */
+//: + (__kindof NSURLSessionTask *)GET:(NSString *)URL
++ (__kindof NSURLSessionTask *)snap:(NSString *)URL
+                        //: parameters:(id)parameters
+                        firmPlate:(id)parameters
+                     //: responseCache:(YLHttpRequestCache)responseCache
+                     schedule:(YLHttpRequestCache)responseCache
+                           //: success:(YLHttpRequestSuccess)success
+                           song:(YLHttpRequestSuccess)success
+                           //: failure:(YLHttpRequestFailed)failure;
+                           drawSize:(YLHttpRequestFailed)failure;
+
+/**
+ *  设置服务器响应数据格式:默认为JSON格式
+ *
+ *  @param responseSerializer PPResponseSerializerJSON(JSON格式),PPResponseSerializerHTTP(二进制格式)
+ */
+//: + (void)setResponseSerializer:(MultiplyInferenceInflateResponseSerializer)responseSerializer;
++ (void)setDigital:(MultiplyInferenceInflateResponseSerializer)responseSerializer;
+
+
+/// 开启日志打印 (Debug级别)
+//: + (void)openLog;
++ (void)legacy;
+
+
+/// 手机网络:YES, 反之:NO
+//: + (BOOL)isWWANNetwork;
++ (BOOL)inspectorWith;
+
+
+/// WiFi网络:YES, 反之:NO
+//: + (BOOL)isWiFiNetwork;
++ (BOOL)decision;
+
+
+/// 实时获取网络状态,通过Block回调实时获取(此方法可多次调用)
+//: + (void)networkStatusWithBlock:(MultiplyInferenceInflateStatus)networkStatus;
++ (void)distinct:(MultiplyInferenceInflateStatus)networkStatus;
 
 
 /**
@@ -249,60 +250,98 @@ typedef void(^MultiplyInferenceInflateStatus)(MultiplyInferenceInflateStatusType
  @param failure 失败回调
  @return 返回值
  */
-+ (__kindof NSURLSessionTask *)uploadImageWithURL:(NSString *)URL
-                                       parameters:(id)parameters
-                                             name:(NSString *)name
-                                             data:(NSData *)data
-                                         fileName:(NSString *)fileName
-                                        imageType:(NSString *)imageType
-                                         progress:(YLHttpProgress)progress
-                                          success:(YLHttpRequestSuccess)success
-                                          failure:(YLHttpRequestFailed)failure;
+//: + (__kindof NSURLSessionTask *)uploadImageWithURL:(NSString *)URL
++ (__kindof NSURLSessionTask *)route:(NSString *)URL
+                                       //: parameters:(id)parameters
+                                       sessionDoing:(id)parameters
+                                             //: name:(NSString *)name
+                                             saveRatio:(NSString *)name
+                                             //: data:(NSData *)data
+                                             end:(NSData *)data
+                                         //: fileName:(NSString *)fileName
+                                         custom:(NSString *)fileName
+                                        //: imageType:(NSString *)imageType
+                                        skilled:(NSString *)imageType
+                                         //: progress:(YLHttpProgress)progress
+                                         tower:(YLHttpProgress)progress
+                                          //: success:(YLHttpRequestSuccess)success
+                                          ting:(YLHttpRequestSuccess)success
+                                          //: failure:(YLHttpRequestFailed)failure;
+                                          date:(YLHttpRequestFailed)failure;
 
 /**
- *  上传单/多张图片
+ *  朋友圈上传视频文件和视频缩略图
  *
  *  @param URL        请求地址
  *  @param parameters 请求参数
- *  @param name       图片对应服务器上的字段
- *  @param images     图片数组
- *  @param fileNames  图片文件名数组, 可以为nil, 数组内的文件名默认为当前日期时间"yyyyMMddHHmmss"
- *  @param imageScale 图片文件压缩比 范围 (0.f ~ 1.f)
- *  @param imageType  图片文件的类型,例:png、jpg(默认类型)....
+ *  @param video      视频文件
+ *  @param thumb      缩略图
  *  @param progress   上传进度信息
  *  @param success    请求成功的回调
  *  @param failure    请求失败的回调
  *
  *  @return 返回的对象可取消请求,调用cancel方法
  */
-+ (__kindof NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
-                                        parameters:(id)parameters
-                                              name:(NSString *)name
-                                            images:(NSArray<UIImage *> *)images
-                                         fileNames:(NSArray<NSString *> *)fileNames
-                                        imageScale:(CGFloat)imageScale
-                                         imageType:(NSString *)imageType
-                                          progress:(YLHttpProgress)progress
-                                           success:(YLHttpRequestSuccess)success
-                                           failure:(YLHttpRequestFailed)failure;
+//: + (__kindof NSURLSessionTask *)uploadVideoWithURL:(NSString *)URL
++ (__kindof NSURLSessionTask *)outGen:(NSString *)URL
+                                       //: parameters:(id)parameters
+                                       mid:(id)parameters
+                                            //: video:(NSString *)videoPath
+                                            elm:(NSString *)videoPath
+                                            //: thumb:(UIImage *)thumb
+                                            wait:(UIImage *)thumb
+                                         //: progress:(YLHttpProgress)progress
+                                         asArtifact:(YLHttpProgress)progress
+                                          //: success:(YLHttpRequestSuccess)success
+                                          honest:(YLHttpRequestSuccess)success
+                                          //: failure:(YLHttpRequestFailed)failure;
+                                          weave:(YLHttpRequestFailed)failure;
+
 
 /**
- *  下载文件
+ *  POST请求,自动缓存
  *
- *  @param URL      请求地址
- *  @param fileDir  文件存储目录(默认存储目录为Download)
- *  @param progress 文件下载的进度信息
- *  @param success  下载成功的回调(回调参数filePath:文件的路径)
- *  @param failure  下载失败的回调
+ *  @param URL           请求地址
+ *  @param parameters    请求参数
+ *  @param responseCache 缓存数据的回调
+ *  @param success       请求成功的回调
+ *  @param failure       请求失败的回调
  *
- *  @return 返回NSURLSessionDownloadTask实例，可用于暂停继续，暂停调用suspend方法，开始下载调用resume方法
+ *  @return 返回的对象可取消请求,调用cancel方法
  */
-+ (__kindof NSURLSessionTask *)downloadWithURL:(NSString *)URL
-                                       fileDir:(NSString *)fileDir
-                                      progress:(YLHttpProgress)progress
-                                       success:(void(^)(NSString *filePath))success
-                                       failure:(YLHttpRequestFailed)failure;
+//: + (__kindof NSURLSessionTask *)POST:(NSString *)URL
++ (__kindof NSURLSessionTask *)capability:(NSString *)URL
+                         //: parameters:(id)parameters
+                         joinByReply:(id)parameters
+                      //: responseCache:(YLHttpRequestCache)responseCache
+                      doChild:(YLHttpRequestCache)responseCache
+                            //: success:(YLHttpRequestSuccess)success
+                            condition:(YLHttpRequestSuccess)success
+                            //: failure:(YLHttpRequestFailed)failure;
+                            create:(YLHttpRequestFailed)failure;
 
+/**
+ *  设置请求超时时间:默认为30S
+ *
+ *  @param time 时长
+ */
+//: + (void)setRequestTimeoutInterval:(NSTimeInterval)time;
++ (void)setToday:(NSTimeInterval)time;
+
+
+/// 取消所有HTTP请求
+//: + (void)cancelAllRequest;
++ (void)gesture;
+
+
+
+/**
+ *  设置网络请求参数的格式:默认为二进制格式
+ *
+ *  @param requestSerializer PPRequestSerializerJSON(JSON格式),PPRequestSerializerHTTP(二进制格式),
+ */
+//: + (void)setRequestSerializer:(MultiplyInferenceInflateRequestSerializer)requestSerializer;
++ (void)setFile:(MultiplyInferenceInflateRequestSerializer)requestSerializer;
 
 /*
  **************************************  说明  **********************************************
@@ -324,55 +363,108 @@ typedef void(^MultiplyInferenceInflateStatus)(MultiplyInferenceInflateStatusType
  **************************************  说明  **********************************************
  */
 
+//: #pragma mark - 设置AFHTTPSessionManager相关属性
 #pragma mark - 设置AFHTTPSessionManager相关属性
+//: #pragma mark 注意: 因为全局只有一个AFHTTPSessionManager实例,所以以下设置方式全局生效
 #pragma mark 注意: 因为全局只有一个AFHTTPSessionManager实例,所以以下设置方式全局生效
 /**
  在开发中,如果以下的设置方式不满足项目的需求,就调用此方法获取AFHTTPSessionManager实例进行自定义设置
  (注意: 调用此方法时在要导入AFNetworking.h头文件,否则可能会报找不到AFHTTPSessionManager的❌)
  @param sessionManager AFHTTPSessionManager的实例
  */
-+ (void)setAFHTTPSessionManagerProperty:(void(^)(AFHTTPSessionManager *sessionManager))sessionManager;
+//: + (void)setAFHTTPSessionManagerProperty:(void(^)(AFHTTPSessionManager *sessionManager))sessionManager;
++ (void)setLaneCircle:(void(^)(AFHTTPSessionManager *sessionManager))sessionManager;
+
+//: + (BOOL)isNetwork;
++ (BOOL)betweenBe;
 
 /**
- *  设置网络请求参数的格式:默认为二进制格式
+ *  上传单/多张图片
  *
- *  @param requestSerializer PPRequestSerializerJSON(JSON格式),PPRequestSerializerHTTP(二进制格式),
+ *  @param URL        请求地址
+ *  @param parameters 请求参数
+ *  @param name       图片对应服务器上的字段
+ *  @param images     图片数组
+ *  @param fileNames  图片文件名数组, 可以为nil, 数组内的文件名默认为当前日期时间"yyyyMMddHHmmss"
+ *  @param imageScale 图片文件压缩比 范围 (0.f ~ 1.f)
+ *  @param imageType  图片文件的类型,例:png、jpg(默认类型)....
+ *  @param progress   上传进度信息
+ *  @param success    请求成功的回调
+ *  @param failure    请求失败的回调
+ *
+ *  @return 返回的对象可取消请求,调用cancel方法
  */
-+ (void)setRequestSerializer:(MultiplyInferenceInflateRequestSerializer)requestSerializer;
-
+//: + (__kindof NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
++ (__kindof NSURLSessionTask *)success:(NSString *)URL
+                                        //: parameters:(id)parameters
+                                        collectionCommon:(id)parameters
+                                              //: name:(NSString *)name
+                                              rear:(NSString *)name
+                                            //: images:(NSArray<UIImage *> *)images
+                                            listen:(NSArray<UIImage *> *)images
+                                         //: fileNames:(NSArray<NSString *> *)fileNames
+                                         backgroundOutput:(NSArray<NSString *> *)fileNames
+                                        //: imageScale:(CGFloat)imageScale
+                                        moreEnable:(CGFloat)imageScale
+                                         //: imageType:(NSString *)imageType
+                                         engine:(NSString *)imageType
+                                          //: progress:(YLHttpProgress)progress
+                                          sheet:(YLHttpProgress)progress
+                                           //: success:(YLHttpRequestSuccess)success
+                                           shift:(YLHttpRequestSuccess)success
+                                           //: failure:(YLHttpRequestFailed)failure;
+                                           countCalm:(YLHttpRequestFailed)failure;
 /**
- *  设置服务器响应数据格式:默认为JSON格式
+ *  上传文件
  *
- *  @param responseSerializer PPResponseSerializerJSON(JSON格式),PPResponseSerializerHTTP(二进制格式)
- */
-+ (void)setResponseSerializer:(MultiplyInferenceInflateResponseSerializer)responseSerializer;
-
-/**
- *  设置请求超时时间:默认为30S
+ *  @param URL        请求地址
+ *  @param parameters 请求参数
+ *  @param name       文件对应服务器上的字段
+ *  @param filePath   文件本地的沙盒路径
+ *  @param progress   上传进度信息
+ *  @param success    请求成功的回调
+ *  @param failure    请求失败的回调
  *
- *  @param time 时长
+ *  @return 返回的对象可取消请求,调用cancel方法
  */
-+ (void)setRequestTimeoutInterval:(NSTimeInterval)time;
-
+//: + (__kindof NSURLSessionTask *)uploadFileWithURL:(NSString *)URL
++ (__kindof NSURLSessionTask *)originBy:(NSString *)URL
+                                      //: parameters:(id)parameters
+                                      shade:(id)parameters
+                                            //: name:(NSString *)name
+                                            winter:(NSString *)name
+                                        //: filePath:(NSString *)filePath
+                                        calendar:(NSString *)filePath
+                                        //: progress:(YLHttpProgress)progress
+                                        borderPlayer:(YLHttpProgress)progress
+                                         //: success:(YLHttpRequestSuccess)success
+                                         humor:(YLHttpRequestSuccess)success
+                                         //: failure:(YLHttpRequestFailed)failure;
+                                         me:(YLHttpRequestFailed)failure;
 /// 设置请求头
-+ (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
+//: + (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
++ (void)forward:(NSString *)value stickTween:(NSString *)field;
 
 /**
- *  是否打开网络状态转圈菊花:默认打开
+ *  下载文件
  *
- *  @param open YES(打开), NO(关闭)
+ *  @param URL      请求地址
+ *  @param fileDir  文件存储目录(默认存储目录为Download)
+ *  @param progress 文件下载的进度信息
+ *  @param success  下载成功的回调(回调参数filePath:文件的路径)
+ *  @param failure  下载失败的回调
+ *
+ *  @return 返回NSURLSessionDownloadTask实例，可用于暂停继续，暂停调用suspend方法，开始下载调用resume方法
  */
-+ (void)openNetworkActivityIndicator:(BOOL)open;
-
-/**
- 配置自建证书的Https请求, 参考链接: http://blog.csdn.net/syg90178aw/article/details/52839103
-
- @param cerPath 自建Https证书的路径
- @param validatesDomainName 是否需要验证域名，默认为YES. 如果证书的域名与请求的域名不一致，需设置为NO; 即服务器使用其他可信任机构颁发
-        的证书，也可以建立连接，这个非常危险, 建议打开.validatesDomainName=NO, 主要用于这种情况:客户端请求的是子域名, 而证书上的是另外
-        一个域名。因为SSL证书上的域名是独立的,假如证书上注册的域名是www.google.com, 那么mail.google.com是无法验证通过的.
- */
-+ (void)setSecurityPolicyWithCerPath:(NSString *)cerPath validatesDomainName:(BOOL)validatesDomainName;
-
+//: + (__kindof NSURLSessionTask *)downloadWithURL:(NSString *)URL
++ (__kindof NSURLSessionTask *)rear:(NSString *)URL
+                                       //: fileDir:(NSString *)fileDir
+                                       boardWait:(NSString *)fileDir
+                                      //: progress:(YLHttpProgress)progress
+                                      roundWith:(YLHttpProgress)progress
+                                       //: success:(void(^)(NSString *filePath))success
+                                       universal:(void(^)(NSString *filePath))success
+                                       //: failure:(YLHttpRequestFailed)failure;
+                                       hydrate:(YLHttpRequestFailed)failure;
+//: @end
 @end
-

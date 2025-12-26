@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  NSDictionary+TimerDeferModelMarker.h
 //  Kitalker
@@ -6,25 +8,38 @@
 //  Copyright (c) 2012年 ibm. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
+//: @interface NSDictionary (TimerDeferModelMarker)
 @interface NSDictionary (TimerDeferModelMarker)
 
-- (NSString *)jsonString;
+//: - (float)floatValueForKey:(id)key;
+- (float)roundSun:(id)key;
 
-- (BOOL)boolValueForKey:(id)key;
+//: - (id)valueObjectForKey:(id)aKey;
+- (id)whiteComputer:(id)aKey;
 
-- (int)intValueForKey:(id)key;
+//: - (NSArray *)arrayValueForKey:(id)aKey;
+- (NSArray *)easy:(id)aKey;
 
-- (NSInteger)integerValueForKey:(id)key;
+//: - (double)doubleValueForKey:(id)key;
+- (double)sub:(id)key;
 
-- (float)floatValueForKey:(id)key;
+//: - (NSString *)newStringValueForKey:(id)key;
+- (NSString *)balance:(id)key;
 
-- (double)doubleValueForKey:(id)key;
+//: - (NSInteger)integerValueForKey:(id)key;
+- (NSInteger)radar:(id)key;
 
-- (NSString *)newStringValueForKey:(id)key;
+//: - (int)intValueForKey:(id)key;
+- (int)groupIn:(id)key;
 
-- (id)valueObjectForKey:(id)aKey;
+//: - (NSString *)jsonString;
+- (NSString *)array;
 
-- (NSArray *)arrayValueForKey:(id)aKey;
+//: - (BOOL)boolValueForKey:(id)key;
+- (BOOL)grace:(id)key;
+//: @end
 @end

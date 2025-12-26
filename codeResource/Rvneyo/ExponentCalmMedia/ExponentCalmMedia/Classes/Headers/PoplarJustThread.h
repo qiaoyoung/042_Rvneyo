@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  PoplarJustThread.h
 //  fanxingxue
@@ -6,24 +8,38 @@
 //  Copyright © 2018年 caoyu. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
+//: @interface PoplarJustThread : NSObject
 @interface PoplarJustThread : NSObject
-+(BOOL)isLogin;
-+ (void)refrushNewData;
-+ (NSString *)getUserId;
+//: + (void)callSevicePhoneNumber;
++ (void)passage;
+//: + (NSString *)getHeaderImageUrl;
++ (NSString *)track;
+//: +(BOOL)isLogin;
++(BOOL)magnitude;
 
-+ (NSString *)getHeaderImageUrl;
-+ (NSString *)getNickName;
-
-
-+ (void)callSevicePhoneNumber;
-+ (NSString *)getMobileNumber;
-
-+ (void)saveUserInfo:(id)responseObject;
-+ (void)logout;
+//: + (NSString *)getUserId;
++ (NSString *)secureGrave;
+//: + (NSString *)getLocaleString;
++ (NSString *)reading;
 
 
-+ (NSString *)getLocaleString;
+//: + (NSString *)getMobileNumber;
++ (NSString *)symbol;
+//: + (void)logout;
++ (void)creation;
 
+//: + (void)saveUserInfo:(id)responseObject;
++ (void)hide:(id)responseObject;
+//: + (NSString *)getNickName;
++ (NSString *)coreToThick;
+
+
+//: + (void)refrushNewData;
++ (void)match;
+
+//: @end
 @end

@@ -1,3 +1,71 @@
+
+#import <Foundation/Foundation.h>
+
+@interface NormWillingData : NSObject
+
++ (instancetype)sharedInstance;
+
+//: tyl_spellingCache
+@property (nonatomic, copy) NSString *themeQuietDict;
+
+@end
+
+@implementation NormWillingData
+
+- (Byte *)NormWillingDataToCache:(Byte *)data {
+    int grandFeatherSong = data[0];
+    Byte depth = data[1];
+    int truth = data[2];
+    for (int i = truth; i < truth + grandFeatherSong; i++) {
+        int value = data[i] - depth;
+        if (value < 0) {
+            value += 256;
+        }
+        data[i] = value;
+    }
+    data[truth + grandFeatherSong] = 0;
+    return data + truth;
+}
+
++ (instancetype)sharedInstance {
+    static NormWillingData *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[self alloc] init];
+    });
+    return instance;
+}
+
+//: tyl_spellingCache
+- (NSString *)themeQuietDict {
+    if (!_themeQuietDict) {
+		NSArray<NSString *> *origin = @[@"17", @"28", @"6", @"236", @"173", @"43", @"144", @"149", @"136", @"123", @"143", @"140", @"129", @"136", @"136", @"133", @"138", @"131", @"95", @"125", @"127", @"132", @"129", @"125"];
+		NSData *data = [NormWillingData NormWillingDataToData:origin];
+        Byte *value = (Byte *)data.bytes;
+        _themeQuietDict = [self StringFromNormWillingData:value];
+    }
+    return _themeQuietDict;
+}
+
++ (NSData *)NormWillingDataToData:(NSArray<NSString *> *)value {
+    NSMutableArray<NSString *> *array = [NSMutableArray arrayWithArray:value];
+    NSInteger length = array.count;
+    Byte *buffer = (Byte *)malloc(length + 1);
+    for (int i = 0; i < length; i++) {
+        buffer[i] = [array[i] intValue];
+    }
+    buffer[length] = 0;
+    return [NSData dataWithBytesNoCopy:buffer length:length freeWhenDone:YES];
+}
+
+- (NSString *)StringFromNormWillingData:(Byte *)data {
+    return [NSString stringWithUTF8String:(char *)[self NormWillingDataToCache:data]];
+}
+
+@end
+
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  EntrySteamSource.m
 //  NIM
@@ -6,127 +74,187 @@
 //  Copyright (c) 2013年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "RefreshAssembleRate.h"
 #import "RefreshAssembleRate.h"
+//: #import "EntropyGateModelConductor.h"
 #import "EntropyGateModelConductor.h"
+//: #import "YYModel/YYModel.h"
 #import "YYModel/YYModel.h"
+//: #import "NSObject+YYModel.h"
 #import "NSObject+YYModel.h"
 
-#define SPELLING_UNIT_FULLSPELLING          @"f"
-#define SPELLING_UNIT_SHORTSPELLING         @"s"
-#define SPELLING_CACHE                      @"sc"
-
+//: @implementation NearVitalAroundSymbol
 @implementation NearVitalAroundSymbol
 
+//: @end
 @end
 
+//: @interface RefreshAssembleRate ()
 @interface RefreshAssembleRate ()
-- (NearVitalAroundSymbol *)calcSpellingOfString: (NSString *)source;
+//: - (NearVitalAroundSymbol *)calcSpellingOfString: (NSString *)source;
+- (NearVitalAroundSymbol *)replace: (NSString *)source;
+//: @end
 @end
 
 
+//: @implementation RefreshAssembleRate
 @implementation RefreshAssembleRate
-+ (RefreshAssembleRate *)sharedCenter
+//: - (NearVitalAroundSymbol *)calcSpellingOfString:(NSString *)source
+- (NearVitalAroundSymbol *)replace:(NSString *)source
 {
-    static RefreshAssembleRate *instance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        instance = [[RefreshAssembleRate alloc]init];
-    });
-    return instance;
-}
-
-- (id)init
-{
-    if (self = [super init])
+    //: NSMutableString *fullSpelling = [[NSMutableString alloc]init];
+    NSMutableString *fullSpelling = [[NSMutableString alloc]init];
+    //: NSMutableString *shortSpelling= [[NSMutableString alloc]init];
+    NSMutableString *shortSpelling= [[NSMutableString alloc]init];
+    //: for (NSInteger i = 0; i < [source length]; i++)
+    for (NSInteger i = 0; i < [source length]; i++)
     {
-        NSDictionary *spellingCache = [[NSUserDefaults standardUserDefaults] objectForKey:@"tyl_spellingCache"];
-        if (spellingCache) {
-            _spellingCache = [[NSMutableDictionary alloc]initWithDictionary:[NSDictionary yy_modelDictionaryWithClass:[NearVitalAroundSymbol class] json:spellingCache]];
-        }
+        //: NSString *word = [source substringWithRange:NSMakeRange(i, 1)];
+        NSString *word = [source substringWithRange:NSMakeRange(i, 1)];
+        //: NSString *pinyin = [[EntropyGateModelConductor sharedInstance] toPinyin:word];
+        NSString *pinyin = [[EntropyGateModelConductor library] praiseLength:word];
 
-        if (!_spellingCache)
+        //: if ([pinyin length])
+        if ([pinyin length])
         {
-            _spellingCache = [[NSMutableDictionary alloc]init];
+            //: [fullSpelling appendString:pinyin];
+            [fullSpelling appendString:pinyin];
+            //: [shortSpelling appendString:[pinyin substringToIndex:1]];
+            [shortSpelling appendString:[pinyin substringToIndex:1]];
         }
     }
+
+    //: NearVitalAroundSymbol *unit = [[NearVitalAroundSymbol alloc]init];
+    NearVitalAroundSymbol *unit = [[NearVitalAroundSymbol alloc]init];
+    //: unit.fullSpelling = [fullSpelling lowercaseString];
+    unit.accept = [fullSpelling lowercaseString];
+    //: unit.shortSpelling= [shortSpelling lowercaseString];
+    unit.savingScope= [shortSpelling lowercaseString];
+    //: return unit;
+    return unit;
+}
+
+//: - (void)saveSpellingCache
+- (void)ridgeCreative
+{
+    //: static const NSInteger kMaxEntriesCount = 5000;
+    static const NSInteger kMaxEntriesCount = 5000;
+    //: @synchronized(self)
+    @synchronized(self)
+    {
+        //: NSInteger count = [_spellingCache count];
+        NSInteger count = [_rule count];
+        //: if (count >= kMaxEntriesCount)
+        if (count >= kMaxEntriesCount)
+        {
+            //: [_spellingCache removeAllObjects];
+            [_rule removeAllObjects];
+        }
+        //: if (_spellingCache)
+        if (_rule)
+        {
+            //: [[NSUserDefaults standardUserDefaults] setObject:[_spellingCache yy_modelToJSONString] forKey:@"tyl_spellingCache"];
+            [[NSUserDefaults standardUserDefaults] setObject:[_rule yy_modelToJSONString] forKey:[NormWillingData sharedInstance].themeQuietDict];
+        }
+
+    }
+}
+
+
+
+//: - (id)init
+- (id)init
+{
+    //: if (self = [super init])
+    if (self = [super init])
+    {
+        //: NSDictionary *spellingCache = [[NSUserDefaults standardUserDefaults] objectForKey:@"tyl_spellingCache"];
+        NSDictionary *spellingCache = [[NSUserDefaults standardUserDefaults] objectForKey:[NormWillingData sharedInstance].themeQuietDict];
+        //: if (spellingCache) {
+        if (spellingCache) {
+            //: _spellingCache = [[NSMutableDictionary alloc]initWithDictionary:[NSDictionary yy_modelDictionaryWithClass:[NearVitalAroundSymbol class] json:spellingCache]];
+            _rule = [[NSMutableDictionary alloc]initWithDictionary:[NSDictionary yy_modelDictionaryWithClass:[NearVitalAroundSymbol class] json:spellingCache]];
+        }
+
+        //: if (!_spellingCache)
+        if (!_rule)
+        {
+            //: _spellingCache = [[NSMutableDictionary alloc]init];
+            _rule = [[NSMutableDictionary alloc]init];
+        }
+    }
+    //: return self;
     return self;
 }
 
 
-
-- (void)saveSpellingCache
+//: + (RefreshAssembleRate *)sharedCenter
++ (RefreshAssembleRate *)appSand
 {
-    static const NSInteger kMaxEntriesCount = 5000;
-    @synchronized(self)
-    {
-        NSInteger count = [_spellingCache count];
-        if (count >= kMaxEntriesCount)
-        {
-            [_spellingCache removeAllObjects];
-        }
-        if (_spellingCache)
-        {
-            [[NSUserDefaults standardUserDefaults] setObject:[_spellingCache yy_modelToJSONString] forKey:@"tyl_spellingCache"];
-        }
-        
-    }
+    //: static RefreshAssembleRate *instance = nil;
+    static RefreshAssembleRate *instance = nil;
+    //: static dispatch_once_t onceToken;
+    static dispatch_once_t onceToken;
+    //: _dispatch_once(&onceToken, ^{
+    _dispatch_once(&onceToken, ^{
+        //: instance = [[RefreshAssembleRate alloc]init];
+        instance = [[RefreshAssembleRate alloc]init];
+    //: });
+    });
+    //: return instance;
+    return instance;
 }
 
-
-- (NearVitalAroundSymbol *)spellingForString:(NSString *)source
+//: - (NSString *)firstLetter:(NSString *)input
+- (NSString *)flush:(NSString *)input
 {
-    if ([source length] == 0)
-    {
-        return nil;
-    }
-    NearVitalAroundSymbol *ShapeCharacterMigrateExpand = nil;
-    @synchronized(self)
-    {
-        NearVitalAroundSymbol *unit = [_spellingCache objectForKey:source];
-        if (!unit)
-        {
-            unit = [self calcSpellingOfString:source];
-            if ([unit.fullSpelling length] && [unit.shortSpelling length])
-            {
-                [_spellingCache setObject:unit forKey:source];
-            }
-        }
-        ShapeCharacterMigrateExpand = unit;
-    }
-    return ShapeCharacterMigrateExpand;
-}
-
-- (NSString *)firstLetter:(NSString *)input
-{
-    NearVitalAroundSymbol *unit = [self spellingForString:input];
-    NSString *spelling = unit.fullSpelling;
+    //: NearVitalAroundSymbol *unit = [self spellingForString:input];
+    NearVitalAroundSymbol *unit = [self shape:input];
+    //: NSString *spelling = unit.fullSpelling;
+    NSString *spelling = unit.accept;
+    //: return [spelling length] ? [spelling substringWithRange:NSMakeRange(0, 1)] : nil;
     return [spelling length] ? [spelling substringWithRange:NSMakeRange(0, 1)] : nil;
 }
 
 
-- (NearVitalAroundSymbol *)calcSpellingOfString:(NSString *)source
+//: - (NearVitalAroundSymbol *)spellingForString:(NSString *)source
+- (NearVitalAroundSymbol *)shape:(NSString *)source
 {
-    NSMutableString *fullSpelling = [[NSMutableString alloc]init];
-    NSMutableString *shortSpelling= [[NSMutableString alloc]init];
-    for (NSInteger i = 0; i < [source length]; i++)
+    //: if ([source length] == 0)
+    if ([source length] == 0)
     {
-        NSString *word = [source substringWithRange:NSMakeRange(i, 1)];
-        NSString *pinyin = [[EntropyGateModelConductor sharedInstance] toPinyin:word];
-        
-        if ([pinyin length])
-        {
-            [fullSpelling appendString:pinyin];
-            [shortSpelling appendString:[pinyin substringToIndex:1]];
-        }
+        //: return nil;
+        return nil;
     }
-    
-    NearVitalAroundSymbol *unit = [[NearVitalAroundSymbol alloc]init];
-    unit.fullSpelling = [fullSpelling lowercaseString];
-    unit.shortSpelling= [shortSpelling lowercaseString];
-    return unit;
+    //: NearVitalAroundSymbol *ShapeCharacterMigrateExpand = nil;
+    NearVitalAroundSymbol *ShapeCharacterMigrateExpand = nil;
+    //: @synchronized(self)
+    @synchronized(self)
+    {
+        //: NearVitalAroundSymbol *unit = [_spellingCache objectForKey:source];
+        NearVitalAroundSymbol *unit = [_rule objectForKey:source];
+        //: if (!unit)
+        if (!unit)
+        {
+            //: unit = [self calcSpellingOfString:source];
+            unit = [self replace:source];
+            //: if ([unit.fullSpelling length] && [unit.shortSpelling length])
+            if ([unit.accept length] && [unit.savingScope length])
+            {
+                //: [_spellingCache setObject:unit forKey:source];
+                [_rule setObject:unit forKey:source];
+            }
+        }
+        //: ShapeCharacterMigrateExpand = unit;
+        ShapeCharacterMigrateExpand = unit;
+    }
+    //: return ShapeCharacterMigrateExpand;
+    return ShapeCharacterMigrateExpand;
 }
 
 
 
 
+//: @end
 @end

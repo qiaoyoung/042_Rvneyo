@@ -1,24 +1,42 @@
-#import <Foundation/Foundation.h>
-#import <SSZipArchive/SSZipArchive.h>
-NS_ASSUME_NONNULL_BEGIN
-#define kExponentCalmMedia @"ExponentCalmMedia"
+// __DEBUG__
+// __CLOSE_PRINT__
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
+#import <Foundation/Foundation.h>
+//: #import <SSZipArchive/SSZipArchive.h>
+#import <SSZipArchive/SSZipArchive.h>
+
+//: NS_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
+
+
+//: @interface WordAwaitStripPositionedManager : NSObject
 @interface WordAwaitStripPositionedManager : NSObject
 
-+ (instancetype)sharedManager;
+//: - (UIImage *)zip_imageNamed:(NSString *)name;
+- (UIImage *)sorted:(NSString *)name;
 
-- (NSString *)getHtml_filePath;
+//: - (NSString *)getVoicePath;
+- (NSString *)implementation;
 
-- (NSString *)getXML_filePath;
+//: + (instancetype)sharedManager;
++ (instancetype)cameraSmooth;
 
-- (NSString *)getEmojiPath;
+//: - (NSString *)getXML_filePath;
+- (NSString *)alongNeed;
 
-- (NSString *)getLprojPath;
+//: - (NSString *)getHtml_filePath;
+- (NSString *)task;
 
-- (NSString *)getVoicePath;
+//: - (NSString *)getLprojPath;
+- (NSString *)sceneDown;
 
-- (UIImage *)zip_imageNamed:(NSString *)name;
+//: - (NSString *)getEmojiPath;
+- (NSString *)flat;
 
+//: @end
 @end
 
+//: NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_END

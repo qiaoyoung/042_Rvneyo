@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  NSDictionary+MaskRepaintSky.h
 //  NIM
@@ -6,20 +8,33 @@
 //  Copyright (c) 2013年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
+//: @interface NSDictionary (MaskRepaintSky)
 @interface NSDictionary (MaskRepaintSky)
-- (NSString *)jsonString: (NSString *)key;
+//: - (BOOL)jsonBool: (NSString *)key;
+- (BOOL)motionPlayer: (NSString *)key;
 
-- (NSDictionary *)jsonDict: (NSString *)key;
-- (NSArray *)jsonArray: (NSString *)key;
-- (NSArray *)jsonStringArray: (NSString *)key;
+//: - (unsigned long long)jsonUnsignedLongLong:(NSString *)key;
+- (unsigned long long)reliable:(NSString *)key;
+//: - (double)jsonDouble: (NSString *)key;
+- (double)contact: (NSString *)key;
+//: - (NSInteger)jsonInteger: (NSString *)key;
+- (NSInteger)healthy: (NSString *)key;
 
 
-- (BOOL)jsonBool: (NSString *)key;
-- (NSInteger)jsonInteger: (NSString *)key;
-- (long long)jsonLongLong: (NSString *)key;
-- (unsigned long long)jsonUnsignedLongLong:(NSString *)key;
+//: - (long long)jsonLongLong: (NSString *)key;
+- (long long)remote: (NSString *)key;
+//: - (NSArray *)jsonStringArray: (NSString *)key;
+- (NSArray *)deleteDawn: (NSString *)key;
+//: - (NSArray *)jsonArray: (NSString *)key;
+- (NSArray *)replace: (NSString *)key;
+//: - (NSString *)jsonString: (NSString *)key;
+- (NSString *)force: (NSString *)key;
 
-- (double)jsonDouble: (NSString *)key;
+//: - (NSDictionary *)jsonDict: (NSString *)key;
+- (NSDictionary *)sumerest: (NSString *)key;
+//: @end
 @end

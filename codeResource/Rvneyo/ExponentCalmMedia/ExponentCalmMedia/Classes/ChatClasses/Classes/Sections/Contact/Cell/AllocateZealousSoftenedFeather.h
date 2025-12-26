@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  AllocateZealousSoftenedFeather.h
 //  NIM
@@ -5,49 +7,69 @@
 //  Created by chris on 15/2/26.
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
+// __M_A_C_R_O__
+
+//: @protocol YardHubThornRow <NSObject>
 @protocol YardHubThornRow <NSObject>
 
-- (NSString *)groupTitle;
+//: - (NSString *)groupTitle;
+- (NSString *)close;
 
-- (NSString *)memberId;
+//: - (NSString *)memberId;
+- (NSString *)stream;
 
-- (NSString *)showName;
+//: - (NSString *)showName;
+- (NSString *)identity;
 
-- (NSString *)avatarUrlString;
+//: - (NSString *)avatarUrlString;
+- (NSString *)key;
 
-- (UIImage *)avatarImage;
+//: - (UIImage *)avatarImage;
+- (UIImage *)inside;
 
-- (id)sortKey;
+//: - (id)sortKey;
+- (id)strategy;
 
+//: @end
 @end
 
+//: @protocol RingPreloadFlagship <NSObject>
 @protocol RingPreloadFlagship <NSObject>
 
 //显示的title名
-- (NSString *)title;
+//: - (NSString *)title;
+- (NSString *)song;
 
 //返回集合里的成员
-- (NSArray *)members;
+//: - (NSArray *)members;
+- (NSArray *)depth;
 
 //重用id
-- (NSString *)reuseId;
+//: - (NSString *)reuseId;
+- (NSString *)theOccasion;
 
 //需要构造的cell类名
-- (NSString *)cellName;
+//: - (NSString *)cellName;
+- (NSString *)automatic;
 
+//: @end
 @end
 
 
-#ifndef NIM_USERContactCellLayoutConstant_h
-#define NIM_USERContactCellLayoutConstant_h
-static const CGFloat   NIMContactUtilRowHeight             = 57;//util类Cell行高
-static const CGFloat   NIMContactDataRowHeight             = 50;//data类Cell行高
-static const NSInteger NIMContactAccessoryLeft             = 10;//选择框到左边的距离
-static const NSInteger NIMContactAvatarLeft                = 15;//没有选择框的时候，头像到左边的距离
-static const NSInteger NIMContactAvatarAndAccessorySpacing = 10;//头像和选择框之间的距离
-static const NSInteger NIMContactAvatarAndTitleSpacing     = 20;//头像和文字之间的间距
 
-#endif
 
+//: static const CGFloat NIMContactUtilRowHeight = 57;
+static const CGFloat appUnknownTimer = 57;//util类Cell行高
+//: static const CGFloat NIMContactDataRowHeight = 50;
+static const CGFloat networkTinyString = 50;//data类Cell行高
+//: static const NSInteger NIMContactAccessoryLeft = 10;
+static const NSInteger commonReadConstrainResource = 10;//选择框到左边的距离
+//: static const NSInteger NIMContactAvatarLeft = 15;
+static const NSInteger screenViewFlameValue = 15;//没有选择框的时候，头像到左边的距离
+//: static const NSInteger NIMContactAvatarAndAccessorySpacing = 10;
+static const NSInteger dataProceedPath = 10;//头像和选择框之间的距离
+//: static const NSInteger NIMContactAvatarAndTitleSpacing = 20;
+static const NSInteger moduleGlobePath = 20;//头像和文字之间的间距

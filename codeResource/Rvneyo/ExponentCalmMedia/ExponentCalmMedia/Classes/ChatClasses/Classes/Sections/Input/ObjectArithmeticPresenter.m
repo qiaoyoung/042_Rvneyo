@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  ObjectArithmeticPresenter.m
 // InkwellValidateSplitShell
@@ -6,8 +8,12 @@
 //  Copyright © 2022 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "ObjectArithmeticPresenter.h"
 #import "ObjectArithmeticPresenter.h"
 
+//: @implementation ObjectArithmeticPresenter
 @implementation ObjectArithmeticPresenter
 
+//: @end
 @end

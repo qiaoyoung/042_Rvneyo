@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  CalibrateOptimalStitchUpdate.h
 // InkwellValidateSplitShell
@@ -6,25 +8,33 @@
 //  Copyright (c) 2015年 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
+//: #import "MissionVocalInviting.h"
 #import "MissionVocalInviting.h"
+//: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
 
+//: @interface CalibrateOptimalStitchUpdate : UIViewController<UITableViewDataSource,UITableViewDelegate,NIMLoginManagerDelegate,NIMConversationManagerDelegate>
 @interface CalibrateOptimalStitchUpdate : UIViewController<UITableViewDataSource,UITableViewDelegate,NIMLoginManagerDelegate,NIMConversationManagerDelegate>
 /**
  *  会话列表tableView
  */
-@property (nonatomic,strong)   UITableView *tableView;
+//: @property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) UITableView *landscape;
 
 /**
  *  最近会话集合
  */
-@property (nonatomic,strong) NSMutableArray * recentSessions;
+//: @property (nonatomic,strong) NSMutableArray * recentSessions;
+@property (nonatomic,strong) NSMutableArray * rich;
 
 /**
  *  删除会话时是不是也同时删除服务器会话 (防止漫游)
  */
-@property (nonatomic,assign)   BOOL autoRemoveRemoteSession;
+//: @property (nonatomic,assign) BOOL autoRemoveRemoteSession;
+@property (nonatomic,assign) BOOL user;
 
 
 /**
@@ -34,19 +44,10 @@
  *  @param indexPath 最近会话cell所在的位置
  *  @discussion      默认将进入会话界面
  */
-- (void)onSelectedRecent:(NIMRecentSession *)recent
-             atIndexPath:(NSIndexPath *)indexPath;
-
-/**
- *  选中某一条最近会话的头像控件，触发的事件回调
- *
- *  @param recent    最近会话
- *  @param indexPath 最近会话cell所在的位置
- *  @discussion      默认将进入会话界面
- */
-- (void)onSelectedAvatar:(NIMRecentSession *)recent
-             atIndexPath:(NSIndexPath *)indexPath;
-
+//: - (void)onSelectedRecent:(NIMRecentSession *)recent
+- (void)tab:(NIMRecentSession *)recent
+             //: atIndexPath:(NSIndexPath *)indexPath;
+             tillMinimal:(NSIndexPath *)indexPath;
 
 /**
  *  cell显示的会话名
@@ -57,18 +58,27 @@
  *
  *  @discussion 默认实现为：点对点会话，显示聊天对象的昵称(没有昵称则显示账号)；群聊会话，显示群名称。
  */
-- (NSString *)nameForRecentSession:(NIMRecentSession *)recent;
+//: - (NSString *)nameForRecentSession:(NIMRecentSession *)recent;
+- (NSString *)mightBy:(NIMRecentSession *)recent;
+
+
 
 /**
- *  cell显示的最近会话具体内容
+ *  选中某一条最近会话的头像控件，触发的事件回调
  *
- *  @param recent 最近会话
- *
- *  @return 具体内容名
- *
- *  @discussion 默认实现为：显示最近一条消息的内容，文本消息则显示文本信息，其他类型消息详见本类中 - (NSAttributedString *)messageContent:(NIMMessage *)lastMessage 方法的实现。
+ *  @param recent    最近会话
+ *  @param indexPath 最近会话cell所在的位置
+ *  @discussion      默认将进入会话界面
  */
-- (NSAttributedString *)contentForRecentSession:(NIMRecentSession *)recent;
+//: - (void)onSelectedAvatar:(NIMRecentSession *)recent
+- (void)enforce:(NIMRecentSession *)recent
+             //: atIndexPath:(NSIndexPath *)indexPath;
+             basic:(NSIndexPath *)indexPath;
+/**
+ *  自定义最近会话排序，上层可以重写这个方法对最近会话重新排序
+ */
+//: - (NSMutableArray *)customSortRecents:(NSMutableArray *)recentSessions;
+- (NSMutableArray *)nearSlope:(NSMutableArray *)recentSessions;
 
 
 /**
@@ -80,16 +90,26 @@
  *
  *  @discussion 默认实现为：最后一条消息的时间戳，具体时间戳消息格式详见RegisterMechanismWarehouse中， + (NSString*)showTime:(NSTimeInterval) msglastTime showDetail:(BOOL)showDetail 方法的实现。
  */
-- (NSString *)timestampDescriptionForRecentSession:(NIMRecentSession *)recent;
+//: - (NSString *)timestampDescriptionForRecentSession:(NIMRecentSession *)recent;
+- (NSString *)modern:(NIMRecentSession *)recent;
+
+/**
+ *  cell显示的最近会话具体内容
+ *
+ *  @param recent 最近会话
+ *
+ *  @return 具体内容名
+ *
+ *  @discussion 默认实现为：显示最近一条消息的内容，文本消息则显示文本信息，其他类型消息详见本类中 - (NSAttributedString *)messageContent:(NIMMessage *)lastMessage 方法的实现。
+ */
+//: - (NSAttributedString *)contentForRecentSession:(NIMRecentSession *)recent;
+- (NSAttributedString *)river:(NIMRecentSession *)recent;
 
 /**
  *  重新加载所有数据，调用时必须先调用父类方法
  */
-- (void)refresh;
+//: - (void)refresh;
+- (void)skillOn;
 
-/**
- *  自定义最近会话排序，上层可以重写这个方法对最近会话重新排序
- */
-- (NSMutableArray *)customSortRecents:(NSMutableArray *)recentSessions;
-
+//: @end
 @end

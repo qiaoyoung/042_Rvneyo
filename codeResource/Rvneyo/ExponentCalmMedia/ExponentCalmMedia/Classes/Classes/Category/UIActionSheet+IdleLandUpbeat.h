@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  UIActionSheet+IdleLandUpbeat.h
 //  eim_iphone
@@ -6,10 +8,18 @@
 //  Copyright (c) 2012年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
+
+//: typedef void (^ActionSheetBlock)(NSInteger);
 typedef void (^ActionSheetBlock)(NSInteger);
 
+//: @interface UIActionSheet (IdleLandUpbeat)<UIActionSheetDelegate>
 @interface UIActionSheet (IdleLandUpbeat)<UIActionSheetDelegate>
-- (void)showInView: (UIView *)view completionHandler: (ActionSheetBlock)block;
-- (void)clearActionBlock;
+//: - (void)showInView: (UIView *)view completionHandler: (ActionSheetBlock)block;
+- (void)smoothMove: (UIView *)view looseMaximum: (ActionSheetBlock)block;
+//: - (void)clearActionBlock;
+- (void)perform;
+//: @end
 @end

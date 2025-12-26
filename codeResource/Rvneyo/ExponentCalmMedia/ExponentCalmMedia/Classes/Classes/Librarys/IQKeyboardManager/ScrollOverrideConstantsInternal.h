@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  ScrollOverrideConstantsInternal.h
 //  https://github.com/hackiftekhar/ScrollOverride
@@ -21,8 +23,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef ScrollOverrideConstantsInternal_h
-#define ScrollOverrideConstantsInternal_h
-
-
-#endif
+// __M_A_C_R_O__

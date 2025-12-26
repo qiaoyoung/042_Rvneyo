@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  InteractorEfficiencyToastHold.h
 //  NIM
@@ -6,27 +8,38 @@
 //  Copyright © 2024 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
+//: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
 
+//: typedef void(^SpeiceBackBlock) (NSString *groupName);
 typedef void(^SpeiceBackBlock) (NSString *groupName);
 
+//: @interface InteractorEfficiencyToastHold : UIView
 @interface InteractorEfficiencyToastHold : UIView
 
-@property (nonatomic, copy) SpeiceBackBlock speiceBackBlock;
+//: @property (nonatomic, copy) SpeiceBackBlock speiceBackBlock;
+@property (nonatomic, copy) SpeiceBackBlock create;
 
 //@property (nonatomic, strong) NSString *nickname;
 
-- (void)reloadWithNickname:(NSString *)groupName;
-
-/** 动画显示 */
-- (void)animationShow;
+//: - (void)reloadWithNickname:(NSString *)groupName;
+- (void)estimate:(NSString *)groupName;
 
 /** 动画关闭 */
-- (void)animationClose;
+//: - (void)animationClose;
+- (void)commentLikeTrainExpose;
 
+/** 动画显示 */
+//: - (void)animationShow;
+- (void)waterWithPool;
+
+//: @end
 @end
 
+//: NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_END

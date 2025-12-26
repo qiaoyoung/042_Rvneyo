@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  NSDictionary+MaskRepaintSky.m
 //  NIM
@@ -6,104 +8,157 @@
 //  Copyright (c) 2013年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
 
+//: @implementation NSDictionary (MaskRepaintSky)
 @implementation NSDictionary (MaskRepaintSky)
 
-- (NSString *)jsonString: (NSString *)key
+//: - (BOOL)jsonBool: (NSString *)key
+- (BOOL)motionPlayer: (NSString *)key
 {
+    //: id object = [self objectForKey:key];
     id object = [self objectForKey:key];
-    if ([object isKindOfClass:[NSString class]])
+    //: if ([object isKindOfClass:[NSString class]] ||
+    if ([object isKindOfClass:[NSString class]] ||
+        //: [object isKindOfClass:[NSNumber class]])
+        [object isKindOfClass:[NSNumber class]])
     {
-        return object;
+        //: return [object boolValue];
+        return [object boolValue];
     }
-    else if([object isKindOfClass:[NSNumber class]])
-    {
-        return [object stringValue];
-    }
-    return nil;
+    //: return NO;
+    return NO;
 }
 
-- (NSDictionary *)jsonDict: (NSString *)key
+//: - (unsigned long long)jsonUnsignedLongLong:(NSString *)key
+- (unsigned long long)reliable:(NSString *)key
 {
+    //: id object = [self objectForKey:key];
     id object = [self objectForKey:key];
-    return [object isKindOfClass:[NSDictionary class]] ? object : nil;
+    //: if ([object isKindOfClass:[NSString class]] ||
+    if ([object isKindOfClass:[NSString class]] ||
+        //: [object isKindOfClass:[NSNumber class]])
+        [object isKindOfClass:[NSNumber class]])
+    {
+        //: return [object unsignedLongLongValue];
+        return [object unsignedLongLongValue];
+    }
+    //: return 0;
+    return 0;
 }
 
 
-- (NSArray *)jsonArray: (NSString *)key
-{
+//: - (double)jsonDouble: (NSString *)key{
+- (double)contact: (NSString *)key{
+    //: id object = [self objectForKey:key];
     id object = [self objectForKey:key];
+    //: if ([object isKindOfClass:[NSString class]] ||
+    if ([object isKindOfClass:[NSString class]] ||
+        //: [object isKindOfClass:[NSNumber class]])
+        [object isKindOfClass:[NSNumber class]])
+    {
+        //: return [object doubleValue];
+        return [object doubleValue];
+    }
+    //: return 0;
+    return 0;
+}
+
+//: - (NSInteger)jsonInteger: (NSString *)key
+- (NSInteger)healthy: (NSString *)key
+{
+    //: id object = [self objectForKey:key];
+    id object = [self objectForKey:key];
+    //: if ([object isKindOfClass:[NSString class]] ||
+    if ([object isKindOfClass:[NSString class]] ||
+        //: [object isKindOfClass:[NSNumber class]])
+        [object isKindOfClass:[NSNumber class]])
+    {
+        //: return [object integerValue];
+        return [object integerValue];
+    }
+    //: return 0;
+    return 0;
+}
+
+//: - (long long)jsonLongLong: (NSString *)key
+- (long long)remote: (NSString *)key
+{
+    //: id object = [self objectForKey:key];
+    id object = [self objectForKey:key];
+    //: if ([object isKindOfClass:[NSString class]] ||
+    if ([object isKindOfClass:[NSString class]] ||
+        //: [object isKindOfClass:[NSNumber class]])
+        [object isKindOfClass:[NSNumber class]])
+    {
+        //: return [object longLongValue];
+        return [object longLongValue];
+    }
+    //: return 0;
+    return 0;
+}
+
+//: - (NSArray *)jsonStringArray: (NSString *)key
+- (NSArray *)deleteDawn: (NSString *)key
+{
+    //: NSArray *array = [self jsonArray:key];
+    NSArray *array = [self replace:key];
+    //: BOOL invalid = NO;
+    BOOL invalid = NO;
+    //: for (id item in array)
+    for (id item in array)
+    {
+        //: if (![item isKindOfClass:[NSString class]])
+        if (![item isKindOfClass:[NSString class]])
+        {
+            //: invalid = YES;
+            invalid = YES;
+        }
+    }
+    //: return invalid ? nil : array;
+    return invalid ? nil : array;
+}
+
+//: - (NSArray *)jsonArray: (NSString *)key
+- (NSArray *)replace: (NSString *)key
+{
+    //: id object = [self objectForKey:key];
+    id object = [self objectForKey:key];
+    //: return [object isKindOfClass:[NSArray class]] ? object : nil;
     return [object isKindOfClass:[NSArray class]] ? object : nil;
 
 }
 
-- (NSArray *)jsonStringArray: (NSString *)key
+//: - (NSString *)jsonString: (NSString *)key
+- (NSString *)force: (NSString *)key
 {
-    NSArray *array = [self jsonArray:key];
-    BOOL invalid = NO;
-    for (id item in array)
+    //: id object = [self objectForKey:key];
+    id object = [self objectForKey:key];
+    //: if ([object isKindOfClass:[NSString class]])
+    if ([object isKindOfClass:[NSString class]])
     {
-        if (![item isKindOfClass:[NSString class]])
-        {
-            invalid = YES;
-        }
+        //: return object;
+        return object;
     }
-    return invalid ? nil : array;
+    //: else if([object isKindOfClass:[NSNumber class]])
+    else if([object isKindOfClass:[NSNumber class]])
+    {
+        //: return [object stringValue];
+        return [object stringValue];
+    }
+    //: return nil;
+    return nil;
 }
 
-- (BOOL)jsonBool: (NSString *)key
+
+//: - (NSDictionary *)jsonDict: (NSString *)key
+- (NSDictionary *)sumerest: (NSString *)key
 {
+    //: id object = [self objectForKey:key];
     id object = [self objectForKey:key];
-    if ([object isKindOfClass:[NSString class]] ||
-        [object isKindOfClass:[NSNumber class]])
-    {
-        return [object boolValue];
-    }
-    return NO;
+    //: return [object isKindOfClass:[NSDictionary class]] ? object : nil;
+    return [object isKindOfClass:[NSDictionary class]] ? object : nil;
 }
 
-- (NSInteger)jsonInteger: (NSString *)key
-{
-    id object = [self objectForKey:key];
-    if ([object isKindOfClass:[NSString class]] ||
-        [object isKindOfClass:[NSNumber class]])
-    {
-        return [object integerValue];
-    }
-    return 0;
-}
-
-- (long long)jsonLongLong: (NSString *)key
-{
-    id object = [self objectForKey:key];
-    if ([object isKindOfClass:[NSString class]] ||
-        [object isKindOfClass:[NSNumber class]])
-    {
-        return [object longLongValue];
-    }
-    return 0;
-}
-
-- (unsigned long long)jsonUnsignedLongLong:(NSString *)key
-{
-    id object = [self objectForKey:key];
-    if ([object isKindOfClass:[NSString class]] ||
-        [object isKindOfClass:[NSNumber class]])
-    {
-        return [object unsignedLongLongValue];
-    }
-    return 0;
-}
-
-
-- (double)jsonDouble: (NSString *)key{
-    id object = [self objectForKey:key];
-    if ([object isKindOfClass:[NSString class]] ||
-        [object isKindOfClass:[NSNumber class]])
-    {
-        return [object doubleValue];
-    }
-    return 0;
-}
-
+//: @end
 @end

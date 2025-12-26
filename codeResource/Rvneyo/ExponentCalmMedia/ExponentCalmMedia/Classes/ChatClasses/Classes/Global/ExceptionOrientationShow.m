@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  ExceptionOrientationShow.m
 // InkwellValidateSplitShell
@@ -6,8 +8,12 @@
 //  Copyright © 2017年 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "ExceptionOrientationShow.h"
 #import "ExceptionOrientationShow.h"
 
+//: @implementation ExceptionOrientationShow
 @implementation ExceptionOrientationShow
 
+//: @end
 @end

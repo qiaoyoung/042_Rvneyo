@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  AuditPlainFieldZoom.h
 // InkwellValidateSplitShell
@@ -6,8 +8,12 @@
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "SearchPublishMeasuredSize.h"
 #import "SearchPublishMeasuredSize.h"
 
+//: @interface AuditPlainFieldZoom : SearchPublishMeasuredSize
 @interface AuditPlainFieldZoom : SearchPublishMeasuredSize
 
+//: @end
 @end

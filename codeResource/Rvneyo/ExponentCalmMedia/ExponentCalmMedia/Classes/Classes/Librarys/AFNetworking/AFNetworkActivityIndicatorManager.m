@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 // AFNetworkActivityIndicatorManager.m
 // Copyright (c) 2011–2016 Alamofire Software Foundation ( http://alamofire.org/ )
 //
@@ -19,221 +21,372 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// __M_A_C_R_O__
+//: #import "AFNetworkActivityIndicatorManager.h"
 #import "AFNetworkActivityIndicatorManager.h"
-
-#if TARGET_OS_IOS
+//: #import "AFURLSessionManager.h"
 #import "AFURLSessionManager.h"
 
+//: typedef NS_ENUM(NSInteger, AFNetworkActivityManagerState) {
 typedef NS_ENUM(NSInteger, AFNetworkActivityManagerState) {
+    //: AFNetworkActivityManagerStateNotActive,
     AFNetworkActivityManagerStateNotActive,
+    //: AFNetworkActivityManagerStateDelayingStart,
     AFNetworkActivityManagerStateDelayingStart,
+    //: AFNetworkActivityManagerStateActive,
     AFNetworkActivityManagerStateActive,
+    //: AFNetworkActivityManagerStateDelayingEnd
     AFNetworkActivityManagerStateDelayingEnd
+//: };
 };
 
-static NSTimeInterval const kDefaultAFNetworkActivityManagerActivationDelay = 1.0;
-static NSTimeInterval const kDefaultAFNetworkActivityManagerCompletionDelay = 0.17;
+//: static NSTimeInterval const kDefaultAFNetworkActivityManagerActivationDelay = 1.0;
 
-static NSURLRequest * AFNetworkRequestFromNotification(NSNotification *notification) {
+static NSTimeInterval const moduleRestoreDate (NSString *value) {
+    if (value) {
+        return  1.0;
+    }
+    return  1.0;
+};
+//: static NSTimeInterval const kDefaultAFNetworkActivityManagerCompletionDelay = 0.17;
+
+static NSTimeInterval const widgetBalanceSumID (NSString *value) {
+    if (value) {
+        return  0.17;
+    }
+    return  0.17;
+};
+
+//: static NSURLRequest * AFNetworkRequestFromNotification(NSNotification *notification) {
+static NSURLRequest * originFit(NSNotification *notification) {
+    //: if ([[notification object] respondsToSelector:@selector(originalRequest)]) {
     if ([[notification object] respondsToSelector:@selector(originalRequest)]) {
+        //: return [(NSURLSessionTask *)[notification object] originalRequest];
         return [(NSURLSessionTask *)[notification object] originalRequest];
+    //: } else {
     } else {
+        //: return nil;
         return nil;
     }
 }
 
+//: typedef void (^AFNetworkActivityActionBlock)(BOOL networkActivityIndicatorVisible);
 typedef void (^AFNetworkActivityActionBlock)(BOOL networkActivityIndicatorVisible);
 
+//: @interface AFNetworkActivityIndicatorManager ()
 @interface AFNetworkActivityIndicatorManager ()
-@property (readwrite, nonatomic, assign) NSInteger activityCount;
-@property (readwrite, nonatomic, strong) NSTimer *activationDelayTimer;
-@property (readwrite, nonatomic, strong) NSTimer *completionDelayTimer;
-@property (readonly, nonatomic, getter = isNetworkActivityOccurring) BOOL networkActivityOccurring;
-@property (nonatomic, copy) AFNetworkActivityActionBlock networkActivityActionBlock;
-@property (nonatomic, assign) AFNetworkActivityManagerState currentState;
-@property (nonatomic, assign, getter=isNetworkActivityIndicatorVisible) BOOL networkActivityIndicatorVisible;
+//: @property (readwrite, nonatomic, strong) NSTimer *completionDelayTimer;
+@property (readwrite, nonatomic, strong) NSTimer *consumerHorizon;
+//: @property (nonatomic, assign) AFNetworkActivityManagerState currentState;
+@property (nonatomic, assign) AFNetworkActivityManagerState consumptionRecognize;
+//: @property (nonatomic, copy) AFNetworkActivityActionBlock networkActivityActionBlock;
+@property (nonatomic, copy) AFNetworkActivityActionBlock isolate;
+//: @property (readwrite, nonatomic, strong) NSTimer *activationDelayTimer;
+@property (readwrite, nonatomic, strong) NSTimer *appLeaf;
+//: @property (readonly, nonatomic, getter = isNetworkActivityOccurring) BOOL networkActivityOccurring;
+@property (readonly, nonatomic, getter = isNetworkActivityOccurring) BOOL permission;
+//: @property (nonatomic, assign, getter=isNetworkActivityIndicatorVisible) BOOL networkActivityIndicatorVisible;
+@property (nonatomic, assign, getter=isNetworkActivityIndicatorVisible) BOOL cliff;
+//: @property (readwrite, nonatomic, assign) NSInteger activityCount;
+@property (readwrite, nonatomic, assign) NSInteger preciseTrail;
 
-- (void)updateCurrentStateForNetworkActivityChange;
+//: - (void)updateCurrentStateForNetworkActivityChange;
+- (void)app;
+//: @end
 @end
 
+//: @implementation AFNetworkActivityIndicatorManager
 @implementation AFNetworkActivityIndicatorManager
 
-+ (instancetype)sharedManager {
-    static AFNetworkActivityIndicatorManager *_sharedManager = nil;
-    static dispatch_once_t oncePredicate;
-    dispatch_once(&oncePredicate, ^{
-        _sharedManager = [[self alloc] init];
-    });
-
-    return _sharedManager;
-}
-
-- (instancetype)init {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    self.currentState = AFNetworkActivityManagerStateNotActive;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkRequestDidStart:) name:AFNetworkingTaskDidResumeNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkRequestDidFinish:) name:AFNetworkingTaskDidSuspendNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkRequestDidFinish:) name:AFNetworkingTaskDidCompleteNotification object:nil];
-    self.activationDelay = kDefaultAFNetworkActivityManagerActivationDelay;
-    self.completionDelay = kDefaultAFNetworkActivityManagerCompletionDelay;
-
-    return self;
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-
-    [_activationDelayTimer invalidate];
-    [_completionDelayTimer invalidate];
-}
-
-- (void)setEnabled:(BOOL)enabled {
-    _enabled = enabled;
-    if (enabled == NO) {
-        [self setCurrentState:AFNetworkActivityManagerStateNotActive];
-    }
-}
-
-- (void)setNetworkingActivityActionWithBlock:(void (^)(BOOL networkActivityIndicatorVisible))block {
-    self.networkActivityActionBlock = block;
-}
-
-- (BOOL)isNetworkActivityOccurring {
-    @synchronized(self) {
-        return self.activityCount > 0;
-    }
-}
-
-- (void)setNetworkActivityIndicatorVisible:(BOOL)networkActivityIndicatorVisible {
-    if (_networkActivityIndicatorVisible != networkActivityIndicatorVisible) {
+//: - (void)setNetworkActivityIndicatorVisible:(BOOL)networkActivityIndicatorVisible {
+- (void)setCliff:(BOOL)networkActivityIndicatorVisible {
+    //: if (_networkActivityIndicatorVisible != networkActivityIndicatorVisible) {
+    if (_cliff != networkActivityIndicatorVisible) {
+        //: @synchronized(self) {
         @synchronized(self) {
-            _networkActivityIndicatorVisible = networkActivityIndicatorVisible;
+            //: _networkActivityIndicatorVisible = networkActivityIndicatorVisible;
+            _cliff = networkActivityIndicatorVisible;
         }
-        if (self.networkActivityActionBlock) {
-            self.networkActivityActionBlock(networkActivityIndicatorVisible);
+        //: if (self.networkActivityActionBlock) {
+        if (self.isolate) {
+            //: self.networkActivityActionBlock(networkActivityIndicatorVisible);
+            self.isolate(networkActivityIndicatorVisible);
+        //: } else {
         } else {
+            //: [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:networkActivityIndicatorVisible];
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:networkActivityIndicatorVisible];
         }
     }
 }
 
-
-- (void)incrementActivityCount {
+//: - (void)decrementActivityCount {
+- (void)trust {
+    //: @synchronized(self) {
     @synchronized(self) {
-        self.activityCount++;
+        //: self.activityCount = ((_activityCount - 1) > (0) ? (_activityCount - 1) : (0));
+        self.preciseTrail = ((_preciseTrail - 1) > (0) ? (_preciseTrail - 1) : (0));
     }
+    //: dispatch_async(dispatch_get_main_queue(), ^{
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self updateCurrentStateForNetworkActivityChange];
+        //: [self updateCurrentStateForNetworkActivityChange];
+        [self app];
+    //: });
     });
 }
 
-- (void)decrementActivityCount {
-    @synchronized(self) {
-        self.activityCount = MAX(_activityCount - 1, 0);
-    }
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self updateCurrentStateForNetworkActivityChange];
-    });
+//: - (void)dealloc {
+- (void)dealloc {
+    //: [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+    //: [_activationDelayTimer invalidate];
+    [_appLeaf invalidate];
+    //: [_completionDelayTimer invalidate];
+    [_consumerHorizon invalidate];
 }
 
-- (void)networkRequestDidStart:(NSNotification *)notification {
-    if ([AFNetworkRequestFromNotification(notification) URL]) {
-        [self incrementActivityCount];
-    }
-}
-
-- (void)networkRequestDidFinish:(NSNotification *)notification {
-    if ([AFNetworkRequestFromNotification(notification) URL]) {
-        [self decrementActivityCount];
-    }
-}
-
+//: #pragma mark - Internal State Management
 #pragma mark - Internal State Management
-- (void)setCurrentState:(AFNetworkActivityManagerState)currentState {
+//: - (void)setCurrentState:(AFNetworkActivityManagerState)currentState {
+- (void)setConsumptionRecognize:(AFNetworkActivityManagerState)currentState {
+    //: @synchronized(self) {
     @synchronized(self) {
-        if (_currentState != currentState) {
-            _currentState = currentState;
+        //: if (_currentState != currentState) {
+        if (_consumptionRecognize != currentState) {
+            //: _currentState = currentState;
+            _consumptionRecognize = currentState;
+            //: switch (currentState) {
             switch (currentState) {
+                //: case AFNetworkActivityManagerStateNotActive:
                 case AFNetworkActivityManagerStateNotActive:
-                    [self cancelActivationDelayTimer];
-                    [self cancelCompletionDelayTimer];
-                    [self setNetworkActivityIndicatorVisible:NO];
+                    //: [self cancelActivationDelayTimer];
+                    [self ventureComposition];
+                    //: [self cancelCompletionDelayTimer];
+                    [self echoSkirt];
+                    //: [self setNetworkActivityIndicatorVisible:NO];
+                    [self setCliff:NO];
+                    //: break;
                     break;
+                //: case AFNetworkActivityManagerStateDelayingStart:
                 case AFNetworkActivityManagerStateDelayingStart:
-                    [self startActivationDelayTimer];
+                    //: [self startActivationDelayTimer];
+                    [self write];
+                    //: break;
                     break;
+                //: case AFNetworkActivityManagerStateActive:
                 case AFNetworkActivityManagerStateActive:
-                    [self cancelCompletionDelayTimer];
-                    [self setNetworkActivityIndicatorVisible:YES];
+                    //: [self cancelCompletionDelayTimer];
+                    [self echoSkirt];
+                    //: [self setNetworkActivityIndicatorVisible:YES];
+                    [self setCliff:YES];
+                    //: break;
                     break;
+                //: case AFNetworkActivityManagerStateDelayingEnd:
                 case AFNetworkActivityManagerStateDelayingEnd:
-                    [self startCompletionDelayTimer];
+                    //: [self startCompletionDelayTimer];
+                    [self pastLaunch];
+                    //: break;
                     break;
             }
         }
     }
 }
 
-- (void)updateCurrentStateForNetworkActivityChange {
-    if (self.enabled) {
-        switch (self.currentState) {
+//: - (instancetype)init {
+- (instancetype)init {
+    //: self = [super init];
+    self = [super init];
+    //: if (!self) {
+    if (!self) {
+        //: return nil;
+        return nil;
+    }
+    //: self.currentState = AFNetworkActivityManagerStateNotActive;
+    self.consumptionRecognize = AFNetworkActivityManagerStateNotActive;
+    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkRequestDidStart:) name:AFNetworkingTaskDidResumeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchioning:) name:constEffectNumber(nil) object:nil];
+    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkRequestDidFinish:) name:AFNetworkingTaskDidSuspendNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layerses:) name:componentWellComplexSupplyString(nil) object:nil];
+    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkRequestDidFinish:) name:AFNetworkingTaskDidCompleteNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layerses:) name:userDocumentTimer(nil) object:nil];
+    //: self.activationDelay = kDefaultAFNetworkActivityManagerActivationDelay;
+    self.deal = moduleRestoreDate(nil);
+    //: self.completionDelay = kDefaultAFNetworkActivityManagerCompletionDelay;
+    self.found = widgetBalanceSumID(nil);
+
+    //: return self;
+    return self;
+}
+
+//: - (void)cancelCompletionDelayTimer {
+- (void)echoSkirt {
+    //: [self.completionDelayTimer invalidate];
+    [self.consumerHorizon invalidate];
+}
+
+//: - (void)activationDelayTimerFired {
+- (void)ofEmber {
+    //: if (self.networkActivityOccurring) {
+    if (self.permission) {
+        //: [self setCurrentState:AFNetworkActivityManagerStateActive];
+        [self setConsumptionRecognize:AFNetworkActivityManagerStateActive];
+    //: } else {
+    } else {
+        //: [self setCurrentState:AFNetworkActivityManagerStateNotActive];
+        [self setConsumptionRecognize:AFNetworkActivityManagerStateNotActive];
+    }
+}
+
+
+//: - (void)networkRequestDidFinish:(NSNotification *)notification {
+- (void)layerses:(NSNotification *)notification {
+    //: if ([AFNetworkRequestFromNotification(notification) URL]) {
+    if ([originFit(notification) URL]) {
+        //: [self decrementActivityCount];
+        [self trust];
+    }
+}
+
+//: - (void)setNetworkingActivityActionWithBlock:(void (^)(BOOL networkActivityIndicatorVisible))block {
+- (void)setStickFromEnhance:(void (^)(BOOL networkActivityIndicatorVisible))block {
+    //: self.networkActivityActionBlock = block;
+    self.isolate = block;
+}
+
+//: - (void)completionDelayTimerFired {
+- (void)bounceChild {
+    //: [self setCurrentState:AFNetworkActivityManagerStateNotActive];
+    [self setConsumptionRecognize:AFNetworkActivityManagerStateNotActive];
+}
+
+//: - (void)networkRequestDidStart:(NSNotification *)notification {
+- (void)searchioning:(NSNotification *)notification {
+    //: if ([AFNetworkRequestFromNotification(notification) URL]) {
+    if ([originFit(notification) URL]) {
+        //: [self incrementActivityCount];
+        [self techniqueAcross];
+    }
+}
+
+//: - (void)incrementActivityCount {
+- (void)techniqueAcross {
+    //: @synchronized(self) {
+    @synchronized(self) {
+        //: self.activityCount++;
+        self.preciseTrail++;
+    }
+    //: dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //: [self updateCurrentStateForNetworkActivityChange];
+        [self app];
+    //: });
+    });
+}
+
+//: - (void)cancelActivationDelayTimer {
+- (void)ventureComposition {
+    //: [self.activationDelayTimer invalidate];
+    [self.appLeaf invalidate];
+}
+
+//: - (void)startActivationDelayTimer {
+- (void)write {
+    //: self.activationDelayTimer = [NSTimer
+    self.appLeaf = [NSTimer
+                                 //: timerWithTimeInterval:self.activationDelay target:self selector:@selector(activationDelayTimerFired) userInfo:nil repeats:NO];
+                                 timerWithTimeInterval:self.deal target:self selector:@selector(ofEmber) userInfo:nil repeats:NO];
+    //: [[NSRunLoop mainRunLoop] addTimer:self.activationDelayTimer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop] addTimer:self.appLeaf forMode:NSRunLoopCommonModes];
+}
+
+//: - (void)startCompletionDelayTimer {
+- (void)pastLaunch {
+    //: [self.completionDelayTimer invalidate];
+    [self.consumerHorizon invalidate];
+    //: self.completionDelayTimer = [NSTimer timerWithTimeInterval:self.completionDelay target:self selector:@selector(completionDelayTimerFired) userInfo:nil repeats:NO];
+    self.consumerHorizon = [NSTimer timerWithTimeInterval:self.found target:self selector:@selector(bounceChild) userInfo:nil repeats:NO];
+    //: [[NSRunLoop mainRunLoop] addTimer:self.completionDelayTimer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop] addTimer:self.consumerHorizon forMode:NSRunLoopCommonModes];
+}
+
+//: - (BOOL)isNetworkActivityOccurring {
+- (BOOL)isNetworkActivityOccurring {
+    //: @synchronized(self) {
+    @synchronized(self) {
+        //: return self.activityCount > 0;
+        return self.preciseTrail > 0;
+    }
+}
+
+//: - (void)updateCurrentStateForNetworkActivityChange {
+- (void)app {
+    //: if (self.enabled) {
+    if (self.general) {
+        //: switch (self.currentState) {
+        switch (self.consumptionRecognize) {
+            //: case AFNetworkActivityManagerStateNotActive:
             case AFNetworkActivityManagerStateNotActive:
+                //: if (self.isNetworkActivityOccurring) {
                 if (self.isNetworkActivityOccurring) {
-                    [self setCurrentState:AFNetworkActivityManagerStateDelayingStart];
+                    //: [self setCurrentState:AFNetworkActivityManagerStateDelayingStart];
+                    [self setConsumptionRecognize:AFNetworkActivityManagerStateDelayingStart];
                 }
+                //: break;
                 break;
+            //: case AFNetworkActivityManagerStateDelayingStart:
             case AFNetworkActivityManagerStateDelayingStart:
                 //No op. Let the delay timer finish out.
+                //: break;
                 break;
+            //: case AFNetworkActivityManagerStateActive:
             case AFNetworkActivityManagerStateActive:
+                //: if (!self.isNetworkActivityOccurring) {
                 if (!self.isNetworkActivityOccurring) {
-                    [self setCurrentState:AFNetworkActivityManagerStateDelayingEnd];
+                    //: [self setCurrentState:AFNetworkActivityManagerStateDelayingEnd];
+                    [self setConsumptionRecognize:AFNetworkActivityManagerStateDelayingEnd];
                 }
+                //: break;
                 break;
+            //: case AFNetworkActivityManagerStateDelayingEnd:
             case AFNetworkActivityManagerStateDelayingEnd:
+                //: if (self.isNetworkActivityOccurring) {
                 if (self.isNetworkActivityOccurring) {
-                    [self setCurrentState:AFNetworkActivityManagerStateActive];
+                    //: [self setCurrentState:AFNetworkActivityManagerStateActive];
+                    [self setConsumptionRecognize:AFNetworkActivityManagerStateActive];
                 }
+                //: break;
                 break;
         }
     }
 }
 
-- (void)startActivationDelayTimer {
-    self.activationDelayTimer = [NSTimer
-                                 timerWithTimeInterval:self.activationDelay target:self selector:@selector(activationDelayTimerFired) userInfo:nil repeats:NO];
-    [[NSRunLoop mainRunLoop] addTimer:self.activationDelayTimer forMode:NSRunLoopCommonModes];
-}
-
-- (void)activationDelayTimerFired {
-    if (self.networkActivityOccurring) {
-        [self setCurrentState:AFNetworkActivityManagerStateActive];
-    } else {
-        [self setCurrentState:AFNetworkActivityManagerStateNotActive];
+//: - (void)setEnabled:(BOOL)enabled {
+- (void)setGeneral:(BOOL)enabled {
+    //: _enabled = enabled;
+    _general = enabled;
+    //: if (enabled == NO) {
+    if (enabled == NO) {
+        //: [self setCurrentState:AFNetworkActivityManagerStateNotActive];
+        [self setConsumptionRecognize:AFNetworkActivityManagerStateNotActive];
     }
 }
 
-- (void)startCompletionDelayTimer {
-    [self.completionDelayTimer invalidate];
-    self.completionDelayTimer = [NSTimer timerWithTimeInterval:self.completionDelay target:self selector:@selector(completionDelayTimerFired) userInfo:nil repeats:NO];
-    [[NSRunLoop mainRunLoop] addTimer:self.completionDelayTimer forMode:NSRunLoopCommonModes];
+//: + (instancetype)sharedManager {
++ (instancetype)cameraSmooth {
+    //: static AFNetworkActivityIndicatorManager *_sharedManager = nil;
+    static AFNetworkActivityIndicatorManager *_sharedManager = nil;
+    //: static dispatch_once_t oncePredicate;
+    static dispatch_once_t oncePredicate;
+    //: _dispatch_once(&oncePredicate, ^{
+    _dispatch_once(&oncePredicate, ^{
+        //: _sharedManager = [[self alloc] init];
+        _sharedManager = [[self alloc] init];
+    //: });
+    });
+
+    //: return _sharedManager;
+    return _sharedManager;
 }
 
-- (void)completionDelayTimerFired {
-    [self setCurrentState:AFNetworkActivityManagerStateNotActive];
-}
-
-- (void)cancelActivationDelayTimer {
-    [self.activationDelayTimer invalidate];
-}
-
-- (void)cancelCompletionDelayTimer {
-    [self.completionDelayTimer invalidate];
-}
-
+//: @end
 @end
-
-#endif

@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  UIViewController+AssignConvergeBlend.m
 //  https://github.com/hackiftekhar/ScrollOverride
@@ -21,18 +23,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
+//: #import <objc/runtime.h>
 #import <objc/runtime.h>
-
+//: #import "UIViewController+AssignConvergeBlend.h"
 #import "UIViewController+AssignConvergeBlend.h"
 
-
+//: NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
 NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
+//: @implementation UIViewController (AssignConvergeBlend)
 @implementation UIViewController (AssignConvergeBlend)
 
--(nullable UIViewController*)parentIQContainerViewController
+//: -(nullable UIViewController*)parentIQContainerViewController
+-(nullable UIViewController*)bodyAppearance
 {
+    //: return self;
     return self;
 }
 
+//: @end
 @end

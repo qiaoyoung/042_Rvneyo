@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  DereferenceConstructComposite.h
 // InkwellValidateSplitShell
@@ -6,73 +8,117 @@
 //  Copyright (c) 2015年 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
+//: #import "TrimOptimizeStaggerEstimate.h"
 #import "TrimOptimizeStaggerEstimate.h"
+//: #import "SizePackDuskHardy.h"
 #import "SizePackDuskHardy.h"
+//: #import "TrendInspectBridgeCable.h"
 #import "TrendInspectBridgeCable.h"
+//: #import "EffectOutlineVirtuousReport.h"
 #import "EffectOutlineVirtuousReport.h"
 
+//: @class WellShardStore;
 @class WellShardStore;
+//: @class MelodyRateRaven;
 @class MelodyRateRaven;
+//: @class AdaptChannelTransformer;
 @class AdaptChannelTransformer;
 
 
 
+//: typedef NS_ENUM(NSInteger, EnsurePersistTitleOutline) {
 typedef NS_ENUM(NSInteger, EnsurePersistTitleOutline) {
+    //: EnsurePersistTitleOutlineStart,
     EnsurePersistTitleOutlineStart,
+    //: EnsurePersistTitleOutlineRecording,
     EnsurePersistTitleOutlineRecording,
+    //: EnsurePersistTitleOutlineCancelling,
     EnsurePersistTitleOutlineCancelling,
+    //: EnsurePersistTitleOutlineEnd
     EnsurePersistTitleOutlineEnd
+//: };
 };
 
 
 
+//: @protocol InspectorDistinctionNotationCollateIn <NSObject>
 @protocol InspectorDistinctionNotationCollateIn <NSObject>
 
+//: @optional
 @optional
 
-- (void)didChangeInputHeight:(CGFloat)inputHeight;
+//: - (void)didChangeInputHeight:(CGFloat)inputHeight;
+- (void)treasureCharacteristic:(CGFloat)inputHeight;
 
+//: @end
 @end
 
+//: @interface DereferenceConstructComposite : UIView
 @interface DereferenceConstructComposite : UIView
 
-@property (nonatomic, strong) NIMSession             *session;
+//: @property (assign, nonatomic, getter=isRecording) BOOL recording;
+@property (assign, nonatomic, getter=isRecording) BOOL endless;
 
-@property (nonatomic, assign) NSInteger              maxTextLength;
+//: @property (strong, nonatomic) UIView *emoticonContainer;
+@property (strong, nonatomic) UIView *characteristic;
 
-@property (assign, nonatomic, getter=isRecording)    BOOL recording;
-@property (nonatomic,assign) BOOL canTapVoiceBtn;  // 能够点击语音按钮
+//: @property (strong, nonatomic) TrendInspectBridgeCable *toolBar;
+@property (strong, nonatomic) TrendInspectBridgeCable *remain;
+//: @property (nonatomic,assign) BOOL canTapVoiceBtn; 
+@property (nonatomic,assign) BOOL totalFoot;// 能够点击语音按钮
 
-@property (strong, nonatomic)  TrendInspectBridgeCable *toolBar;
-@property (strong, nonatomic)  WellShardStore *moreContainer;
-@property (strong, nonatomic)  UIView *emoticonContainer;
+//: @property (nonatomic, assign) MoorNotifier status;
+@property (nonatomic, assign) MoorNotifier match;
+//: @property (nonatomic, strong) AdaptChannelTransformer *replyedContent;
+@property (nonatomic, strong) AdaptChannelTransformer *portArea;
+//: @property (nonatomic, assign) NSInteger maxTextLength;
+@property (nonatomic, assign) NSInteger nature;
 
-@property (nonatomic, strong)   AdaptChannelTransformer *replyedContent;
+//: @property (strong, nonatomic) WellShardStore *moreContainer;
+@property (strong, nonatomic) WellShardStore *external;
 
-@property (nonatomic, assign) MoorNotifier status;
-@property (nonatomic, strong) EffectOutlineVirtuousReport *atCache;
+//: @property (nonatomic, strong) EffectOutlineVirtuousReport *atCache;
+@property (nonatomic, strong) EffectOutlineVirtuousReport *less;
+//: @property (nonatomic, strong) NIMSession *session;
+@property (nonatomic, strong) NIMSession *fine;
 
-- (instancetype)initWithFrame:(CGRect)frame
-                       config:(id<SizePackDuskHardy>)config;
+//: - (void)updateAudioRecordTime:(NSTimeInterval)time;
+- (void)exclusive:(NSTimeInterval)time;
 
-- (void)reset;
 
-- (void)refreshStatus:(MoorNotifier)status;
-
-- (void)setInputDelegate:(id<InspectorDistinctionNotationCollateIn>)delegate;
+//: - (void)reset;
+- (void)anLanguage;
 
 //外部设置
-- (void)setInputActionDelegate:(id<NeatTopmostFind>)actionDelegate;
+//: - (void)setInputActionDelegate:(id<NeatTopmostFind>)actionDelegate;
+- (void)setLimit:(id<NeatTopmostFind>)actionDelegate;
 
-- (void)setInputTextPlaceHolder:(NSString*)placeHolder;
-- (void)setInputTextPlaceHolder:(NSString*)placeHolder color:(UIColor *)placeholderColor;
+//: - (void)setInputDelegate:(id<InspectorDistinctionNotationCollateIn>)delegate;
+- (void)setCountegration:(id<InspectorDistinctionNotationCollateIn>)delegate;
 
-- (void)updateAudioRecordTime:(NSTimeInterval)time;
-- (void)updateVoicePower:(float)power;
-- (void)addAtItems:(NSArray *)contacts;
+//: - (void)refreshReplyedContent:(NIMMessage *)message;
+- (void)colorQuantityro:(NIMMessage *)message;
 
-- (void)refreshReplyedContent:(NIMMessage *)message;
-- (void)dismissReplyedContent;
+//: - (void)updateVoicePower:(float)power;
+- (void)file:(float)power;
+//: - (void)setInputTextPlaceHolder:(NSString*)placeHolder color:(UIColor *)placeholderColor;
+- (void)cornerAttach:(NSString*)placeHolder wind:(UIColor *)placeholderColor;
 
+//: - (void)refreshStatus:(MoorNotifier)status;
+- (void)transition:(MoorNotifier)status;
+//: - (void)setInputTextPlaceHolder:(NSString*)placeHolder;
+- (void)setMarkerAmidGreenStorageReadingNet:(NSString*)placeHolder;
+//: - (void)addAtItems:(NSArray *)contacts;
+- (void)mCap:(NSArray *)contacts;
+
+//: - (void)dismissReplyedContent;
+- (void)entityDistance;
+//: - (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithFlat:(CGRect)frame
+                       //: config:(id<SizePackDuskHardy>)config;
+                       young:(id<SizePackDuskHardy>)config;
+//: @end
 @end

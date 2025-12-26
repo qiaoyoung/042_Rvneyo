@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  ZealousAmortizationDownloadMerry.h
 //  天天网
@@ -6,13 +8,19 @@
 //  Copyright (c) 2014年 Ios. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
+//: @interface ZealousAmortizationDownloadMerry : UIView
 @interface ZealousAmortizationDownloadMerry : UIView
 
-+ (ZealousAmortizationDownloadMerry *)showNoticeTo:(UIView *)view animated:(BOOL)animated;
+//: - (void)hideNoticeAnimated:(BOOL)animated;
+- (void)steel:(BOOL)animated;
 
-- (void)hideNoticeAnimated:(BOOL)animated;
+//: + (ZealousAmortizationDownloadMerry *)showNoticeTo:(UIView *)view animated:(BOOL)animated;
++ (ZealousAmortizationDownloadMerry *)wish:(UIView *)view ting:(BOOL)animated;
 
 
+//: @end
 @end

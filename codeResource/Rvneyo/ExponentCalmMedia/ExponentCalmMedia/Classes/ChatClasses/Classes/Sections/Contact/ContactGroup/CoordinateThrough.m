@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  USERGroupedUsrInfo.m
 //  NIM
@@ -6,168 +8,264 @@
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "CoordinateThrough.h"
 #import "CoordinateThrough.h"
+//: #import "RefreshAssembleRate.h"
 #import "RefreshAssembleRate.h"
+//: #import "AssetBinderWithKindred.h"
 #import "AssetBinderWithKindred.h"
 
+//: @interface PowerRegionScatter()
 @interface PowerRegionScatter()
 
-@property (nonatomic,copy)   NSString *userId;
-@property (nonatomic,strong) ImprovedNumberPiece *info;
+//: @property (nonatomic,strong) ImprovedNumberPiece *info;
+@property (nonatomic,strong) ImprovedNumberPiece *shrink;
+//: @property (nonatomic,copy) NSString *userId;
+@property (nonatomic,copy) NSString *conditionTodays;
 
+//: @end
 @end
 
+//: @implementation PowerRegionScatter
 @implementation PowerRegionScatter
 
-- (instancetype)initWithUserId:(NSString *)userId{
+//: - (NSString *)memberId{
+- (NSString *)stream{
+    //: return self.userId;
+    return self.conditionTodays;
+}
+
+//: - (id)sortKey{
+- (id)strategy{
+    //: return [[RefreshAssembleRate sharedCenter] spellingForString:self.info.showName].shortSpelling;
+    return [[RefreshAssembleRate appSand] shape:self.shrink.teamFriendly].savingScope;
+}
+
+//: - (NSString *)showName{
+- (NSString *)identity{
+    //: return self.info.showName;
+    return self.shrink.teamFriendly;
+}
+
+//: - (instancetype)initWithUserId:(NSString *)userId{
+- (instancetype)initWithSafely:(NSString *)userId{
+    //: self = [super init];
     self = [super init];
+    //: if (self) {
     if (self) {
-        _userId = userId;
-        _info = [[InkwellValidateSplitShell sharedKit] infoByUser:userId option:nil];
+        //: _userId = userId;
+        _conditionTodays = userId;
+        //: _info = [[InkwellValidateSplitShell sharedKit] infoByUser:userId option:nil];
+        _shrink = [[InkwellValidateSplitShell sub] transition:userId vendor:nil];
     }
+    //: return self;
     return self;
 }
 
-- (NSString *)groupTitle{
-    NSString *title = [[RefreshAssembleRate sharedCenter] firstLetter:self.info.showName].capitalizedString;
+//: - (NSString *)groupTitle{
+- (NSString *)close{
+    //: NSString *title = [[RefreshAssembleRate sharedCenter] firstLetter:self.info.showName].capitalizedString;
+    NSString *title = [[RefreshAssembleRate appSand] flush:self.shrink.teamFriendly].capitalizedString;
+    //: unichar character = [title characterAtIndex:0];
     unichar character = [title characterAtIndex:0];
+    //: if (character >= 'A' && character <= 'Z') {
     if (character >= 'A' && character <= 'Z') {
+        //: return title;
         return title;
+    //: }else{
     }else{
+        //: return @"#";
         return @"#";
     }
 }
 
-- (NSString *)showName{
-    return self.info.showName;
-}
-
-- (NSString *)memberId{
-    return self.userId;
-}
-
-- (id)sortKey{
-    return [[RefreshAssembleRate sharedCenter] spellingForString:self.info.showName].shortSpelling;
-}
-
-- (UIImage *)avatarImage {
-    return self.info.avatarImage;
+//: - (NSString *)avatarUrlString {
+- (NSString *)key {
+    //: return self.info.avatarUrlString;
+    return self.shrink.followDraw;
 }
 
 
-- (NSString *)avatarUrlString {
-    return self.info.avatarUrlString;
+//: - (UIImage *)avatarImage {
+- (UIImage *)inside {
+    //: return self.info.avatarImage;
+    return self.shrink.argument;
 }
 
 
+//: @end
 @end
 
+//: @interface ProfileBeyondFlagshipHonest()
 @interface ProfileBeyondFlagshipHonest()
 
-@property (nonatomic,copy) NSString *userId;
-@property (nonatomic,strong) ImprovedNumberPiece *info;
+//: @property (nonatomic,strong) ImprovedNumberPiece *info;
+@property (nonatomic,strong) ImprovedNumberPiece *sineZone;
+//: @property (nonatomic,copy) NSString *userId;
+@property (nonatomic,copy) NSString *conditionTodays;
 
+//: @end
 @end
 
+//: @implementation ProfileBeyondFlagshipHonest
 @implementation ProfileBeyondFlagshipHonest
 
-- (instancetype)initWithUserId:(NSString *)userId
-                       session:(NIMSession *)session {
-    self = [super init];
-    if (self) {
-        _userId = userId;
-        AssetBinderWithKindred *option = [[AssetBinderWithKindred alloc] init];
-        option.session = session;
-        _info = [[InkwellValidateSplitShell sharedKit] infoByUser:userId option:option];
-    }
-    return self;
-}
-
-- (NSString *)groupTitle{
-    NSString *title = [[RefreshAssembleRate sharedCenter] firstLetter:self.showName].capitalizedString;
+//: - (NSString *)groupTitle{
+- (NSString *)close{
+    //: NSString *title = [[RefreshAssembleRate sharedCenter] firstLetter:self.showName].capitalizedString;
+    NSString *title = [[RefreshAssembleRate appSand] flush:self.identity].capitalizedString;
+    //: unichar character = [title characterAtIndex:0];
     unichar character = [title characterAtIndex:0];
+    //: if (character >= 'A' && character <= 'Z') {
     if (character >= 'A' && character <= 'Z') {
+        //: return title;
         return title;
+    //: }else{
     }else{
+        //: return @"#";
         return @"#";
     }
 }
 
-- (id)sortKey{
-    return [[RefreshAssembleRate sharedCenter] spellingForString:self.showName].shortSpelling;
+//: - (NSString *)showName{
+- (NSString *)identity{
+    //: return self.info.showName;
+    return self.sineZone.teamFriendly;
 }
 
-- (NSString *)showName{
-    return self.info.showName;
+//: - (NSString *)avatarUrlString {
+- (NSString *)key {
+    //: return self.info.avatarUrlString;
+    return self.sineZone.followDraw;
 }
 
-- (NSString *)memberId{
-    return self.userId;
+//: - (id)sortKey{
+- (id)strategy{
+    //: return [[RefreshAssembleRate sharedCenter] spellingForString:self.showName].shortSpelling;
+    return [[RefreshAssembleRate appSand] shape:self.identity].savingScope;
 }
 
-- (UIImage *)avatarImage {
-    return self.info.avatarImage;
+//: - (UIImage *)avatarImage {
+- (UIImage *)inside {
+    //: return self.info.avatarImage;
+    return self.sineZone.argument;
 }
 
-- (NSString *)avatarUrlString {
-    return self.info.avatarUrlString;
+//: - (NSString *)memberId{
+- (NSString *)stream{
+    //: return self.userId;
+    return self.conditionTodays;
 }
 
+//: - (instancetype)initWithUserId:(NSString *)userId
+- (instancetype)initWithFactory:(NSString *)userId
+                       //: session:(NIMSession *)session {
+                       neatBox:(NIMSession *)session {
+    //: self = [super init];
+    self = [super init];
+    //: if (self) {
+    if (self) {
+        //: _userId = userId;
+        _conditionTodays = userId;
+        //: AssetBinderWithKindred *option = [[AssetBinderWithKindred alloc] init];
+        AssetBinderWithKindred *option = [[AssetBinderWithKindred alloc] init];
+        //: option.session = session;
+        option.area = session;
+        //: _info = [[InkwellValidateSplitShell sharedKit] infoByUser:userId option:option];
+        _sineZone = [[InkwellValidateSplitShell sub] transition:userId vendor:option];
+    }
+    //: return self;
+    return self;
+}
+
+//: @end
 @end
 
+//: @interface PhaseOrbit()
 @interface PhaseOrbit()
 
-@property (nonatomic,copy) NSString *teamId;
-@property (nonatomic,strong) ImprovedNumberPiece *info;
+//: @property (nonatomic,strong) ImprovedNumberPiece *info;
+@property (nonatomic,strong) ImprovedNumberPiece *ground;
+//: @property (nonatomic,copy) NSString *teamId;
+@property (nonatomic,copy) NSString *sure;
 
+//: @end
 @end
 
+//: @implementation PhaseOrbit
 @implementation PhaseOrbit
 
-- (instancetype)initWithTeamId:(NSString *)teamId
-                      teamType:(VertexFilledKnack)teamType {
-    self = [super init];
-    if (self) {
-        _teamId = teamId;
-        if (teamType == VertexFilledKnackNomal) {
-            _info = [[InkwellValidateSplitShell sharedKit] infoByTeam:teamId option:nil];
-        } else if (teamType == VertexFilledKnackSuper) {
-            _info = [[InkwellValidateSplitShell sharedKit] infoBySuperTeam:teamId option:nil];
-        }
-    }
-    return self;
+//: - (NSString *)showName{
+- (NSString *)identity{
+    //: return self.info.showName;
+    return self.ground.teamFriendly;
 }
 
-- (NSString *)groupTitle{
-    NSString *title = [[RefreshAssembleRate sharedCenter] firstLetter:self.showName].capitalizedString;
+//: - (id)sortKey{
+- (id)strategy{
+    //: return [[RefreshAssembleRate sharedCenter] spellingForString:[self showName]].shortSpelling;
+    return [[RefreshAssembleRate appSand] shape:[self identity]].savingScope;
+}
+
+//: - (NSString *)groupTitle{
+- (NSString *)close{
+    //: NSString *title = [[RefreshAssembleRate sharedCenter] firstLetter:self.showName].capitalizedString;
+    NSString *title = [[RefreshAssembleRate appSand] flush:self.identity].capitalizedString;
+    //: unichar character = [title characterAtIndex:0];
     unichar character = [title characterAtIndex:0];
+    //: if (character >= 'A' && character <= 'Z') {
     if (character >= 'A' && character <= 'Z') {
+        //: return title;
         return title;
+    //: }else{
     }else{
+        //: return @"#";
         return @"#";
     }
 }
 
-- (id)sortKey{
-    return [[RefreshAssembleRate sharedCenter] spellingForString:[self showName]].shortSpelling;
+//: - (NSString *)avatarUrlString {
+- (NSString *)key {
+    //: return self.info.avatarUrlString;
+    return self.ground.followDraw;
 }
 
-- (NSString *)showName{
-    return self.info.showName;
+//: - (instancetype)initWithTeamId:(NSString *)teamId
+- (instancetype)initWithForward:(NSString *)teamId
+                      //: teamType:(VertexFilledKnack)teamType {
+                      threadProtection:(VertexFilledKnack)teamType {
+    //: self = [super init];
+    self = [super init];
+    //: if (self) {
+    if (self) {
+        //: _teamId = teamId;
+        _sure = teamId;
+        //: if (teamType == VertexFilledKnackNomal) {
+        if (teamType == VertexFilledKnackNomal) {
+            //: _info = [[InkwellValidateSplitShell sharedKit] infoByTeam:teamId option:nil];
+            _ground = [[InkwellValidateSplitShell sub] noLean:teamId tolerance:nil];
+        //: } else if (teamType == VertexFilledKnackSuper) {
+        } else if (teamType == VertexFilledKnackSuper) {
+            //: _info = [[InkwellValidateSplitShell sharedKit] infoBySuperTeam:teamId option:nil];
+            _ground = [[InkwellValidateSplitShell sub] portMove:teamId language:nil];
+        }
+    }
+    //: return self;
+    return self;
 }
 
-- (NSString *)memberId{
-    return self.teamId;
+//: - (UIImage *)avatarImage {
+- (UIImage *)inside {
+    //: return self.info.avatarImage;
+    return self.ground.argument;
 }
 
-- (UIImage *)avatarImage {
-    return self.info.avatarImage;
+//: - (NSString *)memberId{
+- (NSString *)stream{
+    //: return self.teamId;
+    return self.sure;
 }
 
-- (NSString *)avatarUrlString {
-    return self.info.avatarUrlString;
-}
-
+//: @end
 @end
-
-

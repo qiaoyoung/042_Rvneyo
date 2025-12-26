@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  StructureCozyChat.h
 // InkwellValidateSplitShell
@@ -6,13 +8,21 @@
 //  Copyright (c) 2015年 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
+
+//: @class FutureStripeExponent;
 @class FutureStripeExponent;
 
+//: @interface StructureCozyChat : UIView
 @interface StructureCozyChat : UIView
 
-@property (nonatomic,strong) FutureStripeExponent *pickedView;
+//: @property (nonatomic,strong) UIButton *doneButton;
+@property (nonatomic,strong) UIButton *analyzeToday;
 
-@property (nonatomic,strong) UIButton *doneButton;
+//: @property (nonatomic,strong) FutureStripeExponent *pickedView;
+@property (nonatomic,strong) FutureStripeExponent *off;
 
+//: @end
 @end

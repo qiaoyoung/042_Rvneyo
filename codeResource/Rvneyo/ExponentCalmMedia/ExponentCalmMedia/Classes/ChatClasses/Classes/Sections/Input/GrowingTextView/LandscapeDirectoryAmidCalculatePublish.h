@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  LandscapeDirectoryAmidCalculatePublish.h
 // InkwellValidateSplitShell
@@ -6,10 +8,15 @@
 //  Copyright © 2016年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
+//: @interface LandscapeDirectoryAmidCalculatePublish : UITextView
 @interface LandscapeDirectoryAmidCalculatePublish : UITextView
 
-@property (nonatomic,strong) NSAttributedString *placeholderAttributedText;
+//: @property (nonatomic,strong) NSAttributedString *placeholderAttributedText;
+@property (nonatomic,strong) NSAttributedString *tenseShot;
 
+//: @end
 @end

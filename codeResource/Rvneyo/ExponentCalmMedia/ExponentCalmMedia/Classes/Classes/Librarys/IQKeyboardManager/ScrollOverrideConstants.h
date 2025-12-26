@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  ScrollOverrideConstants.h
 //  https://github.com/hackiftekhar/ScrollOverride
@@ -20,15 +22,13 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-
-#ifndef ScrollOverrideConstants_h
-#define ScrollOverrideConstants_h
-
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-
 ///-----------------------------------
 /// @name DryAssistResizeHonestManageBehavior
 ///-----------------------------------
+
+// __M_A_C_R_O__
 
 /**
  `DryAssistResizeHonestBySubviews`
@@ -40,10 +40,15 @@
  `DryAssistResizeHonestByPosition`
  Creates Toolbar according to the y,x position of textField in it's superview coordinate.
  */
+//: typedef NS_ENUM(NSInteger, DryAssistResizeHonestManageBehavior) {
 typedef NS_ENUM(NSInteger, DryAssistResizeHonestManageBehavior) {
+    //: DryAssistResizeHonestBySubviews,
     DryAssistResizeHonestBySubviews,
+    //: DryAssistResizeHonestByTag,
     DryAssistResizeHonestByTag,
+    //: DryAssistResizeHonestByPosition,
     DryAssistResizeHonestByPosition,
+//: };
 };
 
 /**
@@ -56,10 +61,15 @@ typedef NS_ENUM(NSInteger, DryAssistResizeHonestManageBehavior) {
  `DispatchVertexAspectAlwaysShow`
  Always show nextPrevious buttons, if there are more than 1 textField then both buttons will be visible but will be shown as disabled.
  */
+//: typedef NS_ENUM(NSUInteger, DispatchVertexAspect) {
 typedef NS_ENUM(NSUInteger, DispatchVertexAspect) {
+    //: DispatchVertexAspectDefault,
     DispatchVertexAspectDefault,
+    //: DispatchVertexAspectAlwaysHide,
     DispatchVertexAspectAlwaysHide,
+    //: DispatchVertexAspectAlwaysShow,
     DispatchVertexAspectAlwaysShow,
+//: };
 };
 
 /**
@@ -72,13 +82,18 @@ typedef NS_ENUM(NSUInteger, DispatchVertexAspect) {
  `WealthSignCliffDisabled`
  setting is disabled.
  */
+//: typedef NS_ENUM(NSUInteger, WealthSignCliff) {
 typedef NS_ENUM(NSUInteger, WealthSignCliff) {
+    //: WealthSignCliffDefault,
     WealthSignCliffDefault,
+    //: WealthSignCliffEnabled,
     WealthSignCliffEnabled,
+    //: WealthSignCliffDisabled,
     WealthSignCliffDisabled,
+//: };
 };
 
-#endif
+
 
 /*
  

@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  AnnotateDriftDrainAdapt.h
 //  https://github.com/hackiftekhar/ScrollOverride
@@ -21,41 +23,49 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-
+//: #import "DocumentDebounceStop.h"
 #import "DocumentDebounceStop.h"
-
 
 /**
  AnnotateDriftDrainAdapt for ScrollOverride.
  */
+//: NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
 NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
+//: @interface AnnotateDriftDrainAdapt : UIToolbar <UIInputViewAudioFeedback>
 @interface AnnotateDriftDrainAdapt : UIToolbar <UIInputViewAudioFeedback>
 
 /**
  Previous bar button of toolbar.
  */
-@property(nonnull, nonatomic, strong) ThoroughTrustyIndex *previousBarButton;
-
 /**
  Next bar button of toolbar.
  */
-@property(nonnull, nonatomic, strong) ThoroughTrustyIndex *nextBarButton;
-
-/**
- Title bar button of toolbar.
- */
-@property(nonnull, nonatomic, strong, readonly) DocumentDebounceStop *titleBarButton;
+//: @property(nonnull, nonatomic, strong) ThoroughTrustyIndex *nextBarButton;
+@property(nonnull, nonatomic, strong) ThoroughTrustyIndex *secondSingle;
 
 /**
  Done bar button of toolbar.
  */
-@property(nonnull, nonatomic, strong) ThoroughTrustyIndex *doneBarButton;
+//: @property(nonnull, nonatomic, strong) ThoroughTrustyIndex *doneBarButton;
+@property(nonnull, nonatomic, strong) ThoroughTrustyIndex *progress;
+
+/**
+ Title bar button of toolbar.
+ */
+//: @property(nonnull, nonatomic, strong, readonly) DocumentDebounceStop *titleBarButton;
+@property(nonnull, nonatomic, strong, readonly) DocumentDebounceStop *modifyEvaluation;
+
+//: @property(nonnull, nonatomic, strong) ThoroughTrustyIndex *previousBarButton;
+@property(nonnull, nonatomic, strong) ThoroughTrustyIndex *tap;
 
 /**
  Fixed space bar button of toolbar.
  */
-@property(nonnull, nonatomic, strong) ThoroughTrustyIndex *fixedSpaceBarButton;
+//: @property(nonnull, nonatomic, strong) ThoroughTrustyIndex *fixedSpaceBarButton;
+@property(nonnull, nonatomic, strong) ThoroughTrustyIndex *split;
 
+//: @end
 @end
-

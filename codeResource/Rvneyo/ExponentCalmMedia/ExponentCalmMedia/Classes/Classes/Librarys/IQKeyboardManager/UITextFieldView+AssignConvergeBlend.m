@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  UITextFieldView+AssignConvergeBlend.m
 //  https://github.com/hackiftekhar/ScrollOverride
@@ -21,64 +23,90 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// __M_A_C_R_O__
+//: #import <objc/runtime.h>
 #import <objc/runtime.h>
-
+//: #import "UITextFieldView+AssignConvergeBlend.h"
 #import "UITextFieldView+AssignConvergeBlend.h"
 
+//: NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
 NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
+//: @implementation UIView (AssignConvergeBlend)
 @implementation UIView (AssignConvergeBlend)
 
--(void)setKeyboardDistanceFromTextField:(CGFloat)keyboardDistanceFromTextField
+//: -(void)setIgnoreSwitchingByNextPrevious:(BOOL)ignoreSwitchingByNextPrevious
+-(void)setDistantCancelled:(BOOL)ignoreSwitchingByNextPrevious
 {
-    //Can't be less than zero. Minimum is zero.
-    keyboardDistanceFromTextField = MAX(keyboardDistanceFromTextField, 0);
-    
-    objc_setAssociatedObject(self, @selector(keyboardDistanceFromTextField), @(keyboardDistanceFromTextField), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    //: objc_setAssociatedObject(self, @selector(ignoreSwitchingByNextPrevious), @(ignoreSwitchingByNextPrevious), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(distantCancelled), @(ignoreSwitchingByNextPrevious), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
--(CGFloat)keyboardDistanceFromTextField
+//: -(void)setShouldResignOnTouchOutsideMode:(WealthSignCliff)shouldResignOnTouchOutsideMode
+-(void)setUniversalCandidded:(WealthSignCliff)shouldResignOnTouchOutsideMode
 {
-    NSNumber *keyboardDistanceFromTextField = objc_getAssociatedObject(self, @selector(keyboardDistanceFromTextField));
-    
-    return (keyboardDistanceFromTextField != nil)?[keyboardDistanceFromTextField floatValue]:kIQUseDefaultKeyboardDistance;
+    //: objc_setAssociatedObject(self, @selector(shouldResignOnTouchOutsideMode), @(shouldResignOnTouchOutsideMode), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(universalCandidded), @(shouldResignOnTouchOutsideMode), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
--(void)setIgnoreSwitchingByNextPrevious:(BOOL)ignoreSwitchingByNextPrevious
+//: -(void)setEnableMode:(WealthSignCliff)enableMode
+-(void)setStemNatures:(WealthSignCliff)enableMode
 {
-    objc_setAssociatedObject(self, @selector(ignoreSwitchingByNextPrevious), @(ignoreSwitchingByNextPrevious), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    //: objc_setAssociatedObject(self, @selector(enableMode), @(enableMode), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(stemNatures), @(enableMode), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
--(BOOL)ignoreSwitchingByNextPrevious
+//: -(WealthSignCliff)enableMode
+-(WealthSignCliff)stemNatures
 {
-    NSNumber *ignoreSwitchingByNextPrevious = objc_getAssociatedObject(self, @selector(ignoreSwitchingByNextPrevious));
-    
-    return [ignoreSwitchingByNextPrevious boolValue];
-}
+    //: NSNumber *enableMode = objc_getAssociatedObject(self, @selector(enableMode));
+    NSNumber *enableMode = objc_getAssociatedObject(self, @selector(stemNatures));
 
--(void)setEnableMode:(WealthSignCliff)enableMode
-{
-    objc_setAssociatedObject(self, @selector(enableMode), @(enableMode), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
--(WealthSignCliff)enableMode
-{
-    NSNumber *enableMode = objc_getAssociatedObject(self, @selector(enableMode));
-    
+    //: return [enableMode unsignedIntegerValue];
     return [enableMode unsignedIntegerValue];
 }
 
--(void)setShouldResignOnTouchOutsideMode:(WealthSignCliff)shouldResignOnTouchOutsideMode
+//: -(BOOL)ignoreSwitchingByNextPrevious
+-(BOOL)distantCancelled
 {
-    objc_setAssociatedObject(self, @selector(shouldResignOnTouchOutsideMode), @(shouldResignOnTouchOutsideMode), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    //: NSNumber *ignoreSwitchingByNextPrevious = objc_getAssociatedObject(self, @selector(ignoreSwitchingByNextPrevious));
+    NSNumber *ignoreSwitchingByNextPrevious = objc_getAssociatedObject(self, @selector(distantCancelled));
+
+    //: return [ignoreSwitchingByNextPrevious boolValue];
+    return [ignoreSwitchingByNextPrevious boolValue];
 }
 
--(WealthSignCliff)shouldResignOnTouchOutsideMode
+//: -(void)setKeyboardDistanceFromTextField:(CGFloat)keyboardDistanceFromTextField
+-(void)setMotionPortraits:(CGFloat)keyboardDistanceFromTextField
 {
-    NSNumber *shouldResignOnTouchOutsideMode = objc_getAssociatedObject(self, @selector(shouldResignOnTouchOutsideMode));
-    
+    //Can't be less than zero. Minimum is zero.
+    //: keyboardDistanceFromTextField = ((keyboardDistanceFromTextField) > (0) ? (keyboardDistanceFromTextField) : (0));
+    keyboardDistanceFromTextField = ((keyboardDistanceFromTextField) > (0) ? (keyboardDistanceFromTextField) : (0));
+
+    //: objc_setAssociatedObject(self, @selector(keyboardDistanceFromTextField), @(keyboardDistanceFromTextField), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(motionPortraits), @(keyboardDistanceFromTextField), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+//: -(WealthSignCliff)shouldResignOnTouchOutsideMode
+-(WealthSignCliff)universalCandidded
+{
+    //: NSNumber *shouldResignOnTouchOutsideMode = objc_getAssociatedObject(self, @selector(shouldResignOnTouchOutsideMode));
+    NSNumber *shouldResignOnTouchOutsideMode = objc_getAssociatedObject(self, @selector(universalCandidded));
+
+    //: return [shouldResignOnTouchOutsideMode unsignedIntegerValue];
     return [shouldResignOnTouchOutsideMode unsignedIntegerValue];
 }
 
+//: -(CGFloat)keyboardDistanceFromTextField
+-(CGFloat)motionPortraits
+{
+    //: NSNumber *keyboardDistanceFromTextField = objc_getAssociatedObject(self, @selector(keyboardDistanceFromTextField));
+    NSNumber *keyboardDistanceFromTextField = objc_getAssociatedObject(self, @selector(motionPortraits));
+
+    //: return (keyboardDistanceFromTextField != nil)?[keyboardDistanceFromTextField floatValue]:kIQUseDefaultKeyboardDistance;
+    return (keyboardDistanceFromTextField != nil)?[keyboardDistanceFromTextField floatValue]:themePressStrikeMessage(nil);
+}
+
+//: @end
 @end
 
 ///------------------------------------
@@ -88,5 +116,11 @@ NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
 /**
  Uses default keyboard distance for textField.
  */
-CGFloat const kIQUseDefaultKeyboardDistance = CGFLOAT_MAX;
+//: CGFloat const kIQUseDefaultKeyboardDistance = 1.7976931348623157e+308;
 
+CGFloat const themePressStrikeMessage (NSString *value) {
+    if (value) {
+        return  1.7976931348623157e+308;
+    }
+    return  1.7976931348623157e+308;
+};

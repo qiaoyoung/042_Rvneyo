@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  ContinueWithinBatchMonochrome.h
 //  NIM
@@ -6,8 +8,12 @@
 //  Copyright © 2017年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "SearchPublishMeasuredSize.h"
 #import "SearchPublishMeasuredSize.h"
 
+//: @interface ContinueWithinBatchMonochrome : SearchPublishMeasuredSize
 @interface ContinueWithinBatchMonochrome : SearchPublishMeasuredSize
 
+//: @end
 @end

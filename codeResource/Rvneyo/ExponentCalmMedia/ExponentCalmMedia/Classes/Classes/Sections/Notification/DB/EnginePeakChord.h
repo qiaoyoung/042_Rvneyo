@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  EnginePeakChord.h
 //  NIM
@@ -6,24 +8,37 @@
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
+//: @class EnhanceGuardUnaryEmitter;
 @class EnhanceGuardUnaryEmitter;
+//: @interface EnginePeakChord : NSObject
 @interface EnginePeakChord : NSObject
 
-dSINGLETON_FOR_CLASS_HEADER(EnginePeakChord);
+//: - (void)deleteAllNotification;
+- (void)movie;
+;
 
-@property (nonatomic,assign) NSInteger unreadCount;
+//: @property (nonatomic,assign) NSInteger unreadCount;
+@property (nonatomic,assign) NSInteger infrastructureMarkerCondition;
 
-- (NSArray *)fetchNotifications:(EnhanceGuardUnaryEmitter *)notification
-                          limit:(NSInteger)limit;
+//: - (NSArray *)fetchNotifications:(EnhanceGuardUnaryEmitter *)notification
+- (NSArray *)loop:(EnhanceGuardUnaryEmitter *)notification
+                          //: limit:(NSInteger)limit;
+                          downHidden:(NSInteger)limit;
 
-- (BOOL)saveNotification:(EnhanceGuardUnaryEmitter *)notification;
+//: + (instancetype)sharedInstance;;
++ (instancetype)organic;
+//: - (BOOL)saveNotification:(EnhanceGuardUnaryEmitter *)notification;
+- (BOOL)arena:(EnhanceGuardUnaryEmitter *)notification;
 
-- (void)deleteNotification:(EnhanceGuardUnaryEmitter *)notification;
+//: - (void)deleteNotification:(EnhanceGuardUnaryEmitter *)notification;
+- (void)fragmentDensity:(EnhanceGuardUnaryEmitter *)notification;
 
-- (void)deleteAllNotification;
+//: - (void)markAllNotificationsAsRead;
+- (void)consume;
 
-- (void)markAllNotificationsAsRead;
-
+//: @end
 @end

@@ -1,3 +1,58 @@
+
+#import <Foundation/Foundation.h>
+
+@interface InsightReductionData : NSObject
+
+@end
+
+@implementation InsightReductionData
+
++ (NSString *)StringFromInsightReductionData:(Byte *)data {
+    return [NSString stringWithUTF8String:(char *)[self InsightReductionDataToCache:data]];
+}
+
++ (Byte *)InsightReductionDataToCache:(Byte *)data {
+    int calculate = data[0];
+    Byte galaxySteamAccess = data[1];
+    int runBroker = data[2];
+    for (int i = runBroker; i < runBroker + calculate; i++) {
+        int value = data[i] - galaxySteamAccess;
+        if (value < 0) {
+            value += 256;
+        }
+        data[i] = value;
+    }
+    data[runBroker + calculate] = 0;
+    return data + runBroker;
+}
+
+//: _backgroundView
++ (NSString *)userCreativeError {
+    /* static */ NSString *userCreativeError = nil;
+    if (!userCreativeError) {
+		NSArray<NSString *> *origin = @[@"15", @"12", @"6", @"51", @"58", @"64", @"107", @"110", @"109", @"111", @"119", @"115", @"126", @"123", @"129", @"122", @"112", @"98", @"117", @"113", @"131", @"34"];
+		NSData *data = [InsightReductionData InsightReductionDataToData:origin];
+        Byte *value = (Byte *)data.bytes;
+        userCreativeError = [self StringFromInsightReductionData:value];
+    }
+    return userCreativeError;
+}
+
++ (NSData *)InsightReductionDataToData:(NSArray<NSString *> *)value {
+    NSMutableArray<NSString *> *array = [NSMutableArray arrayWithArray:value];
+    NSInteger length = array.count;
+    Byte *buffer = (Byte *)malloc(length + 1);
+    for (int i = 0; i < length; i++) {
+        buffer[i] = [array[i] intValue];
+    }
+    buffer[length] = 0;
+    return [NSData dataWithBytesNoCopy:buffer length:length freeWhenDone:YES];
+}
+
+@end
+
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  UINavigationBar+CacheCrescentAmongSelf.m
 //
@@ -21,38 +76,62 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+// __M_A_C_R_O__
+//: #import "UINavigationBar+CacheCrescentAmongSelf.h"
 #import "UINavigationBar+CacheCrescentAmongSelf.h"
+//: #import <objc/runtime.h>
 #import <objc/runtime.h>
+//: #import "StorySwatchTemple.h"
 #import "StorySwatchTemple.h"
 
+//: @implementation UINavigationBar (CacheCrescentAmongSelf)
 @implementation UINavigationBar (CacheCrescentAmongSelf)
 
-#ifdef __IPHONE_11_0
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        StorySwatchTempleMethod([self class],
-                        @selector(layoutSubviews),
-                        [self class],
-                        @selector(km_layoutSubviews));
-    });
-}
-#endif
 
-- (void)km_layoutSubviews {
-    [self km_layoutSubviews];
-    UIView *backgroundView = [self valueForKey:@"_backgroundView"];
+//: - (void)km_layoutSubviews {
+- (void)braveHolder {
+    //: [self km_layoutSubviews];
+    [self braveHolder];
+    //: UIView *backgroundView = [self valueForKey:@"_backgroundView"];
+    UIView *backgroundView = [self valueForKey:[InsightReductionData userCreativeError]];
+    //: CGRect frame = backgroundView.frame;
     CGRect frame = backgroundView.frame;
+    //: frame.size.height = self.frame.size.height + fabs(frame.origin.y);
     frame.size.height = self.frame.size.height + fabs(frame.origin.y);
+    //: backgroundView.frame = frame;
     backgroundView.frame = frame;
 }
 
-- (BOOL)km_isFakeBar {
+
+//: - (void)setKm_isFakeBar:(BOOL)hidden {
+- (void)setPingEarth:(BOOL)hidden {
+    //: objc_setAssociatedObject(self, @selector(km_isFakeBar), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(pingEarth), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+//: + (void)load {
++ (void)load {
+    //: static dispatch_once_t onceToken;
+    static dispatch_once_t onceToken;
+    //: _dispatch_once(&onceToken, ^{
+    _dispatch_once(&onceToken, ^{
+        //: StorySwatchTempleMethod([self class],
+        preciseRadioHappy([self class],
+                        //: @selector(layoutSubviews),
+                        @selector(layoutSubviews),
+                        //: [self class],
+                        [self class],
+                        //: @selector(km_layoutSubviews));
+                        @selector(braveHolder));
+    //: });
+    });
+}
+
+//: - (BOOL)km_isFakeBar {
+- (BOOL)pingEarth {
+    //: return [objc_getAssociatedObject(self, _cmd) boolValue];
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
-- (void)setKm_isFakeBar:(BOOL)hidden {
-    objc_setAssociatedObject(self, @selector(km_isFakeBar), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
+//: @end
 @end

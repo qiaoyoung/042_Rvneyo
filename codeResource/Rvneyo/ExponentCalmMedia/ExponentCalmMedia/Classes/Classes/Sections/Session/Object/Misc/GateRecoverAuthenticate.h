@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  USERSessionMsgHelper.h
 //  NIMDemo
@@ -6,53 +8,84 @@
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
+//: @class SubtleDalePreserveReceive;
 @class SubtleDalePreserveReceive;
+//: @class RunViewportOutsideSwatch;
 @class RunViewportOutsideSwatch;
+//: @class ReservoirWatchTemplateRotation;
 @class ReservoirWatchTemplateRotation;
+//: @class TonalMockCrown;
 @class TonalMockCrown;
+//: @class FocalDawnGlobal;
 @class FocalDawnGlobal;
+//: @class AnalyzeOakenChainCalibrate;
 @class AnalyzeOakenChainCalibrate;
+//: @class RuggedFrostEchoAngle;
 @class RuggedFrostEchoAngle;
 
+//: @interface GateRecoverAuthenticate : NSObject
 @interface GateRecoverAuthenticate : NSObject
 
-+ (NIMMessage *)msgWithText:(NSString *)text;
+//: + (NIMMessage *)msgWithFileData:(NSData *)data extension:(NSString *)extension;
++ (NIMMessage *)precise:(NSData *)data watch:(NSString *)extension;
 
-+ (NIMMessage *)msgWithImage:(UIImage *)image;
+//: + (NIMMessage *)msgWithTip:(NSString *)tip;
++ (NIMMessage *)resolution:(NSString *)tip;
 
-+ (NIMMessage *)msgWithImagePath:(NSString *)path;
+//: + (NIMMessage *)msgWithImage:(UIImage *)image;
++ (NIMMessage *)snap:(UIImage *)image;
 
-+ (NIMMessage *)msgWithAudio:(NSString *)filePath;
+//: + (NIMMessage *)msgWithImagePath:(NSString *)path;
++ (NIMMessage *)anyWritten:(NSString *)path;
 
-+ (NIMMessage *)msgWithVideo:(NSString *)filePath;
+//: + (NIMMessage *)msgWithWhiteboardAttachment:(ReservoirWatchTemplateRotation *)attachment;
++ (NIMMessage *)interval:(ReservoirWatchTemplateRotation *)attachment;
 
-+ (NIMMessage *)msgWithJenKenPon:(SubtleDalePreserveReceive *)attachment;
+//: + (NIMMessage *)msgWithText:(NSString *)text;
++ (NIMMessage *)sky:(NSString *)text;
 
-+ (NIMMessage *)msgWithSnapchatAttachment:(RunViewportOutsideSwatch *)attachment;
+//: + (NIMMessage *)msgWithMultiRetweetAttachment:(AnalyzeOakenChainCalibrate *)attachment;
++ (NIMMessage *)envelopeArea:(AnalyzeOakenChainCalibrate *)attachment;
 
-+ (NIMMessage *)msgWithWhiteboardAttachment:(ReservoirWatchTemplateRotation *)attachment;
+//: + (NIMMessage *)msgWithTip:(NSString *)tip
++ (NIMMessage *)actual:(NSString *)tip
+              //: revokeAttach:(NSString *)revokeAttach
+              more:(NSString *)revokeAttach
+         //: revokeCallbackExt:(NSString *)revokeCallbackExt;
+         conversation:(NSString *)revokeCallbackExt;
+//: + (NIMMessage *)msgWithRedPacketTip:(FocalDawnGlobal *)attachment;
++ (NIMMessage *)shot:(FocalDawnGlobal *)attachment;
 
-+ (NIMMessage *)msgWithFilePath:(NSString *)path;
+//: + (NIMMessage *)msgWithSnapchatAttachment:(RunViewportOutsideSwatch *)attachment;
++ (NIMMessage *)dual:(RunViewportOutsideSwatch *)attachment;
 
-+ (NIMMessage *)msgWithFileData:(NSData *)data extension:(NSString *)extension;
+//: + (NIMMessage *)msgWithRedPacket:(TonalMockCrown *)attachment;
++ (NIMMessage *)orbit:(TonalMockCrown *)attachment;
 
-+ (NIMMessage *)msgWithTip:(NSString *)tip;
+//: + (NIMMessage *)msgWithShareCard:(RuggedFrostEchoAngle *)attachment;
++ (NIMMessage *)contextTall:(RuggedFrostEchoAngle *)attachment;
 
-+ (NIMMessage *)msgWithTip:(NSString *)tip
-              revokeAttach:(NSString *)revokeAttach
-         revokeCallbackExt:(NSString *)revokeCallbackExt;
 
-+ (NIMMessage *)msgWithRedPacket:(TonalMockCrown *)attachment;
+//: + (NIMMessage *)msgWithAudio:(NSString *)filePath;
++ (NIMMessage *)player:(NSString *)filePath;
 
-+ (NIMMessage *)msgWithRedPacketTip:(FocalDawnGlobal *)attachment;
+//: + (NIMMessage *)msgWithRevocationMessage:(NIMMessage *)revocationMessage;
++ (NIMMessage *)exist:(NIMMessage *)revocationMessage;
 
-+ (NIMMessage *)msgWithMultiRetweetAttachment:(AnalyzeOakenChainCalibrate *)attachment;
+//: + (NIMMessage *)msgWithJenKenPon:(SubtleDalePreserveReceive *)attachment;
++ (NIMMessage *)aboveInfo:(SubtleDalePreserveReceive *)attachment;
 
-+ (NIMMessage *)msgWithRevocationMessage:(NIMMessage *)revocationMessage;
+//: + (NIMMessage *)msgWithVideo:(NSString *)filePath;
++ (NIMMessage *)raw:(NSString *)filePath;
 
-+ (NIMMessage *)msgWithShareCard:(RuggedFrostEchoAngle *)attachment;
+//: + (NIMMessage *)msgWithFilePath:(NSString *)path;
++ (NIMMessage *)implement:(NSString *)path;
 
+//: @end
 @end

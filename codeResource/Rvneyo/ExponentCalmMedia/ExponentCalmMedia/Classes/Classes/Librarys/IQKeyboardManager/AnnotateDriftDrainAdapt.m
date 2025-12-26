@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  AnnotateDriftDrainAdapt.m
 //  https://github.com/hackiftekhar/ScrollOverride
@@ -21,138 +23,203 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-
+//: #import "AnnotateDriftDrainAdapt.h"
 #import "AnnotateDriftDrainAdapt.h"
+//: #import "ScrollOverrideConstantsInternal.h"
 #import "ScrollOverrideConstantsInternal.h"
+//: #import "UIView+GlimpseDisplayTransformerLiberalRealm.h"
 #import "UIView+GlimpseDisplayTransformerLiberalRealm.h"
 
-
+//: NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
 NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
+//: @implementation AnnotateDriftDrainAdapt
 @implementation AnnotateDriftDrainAdapt
-@synthesize previousBarButton = _previousBarButton;
-@synthesize nextBarButton = _nextBarButton;
-@synthesize titleBarButton = _titleBarButton;
-@synthesize doneBarButton = _doneBarButton;
-@synthesize fixedSpaceBarButton = _fixedSpaceBarButton;
+//: @synthesize previousBarButton = _previousBarButton;
+@synthesize tap = _publisher;
+//: @synthesize nextBarButton = _nextBarButton;
+@synthesize secondSingle = _display;
+//: @synthesize titleBarButton = _titleBarButton;
+@synthesize modifyEvaluation = _handsome;
+//: @synthesize doneBarButton = _doneBarButton;
+@synthesize progress = _extendDirect;
+//: @synthesize fixedSpaceBarButton = _fixedSpaceBarButton;
+@synthesize split = _clickStopHandsome;
 
--(void)initialize
+//: -(ThoroughTrustyIndex *)nextBarButton
+-(ThoroughTrustyIndex *)secondSingle
 {
+    //: if (_nextBarButton == nil)
+    if (_display == nil)
+    {
+        //: _nextBarButton = [[ThoroughTrustyIndex alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+        _display = [[ThoroughTrustyIndex alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+    }
+
+    //: return _nextBarButton;
+    return _display;
+}
+
+//: -(ThoroughTrustyIndex *)doneBarButton
+-(ThoroughTrustyIndex *)progress
+{
+    //: if (_doneBarButton == nil)
+    if (_extendDirect == nil)
+    {
+        //: _doneBarButton = [[ThoroughTrustyIndex alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
+        _extendDirect = [[ThoroughTrustyIndex alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
+    }
+
+    //: return _doneBarButton;
+    return _extendDirect;
+}
+
+//: -(ThoroughTrustyIndex *)previousBarButton
+-(ThoroughTrustyIndex *)tap
+{
+    //: if (_previousBarButton == nil)
+    if (_publisher == nil)
+    {
+        //: _previousBarButton = [[ThoroughTrustyIndex alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+        _publisher = [[ThoroughTrustyIndex alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+    }
+
+    //: return _previousBarButton;
+    return _publisher;
+}
+
+//: -(void)initialize
+-(void)forbid
+{
+    //: [self sizeToFit];
     [self sizeToFit];
+    //: self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;// | UIViewAutoresizingFlexibleHeight;
+    //: self.translucent = YES;
     self.translucent = YES;
+    //: self.barTintColor = nil;
     self.barTintColor = nil;
 
+    //: NSArray <NSNumber*> *positions = @[@(UIBarPositionAny),@(UIBarPositionBottom),@(UIBarPositionTop),@(UIBarPositionTopAttached)];
     NSArray <NSNumber*> *positions = @[@(UIBarPositionAny),@(UIBarPositionBottom),@(UIBarPositionTop),@(UIBarPositionTopAttached)];
 
+    //: for (NSNumber *position in positions)
     for (NSNumber *position in positions)
     {
-        UIToolbarPosition toolbarPosition = [position unsignedIntegerValue];
+        //: UIBarPosition toolbarPosition = [position unsignedIntegerValue];
+        UIBarPosition toolbarPosition = [position unsignedIntegerValue];
 
+        //: [self setBackgroundImage:nil forToolbarPosition:toolbarPosition barMetrics:UIBarMetricsDefault];
         [self setBackgroundImage:nil forToolbarPosition:toolbarPosition barMetrics:UIBarMetricsDefault];
+        //: [self setShadowImage:nil forToolbarPosition:toolbarPosition];
         [self setShadowImage:nil forToolbarPosition:toolbarPosition];
     }
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self)
-    {
-        [self initialize];
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self)
-    {
-        [self initialize];
-    }
-    return self;
-}
-
--(void)dealloc
-{
-    self.items = nil;
-}
-
--(ThoroughTrustyIndex *)previousBarButton
-{
-    if (_previousBarButton == nil)
-    {
-        _previousBarButton = [[ThoroughTrustyIndex alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
-    }
-    
-    return _previousBarButton;
-}
-
--(ThoroughTrustyIndex *)nextBarButton
-{
-    if (_nextBarButton == nil)
-    {
-        _nextBarButton = [[ThoroughTrustyIndex alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
-    }
-    
-    return _nextBarButton;
-}
-
--(DocumentDebounceStop *)titleBarButton
-{
-    if (_titleBarButton == nil)
-    {
-        _titleBarButton = [[DocumentDebounceStop alloc] initWithTitle:nil];
-    }
-    
-    return _titleBarButton;
-}
-
--(ThoroughTrustyIndex *)doneBarButton
-{
-    if (_doneBarButton == nil)
-    {
-        _doneBarButton = [[ThoroughTrustyIndex alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
-    }
-    
-    return _doneBarButton;
-}
-
--(ThoroughTrustyIndex *)fixedSpaceBarButton
-{
-    if (_fixedSpaceBarButton == nil)
-    {
-        _fixedSpaceBarButton = [[ThoroughTrustyIndex alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        [_fixedSpaceBarButton setWidth:6];
-    }
-    
-    return _fixedSpaceBarButton;
-}
-
--(CGSize)sizeThatFits:(CGSize)size
-{
-    CGSize sizeThatFit = [super sizeThatFits:size];
-
-    sizeThatFit.height = 44;
-    
-    return sizeThatFit;
-}
-
+//: -(void)setTintColor:(UIColor *)tintColor
 -(void)setTintColor:(UIColor *)tintColor
 {
+    //: [super setTintColor:tintColor];
     [super setTintColor:tintColor];
 
+    //: for (UIBarButtonItem *item in self.items)
     for (UIBarButtonItem *item in self.items)
     {
+        //: [item setTintColor:tintColor];
         [item setTintColor:tintColor];
     }
 }
 
-#pragma mark - UIInputViewAudioFeedback delegate
-- (BOOL) enableInputClicksWhenVisible
+//: -(DocumentDebounceStop *)titleBarButton
+-(DocumentDebounceStop *)modifyEvaluation
 {
-	return YES;
+    //: if (_titleBarButton == nil)
+    if (_handsome == nil)
+    {
+        //: _titleBarButton = [[DocumentDebounceStop alloc] initWithTitle:nil];
+        _handsome = [[DocumentDebounceStop alloc] initWithEarth:nil];
+    }
+
+    //: return _titleBarButton;
+    return _handsome;
 }
 
+//: - (instancetype)initWithCoder:(NSCoder *)coder
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    //: self = [super initWithCoder:coder];
+    self = [super initWithCoder:coder];
+    //: if (self)
+    if (self)
+    {
+        //: [self initialize];
+        [self forbid];
+    }
+    //: return self;
+    return self;
+}
+
+//: -(void)dealloc
+-(void)dealloc
+{
+    //: self.items = nil;
+    self.items = nil;
+}
+
+//: #pragma mark - UIInputViewAudioFeedback delegate
+#pragma mark - UIInputViewAudioFeedback delegate
+//: - (BOOL) enableInputClicksWhenVisible
+- (BOOL) enableInputClicksWhenVisible
+{
+ //: return YES;
+ return YES;
+}
+
+//: - (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    //: self = [super initWithFrame:frame];
+    self = [super initWithFrame:frame];
+    //: if (self)
+    if (self)
+    {
+        //: [self initialize];
+        [self forbid];
+    }
+    //: return self;
+    return self;
+}
+
+//: -(ThoroughTrustyIndex *)fixedSpaceBarButton
+-(ThoroughTrustyIndex *)split
+{
+    //: if (_fixedSpaceBarButton == nil)
+    if (_clickStopHandsome == nil)
+    {
+        //: _fixedSpaceBarButton = [[ThoroughTrustyIndex alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        _clickStopHandsome = [[ThoroughTrustyIndex alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        //: [_fixedSpaceBarButton setWidth:6];
+        [_clickStopHandsome setWidth:6];
+    }
+
+    //: return _fixedSpaceBarButton;
+    return _clickStopHandsome;
+}
+
+//: -(CGSize)sizeThatFits:(CGSize)size
+-(CGSize)sizeThatFits:(CGSize)size
+{
+    //: CGSize sizeThatFit = [super sizeThatFits:size];
+    CGSize sizeThatFit = [super sizeThatFits:size];
+
+    //: sizeThatFit.height = 44;
+    sizeThatFit.height = 44;
+
+    //: return sizeThatFit;
+    return sizeThatFit;
+}
+
+//: @end
 @end

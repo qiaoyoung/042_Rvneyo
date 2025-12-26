@@ -1,3 +1,35 @@
+
+#import <Foundation/Foundation.h>
+typedef struct {
+    Byte novel;
+    Byte *strokeContext;
+    unsigned int showBottom;
+    Byte structureDual;
+	int cellTag;
+	int thorough;
+	int arrayMessage;
+} ScaleStretchData;
+
+NSString *StringFromScaleStretchData(ScaleStretchData *data);
+
+
+//: #F6F7FA
+ScaleStretchData userPleasedID = (ScaleStretchData){99, (Byte []){64, 37, 85, 37, 84, 37, 34, 120}, 7, 178, 135, 187, 56};
+
+//: #FF5E00
+ScaleStretchData layoutLineValue = (ScaleStretchData){194, (Byte []){225, 132, 132, 247, 135, 242, 242, 98}, 7, 228, 142, 131, 74};
+
+//: ZMONTeamCartSet%ld
+ScaleStretchData screenSplitString = (ScaleStretchData){205, (Byte []){151, 128, 130, 131, 153, 168, 172, 160, 142, 172, 191, 185, 158, 168, 185, 232, 161, 169, 35}, 18, 174, 169, 186, 107};
+
+//: contact_list_activity_complete
+ScaleStretchData dataDistanceTime = (ScaleStretchData){230, (Byte []){133, 137, 136, 146, 135, 133, 146, 185, 138, 143, 149, 146, 185, 135, 133, 146, 143, 144, 143, 146, 159, 185, 133, 137, 139, 150, 138, 131, 146, 131, 126}, 30, 239, 26, 224, 102};
+
+//: back_arrow_bl
+ScaleStretchData globalSlopePath = (ScaleStretchData){117, (Byte []){23, 20, 22, 30, 42, 20, 7, 7, 26, 2, 42, 23, 25, 69}, 13, 230, 200, 92, 89};
+
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  PrivateThemeParseBox.m
 // InkwellValidateSplitShell
@@ -6,107 +38,207 @@
 //  Copyright © 2019 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "PrivateThemeParseBox.h"
 #import "PrivateThemeParseBox.h"
+//: #import "BaseHistoryCorrect.h"
 #import "BaseHistoryCorrect.h"
+//: #import "ReliableHastyUpdaterRecover.h"
 #import "ReliableHastyUpdaterRecover.h"
+
+//: @interface PrivateThemeParseBox ()<UITableViewDelegate, UITableViewDataSource>
 @interface PrivateThemeParseBox ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray <id <YearOrnateScenario>> *datas;
+//: @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITableView *engine;
 
-@property (nonatomic, strong) UITableView *tableView;
+//: @property (nonatomic, strong) NSMutableArray <id <YearOrnateScenario>> *datas;
+@property (nonatomic, strong) NSMutableArray <id <YearOrnateScenario>> *res;
 
-@property (nonatomic, assign) NSInteger selectedIndex;
+//: @property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, assign) NSInteger utilityStern;
 
-@property (nonatomic, assign) NSInteger oriSelectedIndex;
+//: @property (nonatomic, assign) NSInteger oriSelectedIndex;
+@property (nonatomic, assign) NSInteger arenaHandsome;
 
-@property (nonatomic, strong) UIView *footView;
+//: @property (nonatomic, strong) UIView *footView;
+@property (nonatomic, strong) UIView *orientation;
 
+//: @end
 @end
 
+//: @implementation PrivateThemeParseBox
 @implementation PrivateThemeParseBox
 
-+ (instancetype)instanceWithTitle:(NSString *)title
-                            items:(NSMutableArray <id <YearOrnateScenario>> *)items
-                           result:(NIMSelectedCompletion)result {
-    PrivateThemeParseBox *vc = [[PrivateThemeParseBox alloc] initWithItems:items];
-    vc.titleString = title ?: @"";
-    vc.resultHandle = result;
-    return vc;
-}
-
-- (instancetype)initWithItems:(NSMutableArray <id <YearOrnateScenario>> *)items {
-    if (self = [super init]) {
-        _datas = items;
-        _selectedIndex = -1;
-        __weak typeof(self) weakSelf = self;
-        [items enumerateObjectsUsingBlock:^(id<YearOrnateScenario>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (obj.selected) {
-                weakSelf.selectedIndex = idx;
-            }
-        }];
-        _oriSelectedIndex = _selectedIndex;
-    }
-    return self;
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setHidden:YES];
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar setHidden:NO];
-
-}
-
-- (void)backAction{
-    [self.navigationController popViewControllerAnimated:NO];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = CommonBGView_Color;
-//    UIImageView *bg = [[UIImageView alloc]initWithFrame:self.view.bounds];
-//    bg.image = [UIImage imageNamed:@"common_bg"];
-//    [self.view addSubview:bg];
-
-    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_TOP_HEIGHT)];
-    [self.view addSubview:bgView];
-    
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backButton.frame = CGRectMake(5, SCREEN_STATUS_HEIGHT+4, 40, 40);
-    [backButton setImage:[UIImage imageNamed:@"back_arrow_bl"] forState:(UIControlStateNormal)];
-    [backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
-    [bgView addSubview:backButton];
-    
-    UILabel *labtitle = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-200)/2, SCREEN_STATUS_HEIGHT+4, 200, 40)];
-    labtitle.font = [UIFont systemFontOfSize:16.f];
-    labtitle.textColor = [UIColor blackColor];
-    labtitle.textAlignment = NSTextAlignmentCenter;
-    labtitle.text = _titleString ?: @"";
-    [bgView addSubview:labtitle];
-
-    [self.view addSubview:self.tableView];
-    self.tableView.tableFooterView = self.footView;
-}
-
+//: - (void)viewDidLayoutSubviews {
 - (void)viewDidLayoutSubviews {
+    //: [super viewDidLayoutSubviews];
     [super viewDidLayoutSubviews];
 //    _tableView.frame = self.view.bounds;
 }
 
-#pragma mark - Action
-- (void)onDone{
-    if (_oriSelectedIndex != _selectedIndex) {
-        id <YearOrnateScenario> bodyData = _datas[_selectedIndex];
-        if (_resultHandle) {
-            _resultHandle(bodyData);
-        }
+//: -(void)viewWillDisappear:(BOOL)animated{
+-(void)viewWillDisappear:(BOOL)animated{
+    //: [super viewWillDisappear:animated];
+    [super viewWillDisappear:animated];
+    //: [self.navigationController.navigationBar setHidden:NO];
+    [self.navigationController.navigationBar setHidden:NO];
+
+}
+
+//: - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    //: return 2.2250738585072014e-308;
+    return 2.2250738585072014e-308;
+}
+
+//: - (UIView *)footView{
+- (UIView *)orientation{
+    //: if(!_footView){
+    if(!_orientation){
+        //: _footView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width-30, 68)];
+        _orientation = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width-30, 68)];
+
+        //: UIButton *btnClear = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIButton *btnClear = [UIButton buttonWithType:UIButtonTypeCustom];
+//        btnClear.backgroundColor = [UIColor whiteColor];
+//        btnClear.layer.cornerRadius = 24;
+        //: btnClear.frame = CGRectMake(0, 20, [[UIScreen mainScreen] bounds].size.width-30, 48);
+        btnClear.frame = CGRectMake(0, 20, [[UIScreen mainScreen] bounds].size.width-30, 48);
+        //: [btnClear setTitle:[CommandAlongsideLocation getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
+        [btnClear setTitle:[CommandAlongsideLocation notebook:StringFromScaleStretchData(&dataDistanceTime)] forState:UIControlStateNormal];
+        //: [btnClear addTarget:self action:@selector(onDone) forControlEvents:UIControlEventTouchUpInside];
+        [btnClear addTarget:self action:@selector(cameraBring) forControlEvents:UIControlEventTouchUpInside];
+        //: [_footView addSubview:btnClear];
+        [_orientation addSubview:btnClear];
+        //: btnClear.backgroundColor = [UIColor colorWithHexString:@"#FF5E00"];
+        btnClear.backgroundColor = [UIColor directTo:StringFromScaleStretchData(&layoutLineValue)];
+        //: btnClear.layer.cornerRadius = 24;
+        btnClear.layer.cornerRadius = 24;
+//        btnClear.layer.shadowColor = DeepBtnColor.CGColor;
+//        btnClear.layer.shadowOffset = CGSizeMake(0,3);
+//        btnClear.layer.shadowOpacity = 1;
+//        btnClear.layer.shadowRadius = 0;
+
+
     }
+    //: return _footView;
+    return _orientation;
+}
+
+//: - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //: [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    //: _selectedIndex = indexPath.section;
+    _utilityStern = indexPath.section;
+    //: [_datas enumerateObjectsUsingBlock:^(id<YearOrnateScenario> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [_res enumerateObjectsUsingBlock:^(id<YearOrnateScenario> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        //: BOOL selected = (idx == indexPath.section);
+        BOOL selected = (idx == indexPath.section);
+        //: [obj setSelected:selected];
+        [obj setGradual:selected];
+    //: }];
+    }];
+    //: [self.tableView reloadData];
+    [self.engine reloadData];
+}
+
+//: #pragma mark - Getter
+#pragma mark - Getter
+//: - (UITableView *)tableView {
+- (UITableView *)engine {
+    //: if (!_tableView) {
+    if (!_engine) {
+        //: _tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, (44.0f + [UIDevice vg_statusBarHeight]), [[UIScreen mainScreen] bounds].size.width-30, [[UIScreen mainScreen] bounds].size.height-(44.0f + [UIDevice vg_statusBarHeight])) style:UITableViewStyleGrouped];
+        _engine = [[UITableView alloc] initWithFrame:CGRectMake(15, (44.0f + [UIDevice opinion]), [[UIScreen mainScreen] bounds].size.width-30, [[UIScreen mainScreen] bounds].size.height-(44.0f + [UIDevice opinion])) style:UITableViewStyleGrouped];
+        //: _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _engine.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        _tableView.scrollEnabled = NO;
+//        _tableView.layer.cornerRadius = 12;
+        //: _tableView.delegate = self;
+        _engine.delegate = self;
+        //: _tableView.dataSource = self;
+        _engine.dataSource = self;
+        //: _tableView.backgroundColor = [UIColor clearColor];
+        _engine.backgroundColor = [UIColor clearColor];
+    }
+    //: return _tableView;
+    return _engine;
+}
+
+//: + (instancetype)instanceWithTitle:(NSString *)title
++ (instancetype)cur:(NSString *)title
+                            //: items:(NSMutableArray <id <YearOrnateScenario>> *)items
+                            memory:(NSMutableArray <id <YearOrnateScenario>> *)items
+                           //: result:(NIMSelectedCompletion)result {
+                           lean:(NIMSelectedCompletion)result {
+    //: PrivateThemeParseBox *vc = [[PrivateThemeParseBox alloc] initWithItems:items];
+    PrivateThemeParseBox *vc = [[PrivateThemeParseBox alloc] initWithOuter:items];
+    //: vc.titleString = title ?: @"";
+    vc.accept = title ?: @"";
+    //: vc.resultHandle = result;
+    vc.fuse = result;
+    //: return vc;
+    return vc;
+}
+
+//: - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    //: return 10;
+    return 10;
+}
+
+//: - (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
+    //: [super viewWillAppear:animated];
+    [super viewWillAppear:animated];
+    //: [self.navigationController.navigationBar setHidden:YES];
+    [self.navigationController.navigationBar setHidden:YES];
+}
+//: - (void)backAction{
+- (void)tuneTo{
+    //: [self.navigationController popViewControllerAnimated:NO];
     [self.navigationController popViewControllerAnimated:NO];
 }
 
+//: - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    //: UIView *backView = [UIView new];
+    UIView *backView = [UIView new];
+    //: backView.backgroundColor = [UIColor clearColor];
+    backView.backgroundColor = [UIColor clearColor];
+    //: return backView;
+    return backView;
+}
+
+//: #pragma mark - Action
+#pragma mark - Action
+//: - (void)onDone{
+- (void)cameraBring{
+    //: if (_oriSelectedIndex != _selectedIndex) {
+    if (_arenaHandsome != _utilityStern) {
+        //: id <YearOrnateScenario> bodyData = _datas[_selectedIndex];
+        id <YearOrnateScenario> bodyData = _res[_utilityStern];
+        //: if (_resultHandle) {
+        if (_fuse) {
+            //: _resultHandle(bodyData);
+            _fuse(bodyData);
+        }
+    }
+    //: [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
+//: - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+        //: return 1;
+        return 1;
+
+}
+
+//: #pragma mark - Delegate
 #pragma mark - Delegate
 //- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 //{
@@ -182,103 +314,147 @@
 //    cell.backgroundView = roundView;
 //
 //}
+//: - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return _datas.count;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-        return 1;
-
+    //: return _datas.count;
+    return _res.count;
 }
 
+//: - (instancetype)initWithItems:(NSMutableArray <id <YearOrnateScenario>> *)items {
+- (instancetype)initWithOuter:(NSMutableArray <id <YearOrnateScenario>> *)items {
+    //: if (self = [super init]) {
+    if (self = [super init]) {
+        //: _datas = items;
+        _res = items;
+        //: _selectedIndex = -1;
+        _utilityStern = -1;
+        //: __weak typeof(self) weakSelf = self;
+        __weak typeof(self) weakSelf = self;
+        //: [items enumerateObjectsUsingBlock:^(id<YearOrnateScenario> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [items enumerateObjectsUsingBlock:^(id<YearOrnateScenario> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            //: if (obj.selected) {
+            if (obj.gradual) {
+                //: weakSelf.selectedIndex = idx;
+                weakSelf.utilityStern = idx;
+            }
+        //: }];
+        }];
+        //: _oriSelectedIndex = _selectedIndex;
+        _arenaHandsome = _utilityStern;
+    }
+    //: return self;
+    return self;
+}
+
+//: - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    //: UIView *backView = [UIView new];
+    UIView *backView = [UIView new];
+    //: backView.backgroundColor = [UIColor clearColor];
+    backView.backgroundColor = [UIColor clearColor];
+    //: return backView;
+    return backView;
+}
+
+//: - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //: return 56.0f;
     return 56.0f;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 10;
+//: - (void)viewDidLoad {
+- (void)viewDidLoad {
+    //: [super viewDidLoad];
+    [super viewDidLoad];
+    //: self.view.backgroundColor = [UIColor colorWithHexString:@"#F6F7FA"];
+    self.view.backgroundColor = [UIColor directTo:StringFromScaleStretchData(&userPleasedID)];
+//    UIImageView *bg = [[UIImageView alloc]initWithFrame:self.view.bounds];
+//    bg.image = [UIImage imageNamed:@"common_bg"];
+//    [self.view addSubview:bg];
+
+    //: UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, (44.0f + [UIDevice vg_statusBarHeight]))];
+    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, (44.0f + [UIDevice opinion]))];
+    //: [self.view addSubview:bgView];
+    [self.view addSubview:bgView];
+
+    //: UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //: backButton.frame = CGRectMake(5, [UIDevice vg_statusBarHeight]+4, 40, 40);
+    backButton.frame = CGRectMake(5, [UIDevice opinion]+4, 40, 40);
+    //: [backButton setImage:[UIImage imageNamed:@"back_arrow_bl"] forState:(UIControlStateNormal)];
+    [backButton setImage:[UIImage imageNamed:StringFromScaleStretchData(&globalSlopePath)] forState:(UIControlStateNormal)];
+    //: [backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+    [backButton addTarget:self action:@selector(tuneTo) forControlEvents:UIControlEventTouchUpInside];
+    //: [bgView addSubview:backButton];
+    [bgView addSubview:backButton];
+
+    //: UILabel *labtitle = [[UILabel alloc] initWithFrame:CGRectMake(([[UIScreen mainScreen] bounds].size.width-200)/2, [UIDevice vg_statusBarHeight]+4, 200, 40)];
+    UILabel *labtitle = [[UILabel alloc] initWithFrame:CGRectMake(([[UIScreen mainScreen] bounds].size.width-200)/2, [UIDevice opinion]+4, 200, 40)];
+    //: labtitle.font = [UIFont systemFontOfSize:16.f];
+    labtitle.font = [UIFont systemFontOfSize:16.f];
+    //: labtitle.textColor = [UIColor blackColor];
+    labtitle.textColor = [UIColor blackColor];
+    //: labtitle.textAlignment = NSTextAlignmentCenter;
+    labtitle.textAlignment = NSTextAlignmentCenter;
+    //: labtitle.text = _titleString ?: @"";
+    labtitle.text = _accept ?: @"";
+    //: [bgView addSubview:labtitle];
+    [bgView addSubview:labtitle];
+
+    //: [self.view addSubview:self.tableView];
+    [self.view addSubview:self.engine];
+    //: self.tableView.tableFooterView = self.footView;
+    self.engine.tableFooterView = self.orientation;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *backView = [UIView new];
-    backView.backgroundColor = [UIColor clearColor];
-    return backView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return CGFLOAT_MIN;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIView *backView = [UIView new];
-    backView.backgroundColor = [UIColor clearColor];
-    return backView;
-}
-
+//: - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    id <YearOrnateScenario> bodyData = _datas[indexPath.section];
-    
+    //: id <YearOrnateScenario> bodyData = _datas[indexPath.section];
+    id <YearOrnateScenario> bodyData = _res[indexPath.section];
+
 //    ReliableHastyUpdaterRecover *cell = [ReliableHastyUpdaterRecover cellWithTableView:tableView];
-    NSString *identifier = [NSString stringWithFormat:@"ZMONTeamCartSet%ld",(long)indexPath.row];
+    //: NSString *identifier = [NSString stringWithFormat:@"ZMONTeamCartSet%ld",(long)indexPath.row];
+    NSString *identifier = [NSString stringWithFormat:StringFromScaleStretchData(&screenSplitString),(long)indexPath.row];
+    //: ReliableHastyUpdaterRecover *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     ReliableHastyUpdaterRecover *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    //: if (!cell)
     if (!cell)
     {
+        //: cell = [[ReliableHastyUpdaterRecover alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell = [[ReliableHastyUpdaterRecover alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
+
+    //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.iconImageView.image = [UIImage imageNamed:bodyData.img];
-    cell.titleLabel.text = bodyData.title;
-    cell.arrowsImageView.hidden = ![bodyData selected];
-    
+    //: cell.iconImageView.image = [UIImage imageNamed:bodyData.img];
+    cell.realmMenu.image = [UIImage imageNamed:bodyData.notebookInLandscape];
+    //: cell.titleLabel.text = bodyData.title;
+    cell.below.text = bodyData.heaven;
+    //: cell.arrowsImageView.hidden = ![bodyData selected];
+    cell.behind.hidden = ![bodyData gradual];
+
+    //: return cell;
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    _selectedIndex = indexPath.section;
-    [_datas enumerateObjectsUsingBlock:^(id<YearOrnateScenario>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        BOOL selected = (idx == indexPath.section);
-        [obj setSelected:selected];
-    }];
-    [self.tableView reloadData];
-}
-
-#pragma mark - Getter
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, SCREEN_TOP_HEIGHT, SCREEN_WIDTH-30, SCREEN_HEIGHT-SCREEN_TOP_HEIGHT) style:UITableViewStyleGrouped];
-        _tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
-//        _tableView.scrollEnabled = NO;
-//        _tableView.layer.cornerRadius = 12;
-        _tableView.delegate   = self;
-        _tableView.dataSource = self;
-        _tableView.backgroundColor = [UIColor clearColor];
-    }
-    return _tableView;
-}
-
-- (UIView *)footView{
-    if(!_footView){
-        _footView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-30, 68)];
-                
-        UIButton *btnClear = [UIButton buttonWithType:UIButtonTypeCustom];
-//        btnClear.backgroundColor = [UIColor whiteColor];
-//        btnClear.layer.cornerRadius = 24;
-        btnClear.frame = CGRectMake(0, 20, SCREEN_WIDTH-30, 48);
-        [btnClear setTitle:LangKey(@"contact_list_activity_complete") forState:UIControlStateNormal];
-        [btnClear addTarget:self action:@selector(onDone) forControlEvents:UIControlEventTouchUpInside];
-        [_footView addSubview:btnClear];
-        btnClear.backgroundColor = ThemeColor;
-        btnClear.layer.cornerRadius = 24;
-//        btnClear.layer.shadowColor = DeepBtnColor.CGColor;
-//        btnClear.layer.shadowOffset = CGSizeMake(0,3);
-//        btnClear.layer.shadowOpacity = 1;
-//        btnClear.layer.shadowRadius = 0;
-        
-
-    }
-    return _footView;
-}
-
+//: @end
 @end
+
+Byte *ScaleStretchDataToByte(ScaleStretchData *data) {
+    if (data->structureDual < 116) return data->strokeContext;
+    for (int i = 0; i < data->showBottom; i++) {
+        data->strokeContext[i] ^= data->novel;
+    }
+    data->strokeContext[data->showBottom] = 0;
+    data->structureDual = 76;
+	if (data->showBottom >= 3) {
+		data->cellTag = data->strokeContext[0];
+		data->thorough = data->strokeContext[1];
+		data->arrayMessage = data->strokeContext[2];
+	}
+    return data->strokeContext;
+}
+
+NSString *StringFromScaleStretchData(ScaleStretchData *data) {
+    return [NSString stringWithUTF8String:(char *)ScaleStretchDataToByte(data)];
+}

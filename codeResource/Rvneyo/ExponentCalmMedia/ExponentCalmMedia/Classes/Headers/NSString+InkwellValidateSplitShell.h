@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  NSString+NIM.h
 // InkwellValidateSplitShell
@@ -6,30 +8,45 @@
 //  Copyright (c) 2015年 NetEase. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
+//: @interface NSString (InkwellValidateSplitShell)
 @interface NSString (InkwellValidateSplitShell)
 
-- (CGSize)nim_stringSizeWithFont:(UIFont *)font;
+//: - (NSString *)nim_stringByDeletingPictureResolution;
+- (NSString *)sumerruptOf;
 
-- (NSString *)nim_MD5String;
+//: - (BOOL)nim_containsEmoji;
+- (BOOL)pineTreat;
 
-- (NSUInteger)nim_getBytesLength;
+//: - (UIColor *)nim_hexToColor;
+- (UIColor *)display;
 
-- (NSString *)nim_stringByDeletingPictureResolution;
+//: - (CGSize)nim_stringSizeWithFont:(UIFont *)font;
+- (CGSize)focus:(UIFont *)font;
 
-- (UIColor *)nim_hexToColor;
+//: - (BOOL)nim_fileIsExist;
+- (BOOL)amendRadio;
 
-- (BOOL)nim_fileIsExist;
+//: - (NSUInteger)nim_getBytesLength;
+- (NSUInteger)justBy;
 
 
-- (NSString *)nim_localized;
+//: - (NSString *)nim_MD5String;
+- (NSString *)someRelated;
 
-- (NSString *)nim_localizedWithTable:(NSString *)table;
+//: - (NSString *)nim_localized;
+- (NSString *)vineMust;
 
-- (BOOL)nim_containsEmoji;
+//: - (NSRange)nim_rangeOfLastUnicode;
+- (NSRange)terrain;
 
-- (NSRange)nim_rangeOfLastUnicode;
+//: - (NSString *)nim_localizedWithTable:(NSString *)table;
+- (NSString *)belowEstimated:(NSString *)table;
 
-- (NSDictionary *)toDictionary ;
+//: - (NSDictionary *)toDictionary ;
+- (NSDictionary *)fade ;
+//: @end
 @end

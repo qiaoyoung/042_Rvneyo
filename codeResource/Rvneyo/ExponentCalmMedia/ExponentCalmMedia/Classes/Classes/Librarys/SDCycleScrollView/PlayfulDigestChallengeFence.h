@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  PlayfulDigestChallengeFence.h
 //  PlayfulDigestChallengeFence
@@ -5,6 +7,10 @@
 //  Created by aier on 15-3-22.
 //  Copyright (c) 2015年 GSD. All rights reserved.
 //
+
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
 
 /*
  
@@ -33,146 +39,196 @@
  * 更新日期：2016.04.21
  */
 
-#import <UIKit/UIKit.h>
 
+
+//: typedef enum {
 typedef enum {
+    //: PlayfulDigestChallengeFencePageContolAlimentRight,
     PlayfulDigestChallengeFencePageContolAlimentRight,
+    //: PlayfulDigestChallengeFencePageContolAlimentCenter
     PlayfulDigestChallengeFencePageContolAlimentCenter
+//: } PlayfulDigestChallengeFencePageContolAliment;
 } PlayfulDigestChallengeFencePageContolAliment;
 
+//: typedef enum {
 typedef enum {
+    //: PlayfulDigestChallengeFencePageContolStyleStrip,
     PlayfulDigestChallengeFencePageContolStyleStrip,
-    PlayfulDigestChallengeFencePageContolStyleClassic,        // 系统自带经典样式
-    PlayfulDigestChallengeFencePageContolStyleAnimated,       // 动画效果pagecontrol
-    PlayfulDigestChallengeFencePageContolStyleNone            // 不显示pagecontrol
+    //: PlayfulDigestChallengeFencePageContolStyleClassic, 
+    PlayfulDigestChallengeFencePageContolStyleClassic, // 系统自带经典样式
+    //: PlayfulDigestChallengeFencePageContolStyleAnimated, 
+    PlayfulDigestChallengeFencePageContolStyleAnimated, // 动画效果pagecontrol
+    //: PlayfulDigestChallengeFencePageContolStyleNone 
+    PlayfulDigestChallengeFencePageContolStyleNone // 不显示pagecontrol
+//: } PlayfulDigestChallengeFencePageContolStyle;
 } PlayfulDigestChallengeFencePageContolStyle;
 
+//: @class PlayfulDigestChallengeFence;
 @class PlayfulDigestChallengeFence;
 
+//: @protocol PlayfulDigestChallengeFenceDelegate <NSObject>
 @protocol PlayfulDigestChallengeFenceDelegate <NSObject>
 
+//: @optional
 @optional
 
 /** 点击图片回调 */
-- (void)cycleScrollView:(PlayfulDigestChallengeFence *)cycleScrollView didSelectItemAtIndex:(NSInteger)index;
+//: - (void)cycleScrollView:(PlayfulDigestChallengeFence *)cycleScrollView didSelectItemAtIndex:(NSInteger)index;
+- (void)totalegrationDriver:(PlayfulDigestChallengeFence *)cycleScrollView originShrink:(NSInteger)index;
 
 /** 图片滚动回调 */
-- (void)cycleScrollView:(PlayfulDigestChallengeFence *)cycleScrollView didScrollToIndex:(NSInteger)index;
+//: - (void)cycleScrollView:(PlayfulDigestChallengeFence *)cycleScrollView didScrollToIndex:(NSInteger)index;
+- (void)strategy:(PlayfulDigestChallengeFence *)cycleScrollView portraitFor:(NSInteger)index;
 
+//: @end
 @end
 
+//: @interface PlayfulDigestChallengeFence : UIView
 @interface PlayfulDigestChallengeFence : UIView
 
 
 /** 初始轮播图（推荐使用） */
-+ (instancetype)cycleScrollViewWithFrame:(CGRect)frame delegate:(id<PlayfulDigestChallengeFenceDelegate>)delegate placeholderImage:(UIImage *)placeholderImage;
+//////////////////////  清除缓存接口  //////////////////////
 
-+ (instancetype)cycleScrollViewWithFrame:(CGRect)frame imageURLStringsGroup:(NSArray *)imageURLStringsGroup;
+/** 清除图片缓存（此次升级后统一使用SDWebImage管理图片加载和缓存）  */
+//: + (void)clearImagesCache;
++ (void)color;
+
+//: + (instancetype)cycleScrollViewWithFrame:(CGRect)frame delegate:(id<PlayfulDigestChallengeFenceDelegate>)delegate placeholderImage:(UIImage *)placeholderImage;
++ (instancetype)routeSame:(CGRect)frame classicMost:(id<PlayfulDigestChallengeFenceDelegate>)delegate sumo:(UIImage *)placeholderImage;
 
 
 /** 本地图片轮播初始化方式 */
-+ (instancetype)cycleScrollViewWithFrame:(CGRect)frame imageNamesGroup:(NSArray *)imageNamesGroup;
+//: + (instancetype)cycleScrollViewWithFrame:(CGRect)frame imageNamesGroup:(NSArray *)imageNamesGroup;
++ (instancetype)thread:(CGRect)frame primeApply:(NSArray *)imageNamesGroup;
 
-/** 本地图片轮播初始化方式2,infiniteLoop:是否无限循环 */
-+ (instancetype)cycleScrollViewWithFrame:(CGRect)frame shouldInfiniteLoop:(BOOL)infiniteLoop imageNamesGroup:(NSArray *)imageNamesGroup;
+/** 清除图片缓存（兼容旧版本方法） */
+//: - (void)clearCache;
+- (void)yield;
 
 
+
+/** 分页控件小圆标大小 */
+//: @property (nonatomic, assign) CGSize pageControlDotSize;
+@property (nonatomic, assign) CGSize tension;
+
+/** 轮播文字label字体颜色 */
+//: @property (nonatomic, strong) UIColor *titleLabelTextColor;
+@property (nonatomic, strong) UIColor *rowChannel;
+
+/** block方式监听滚动 */
+//: @property (nonatomic, copy) void (^itemDidScrollOperationBlock)(NSInteger currentIndex);
+@property (nonatomic, copy) void (^application)(NSInteger currentIndex);
+
+
+
+
+
+/** 轮播文字label字体大小 */
+//: @property (nonatomic, strong) UIFont *titleLabelTextFont;
+@property (nonatomic, strong) UIFont *stream;
+
+/** 轮播文字label背景颜色 */
+//: @property (nonatomic, strong) UIColor *titleLabelBackgroundColor;
+@property (nonatomic, strong) UIColor *until;
+
+/** 每张图片对应要显示的文字数组 */
+//: @property (nonatomic, strong) NSArray *titlesGroup;
+@property (nonatomic, strong) NSArray *kick;
+
+/** 其他分页控件小圆标图片 */
+//: @property (nonatomic, strong) UIImage *pageDotImage;
+@property (nonatomic, strong) UIImage *assembleReliableReceive;
 
 //////////////////////  数据源接口  //////////////////////
 
 /** 网络图片 url string 数组 */
-@property (nonatomic, strong) NSArray *imageURLStringsGroup;
-
-/** 每张图片对应要显示的文字数组 */
-@property (nonatomic, strong) NSArray *titlesGroup;
-
-/** 本地图片数组 */
-@property (nonatomic, strong) NSArray *localizationImageNamesGroup;
-
-
-
-
+//: @property (nonatomic, strong) NSArray *imageURLStringsGroup;
+@property (nonatomic, strong) NSArray *watchAdapt;
 
 //////////////////////  滚动控制接口 //////////////////////
 
 /** 自动滚动间隔时间,默认2s */
-@property (nonatomic, assign) CGFloat autoScrollTimeInterval;
+//: @property (nonatomic, assign) CGFloat autoScrollTimeInterval;
+@property (nonatomic, assign) CGFloat beyondPrevious;
 
-/** 是否无限循环,默认Yes */
-@property (nonatomic,assign) BOOL infiniteLoop;
+/** 轮播文字label高度 */
+//: @property (nonatomic, assign) CGFloat titleLabelHeight;
+@property (nonatomic, assign) CGFloat garden;
+
+
+
+/** 本地图片数组 */
+//: @property (nonatomic, strong) NSArray *localizationImageNamesGroup;
+@property (nonatomic, strong) NSArray *bubbleUnique;
+
+//: @property (nonatomic, weak) id<PlayfulDigestChallengeFenceDelegate> delegate;
+@property (nonatomic, weak) id<PlayfulDigestChallengeFenceDelegate> curveExactses;
+
+/** pagecontrol 样式，默认为动画样式 */
+//: @property (nonatomic, assign) PlayfulDigestChallengeFencePageContolStyle pageControlStyle;
+@property (nonatomic, assign) PlayfulDigestChallengeFencePageContolStyle custom;
+
+/** 是否显示分页控件 */
+//: @property (nonatomic, assign) BOOL showPageControl;
+@property (nonatomic, assign) BOOL loose;
+
+/** 其他分页控件小圆标颜色 */
+//: @property (nonatomic, strong) UIColor *pageDotColor;
+@property (nonatomic, strong) UIColor *modeResolve;
 
 /** 是否自动滚动,默认Yes */
-@property (nonatomic,assign) BOOL autoScroll;
-
-/** 图片滚动方向，默认为水平滚动 */
-@property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
-
-@property (nonatomic, weak) id<PlayfulDigestChallengeFenceDelegate> delegate;
+//: @property (nonatomic,assign) BOOL autoScroll;
+@property (nonatomic,assign) BOOL gate;
 
 /** block方式监听点击 */
-@property (nonatomic, copy) void (^clickItemOperationBlock)(NSInteger currentIndex);
-
-/** block方式监听滚动 */
-@property (nonatomic, copy) void (^itemDidScrollOperationBlock)(NSInteger currentIndex);
-
-
+//: @property (nonatomic, copy) void (^clickItemOperationBlock)(NSInteger currentIndex);
+@property (nonatomic, copy) void (^replacementTitle)(NSInteger currentIndex);
 
 //////////////////////  自定义样式接口  //////////////////////
 
 /** 轮播图片的ContentMode，默认为 UIViewContentModeScaleToFill */
-@property (nonatomic, assign) UIViewContentMode bannerImageViewContentMode;
-
-/** 占位图，用于网络未加载到图片时 */
-@property (nonatomic, strong) UIImage *placeholderImage;
-
-/** 是否显示分页控件 */
-@property (nonatomic, assign) BOOL showPageControl;
+//: @property (nonatomic, assign) UIViewContentMode bannerImageViewContentMode;
+@property (nonatomic, assign) UIViewContentMode numbereract;
 
 /** 是否在只有一张图时隐藏pagecontrol，默认为YES */
-@property(nonatomic) BOOL hidesForSinglePage;
-
-/** pagecontrol 样式，默认为动画样式 */
-@property (nonatomic, assign) PlayfulDigestChallengeFencePageContolStyle pageControlStyle;
-
-/** 分页控件位置 */
-@property (nonatomic, assign) PlayfulDigestChallengeFencePageContolAliment pageControlAliment;
-
-/** 分页控件小圆标大小 */
-@property (nonatomic, assign) CGSize pageControlDotSize;
+//: @property(nonatomic) BOOL hidesForSinglePage;
+@property(nonatomic) BOOL nativeTransition;
 
 /** 当前分页控件小圆标颜色 */
-@property (nonatomic, strong) UIColor *currentPageDotColor;
+//: @property (nonatomic, strong) UIColor *currentPageDotColor;
+@property (nonatomic, strong) UIColor *tactic;
 
-/** 其他分页控件小圆标颜色 */
-@property (nonatomic, strong) UIColor *pageDotColor;
+/** 占位图，用于网络未加载到图片时 */
+//: @property (nonatomic, strong) UIImage *placeholderImage;
+@property (nonatomic, strong) UIImage *task;
+
+/** 图片滚动方向，默认为水平滚动 */
+//: @property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
+@property (nonatomic, assign) UICollectionViewScrollDirection musicFrame;
 
 /** 当前分页控件小圆标图片 */
-@property (nonatomic, strong) UIImage *currentPageDotImage;
+//: @property (nonatomic, strong) UIImage *currentPageDotImage;
+@property (nonatomic, strong) UIImage *post;
 
-/** 其他分页控件小圆标图片 */
-@property (nonatomic, strong) UIImage *pageDotImage;
+//: @property (nonatomic, assign) BOOL showGradient;
+@property (nonatomic, assign) BOOL assemble;
 
-/** 轮播文字label字体颜色 */
-@property (nonatomic, strong) UIColor *titleLabelTextColor;
+/** 是否无限循环,默认Yes */
+//: @property (nonatomic,assign) BOOL infiniteLoop;
+@property (nonatomic,assign) BOOL skilledClient;
 
-/** 轮播文字label字体大小 */
-@property (nonatomic, strong) UIFont  *titleLabelTextFont;
-
-/** 轮播文字label背景颜色 */
-@property (nonatomic, strong) UIColor *titleLabelBackgroundColor;
-
-/** 轮播文字label高度 */
-@property (nonatomic, assign) CGFloat titleLabelHeight;
-
-@property (nonatomic, assign) BOOL showGradient;
+/** 分页控件位置 */
+//: @property (nonatomic, assign) PlayfulDigestChallengeFencePageContolAliment pageControlAliment;
+@property (nonatomic, assign) PlayfulDigestChallengeFencePageContolAliment dawn;
 
 
-//////////////////////  清除缓存接口  //////////////////////
+//: + (instancetype)cycleScrollViewWithFrame:(CGRect)frame imageURLStringsGroup:(NSArray *)imageURLStringsGroup;
++ (instancetype)duringDetail:(CGRect)frame assemble:(NSArray *)imageURLStringsGroup;
 
-/** 清除图片缓存（此次升级后统一使用SDWebImage管理图片加载和缓存）  */
-+ (void)clearImagesCache;
+/** 本地图片轮播初始化方式2,infiniteLoop:是否无限循环 */
+//: + (instancetype)cycleScrollViewWithFrame:(CGRect)frame shouldInfiniteLoop:(BOOL)infiniteLoop imageNamesGroup:(NSArray *)imageNamesGroup;
++ (instancetype)denseBy:(CGRect)frame sky:(BOOL)infiniteLoop whenDrawing:(NSArray *)imageNamesGroup;
 
-/** 清除图片缓存（兼容旧版本方法） */
-- (void)clearCache;
-
+//: @end
 @end

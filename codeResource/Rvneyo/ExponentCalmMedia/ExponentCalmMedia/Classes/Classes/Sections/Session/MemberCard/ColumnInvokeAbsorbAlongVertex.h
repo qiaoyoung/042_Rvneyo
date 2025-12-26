@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  ColumnInvokeAbsorbAlongVertex.h
 //  Rvneyo
@@ -6,16 +8,27 @@
 //  Copyright © 2025 Rvneyo. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
+//: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
+//: #import "HideBatchInto.h"
 #import "HideBatchInto.h"
+//: #import "PainterDistinctGlobeFor.h"
 #import "PainterDistinctGlobeFor.h"
+
+//: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
+//: @interface ColumnInvokeAbsorbAlongVertex : UIViewController
 @interface ColumnInvokeAbsorbAlongVertex : UIViewController
 
-@property (nonatomic,strong) PainterDistinctGlobeFor *teamListManager;
+//: @property (nonatomic,strong) PainterDistinctGlobeFor *teamListManager;
+@property (nonatomic,strong) PainterDistinctGlobeFor *surf;
 
+//: @end
 @end
 
+//: NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_END
