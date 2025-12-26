@@ -103,7 +103,7 @@
         //: IntimateAppearanceModulus *model = (IntimateAppearanceModulus *)data;
         IntimateAppearanceModulus *model = (IntimateAppearanceModulus *)data;
         //: [_timeLabel setText:[RegisterMechanismWarehouse showTime:model.messageTime showDetail:YES]];
-        [_fast setText:[RegisterMechanismWarehouse execute:model.coreLoad written:YES]];
+        [_fast setText:[RegisterMechanismWarehouse execute:model.snap written:YES]];
     }
 }
 

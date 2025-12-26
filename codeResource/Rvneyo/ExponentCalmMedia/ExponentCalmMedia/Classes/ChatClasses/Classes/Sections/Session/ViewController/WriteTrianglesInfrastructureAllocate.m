@@ -2777,7 +2777,7 @@
 }
 
 //: - (void)onTapMenuItemCopy:(AnchorFocalHandlerDividerWall *)item
-- (void)wallWithoutSpirit:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemCopy:(AnchorFocalHandlerDividerWall *)item
 {
     //: NIMMessage *message = [self messageForMenu];
     NIMMessage *message = [self stern];

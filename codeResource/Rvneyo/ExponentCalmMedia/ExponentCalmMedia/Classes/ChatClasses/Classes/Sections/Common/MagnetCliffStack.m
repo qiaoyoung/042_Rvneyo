@@ -159,7 +159,7 @@
 //        _progressLabel.text = [NSString stringWithFormat:@"%d%%", (int)(progress*100)];
 //        [_activity startAnimating];
         //: self.progressView.progress = progress;
-        self.visualOption.precise = progress;
+        self.progressView.precise = progress;
     }
 
     //: [self setNeedsLayout];
@@ -206,23 +206,23 @@
 //        [self addSubview:_activity];
 
         //: self.progressView = [[AccessLimitPlanCandid alloc] initWithFrame:self.bounds];
-        self.visualOption = [[AccessLimitPlanCandid alloc] initWithFrame:self.bounds];
+        self.progressView = [[AccessLimitPlanCandid alloc] initWithFrame:self.bounds];
         //: self.progressView.backgroundColor = [UIColor clearColor];
-        self.visualOption.backgroundColor = [UIColor clearColor];
+        self.progressView.backgroundColor = [UIColor clearColor];
         //: self.progressView.translatesAutoresizingMaskIntoConstraints = NO;
-        self.visualOption.translatesAutoresizingMaskIntoConstraints = NO;
+        self.progressView.translatesAutoresizingMaskIntoConstraints = NO;
         //: self.progressView.showsText = YES;
-        self.visualOption.arc = YES;
+        self.progressView.arc = YES;
         //: self.progressView.tintColor = [UIColor colorWithHexString:@"#A148FF"];
-        self.visualOption.tintColor = [UIColor directTo:[SoftSensor_Data screenPetTitle]];
+        self.progressView.tintColor = [UIColor directTo:[SoftSensor_Data screenPetTitle]];
 //        self.progressView.tintColor = RGB_COLOR_String(kCommonBGColor_All);
 //        self.progressView.tintColor = [UIColor colorWithPatternImage:[FeatherInteractionGrand getLinearGradientImage:RGB_COLOR_String(kCommonBGColor_begin) and:RGB_COLOR_String(kCommonBGColor_end) directionType:FeatherInteractionGrandDirectionLevel]];
 
         //: [self addSubview:self.progressView];
-        [self addSubview:self.visualOption];
+        [self addSubview:self.progressView];
 
         //: NSDictionary *views = NSDictionaryOfVariableBindings(_progressView);
-        NSDictionary *views = NSDictionaryOfVariableBindings(_visualOption);
+        NSDictionary *views = NSDictionaryOfVariableBindings(_progressView);
         //: [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_progressView]-0-|" options:0 metrics:nil views:views]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[SoftSensor_Data kReceiveURL] options:0 metrics:nil views:views]];
         //: [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_progressView]-0-|" options:0 metrics:nil views:views]];

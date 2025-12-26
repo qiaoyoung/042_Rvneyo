@@ -29,7 +29,7 @@
 //: @property (nonatomic, assign)CGFloat maxProgress;
 @property (nonatomic, assign)CGFloat skilled;
 //: @property (nonatomic, strong) AccessLimitPlanCandid *progressView;
-@property (nonatomic, strong) AccessLimitPlanCandid *visualOption;
+@property (nonatomic, strong) AccessLimitPlanCandid *progressView;
 
 //: - (void)setProgress:(CGFloat)progress;
 - (void)setVastTo:(CGFloat)progress;

@@ -381,7 +381,7 @@
     //: if (self.link == nil) {
     if (self.valleyTab == nil) {
         //: self.link = [CADisplayLink displayLinkWithTarget:[QuillSoundSpoofSink weakProxyWithTarget:self] selector:@selector(updateUI)];
-        self.valleyTab = [CADisplayLink displayLinkWithTarget:[QuillSoundSpoofSink object:self] selector:@selector(updateUI)];
+        self.valleyTab = [CADisplayLink displayLinkWithTarget:[QuillSoundSpoofSink object:self] selector:@selector(restrictionDay)];
         //: [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
         [self.valleyTab addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     }

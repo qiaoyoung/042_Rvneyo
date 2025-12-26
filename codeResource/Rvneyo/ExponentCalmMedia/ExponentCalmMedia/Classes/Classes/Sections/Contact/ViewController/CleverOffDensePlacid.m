@@ -785,17 +785,17 @@ TerrainArithmeticOnDelegate> {
              ([self performSelector:sel withObject:nil]);
         }
         //: else if (contactItem.vcName.length) {
-        else if (contactItem.atTransfer.length) {
+        else if (contactItem.vcName.length) {
             //: Class clazz = NSClassFromString(contactItem.vcName);
-            Class clazz = NSClassFromString(contactItem.atTransfer);
+            Class clazz = NSClassFromString(contactItem.vcName);
             //: UIViewController * vc = [[clazz alloc] initWithNibName:nil bundle:nil];
             UIViewController * vc = [[clazz alloc] initWithNibName:nil bundle:nil];
             //: [self.navigationController pushViewController:vc animated:YES];
             [self.navigationController pushViewController:vc animated:YES];
         //: }else if([contactItem respondsToSelector:@selector(userId)]){
-        }else if([contactItem respondsToSelector:@selector(conditionTodays)]){
+        }else if([contactItem respondsToSelector:@selector(userId)]){
             //: NSString * friendId = contactItem.userId;
-            NSString * friendId = contactItem.dismissBy;
+            NSString * friendId = contactItem.userId;
             //: [self enterPersonalCard:friendId];
             [self jump:friendId];
         }
@@ -1143,9 +1143,9 @@ TerrainArithmeticOnDelegate> {
         //: id<ConnectNatureSegueDescriptionCubit> contactItem = (id<ConnectNatureSegueDescriptionCubit>)[_contacts memberOfIndex:indexPath];
         id<ConnectNatureSegueDescriptionCubit> contactItem = (id<ConnectNatureSegueDescriptionCubit>)[_absorb solar:indexPath];
         //: if([contactItem respondsToSelector:@selector(userId)]){
-        if([contactItem respondsToSelector:@selector(conditionTodays)]){
+        if([contactItem respondsToSelector:@selector(userId)]){
             //: NSString * friendId = contactItem.userId;
-            NSString * friendId = contactItem.dismissBy;
+            NSString * friendId = contactItem.userId;
             //: if ([ids containsObject:friendId]) {
             if ([ids containsObject:friendId]) {
                 //: [indexPaths addObject:indexPath];

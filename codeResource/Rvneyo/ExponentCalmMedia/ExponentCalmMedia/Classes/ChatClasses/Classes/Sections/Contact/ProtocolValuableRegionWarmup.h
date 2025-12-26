@@ -50,7 +50,7 @@ typedef void(^NIMContactDataProviderHandler)(NSDictionary *contentDic, NSArray *
  *  默认已经勾选的人或群组
  */
 //: - (NSArray *)alreadySelectedMemberId;
-- (NSArray *)equal;
+- (NSArray *)mustSecondary;
 
 /**
  *  需要过滤的人或群组id
@@ -86,7 +86,7 @@ typedef void(^NIMContactDataProviderHandler)(NSDictionary *contentDic, NSArray *
 
 /// 是否显示头部的群头像 群名字headerview
 //: - (BOOL)showSelectHeaderview;
-- (BOOL)calendar;
+- (BOOL)core;
 
 //: @end
 @end
@@ -140,7 +140,7 @@ typedef void(^NIMContactDataProviderHandler)(NSDictionary *contentDic, NSArray *
 @property (nonatomic,copy) NSArray *flushFigures;
 
 //: @property (nonatomic,assign) BOOL showSelectHeaderview;
-@property (nonatomic,assign) BOOL response;
+@property (nonatomic,assign) BOOL core;
 
 //: @property (nonatomic,copy) NSString *teamId;
 @property (nonatomic,copy) NSString *attach;
@@ -177,7 +177,7 @@ typedef void(^NIMContactDataProviderHandler)(NSDictionary *contentDic, NSArray *
 @property (nonatomic,copy) NSArray *mustSecondary;
 
 //: @property (nonatomic,assign) BOOL showSelectHeaderview;
-@property (nonatomic,assign) BOOL dataBack;
+@property (nonatomic,assign) BOOL core;
 
 //: @property (nonatomic,assign) VertexFilledKnack teamType;
 @property (nonatomic,assign) VertexFilledKnack evaluate;

@@ -190,13 +190,13 @@
  *  @return 返回thread 父消息
  */
 //: - (NIMMessage *)threadMessage;
-- (NIMMessage *)capability;
+- (NIMMessage *)photoMaximumsed;
 
 /**
  *  设置 thread消息
  */
 //: - (void)setThreadMessage:(NIMMessage *)message;
-- (void)setCapability:(NIMMessage *)message;
+- (void)setPhotoMaximumsed:(NIMMessage *)message;
 /**
  *  清空 thread消息
  */

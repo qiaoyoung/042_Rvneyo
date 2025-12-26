@@ -67,7 +67,7 @@
             //: IntimateAppearanceModulus *timeModel = [[IntimateAppearanceModulus alloc] init];
             IntimateAppearanceModulus *timeModel = [[IntimateAppearanceModulus alloc] init];
             //: timeModel.messageTime = model.messageTime;
-            timeModel.coreLoad = model.snap;
+            timeModel.snap = model.snap;
             //: [self.items insertObject:timeModel atIndex:index];
             [self.run insertObject:timeModel atIndex:index];
             //: [inserts addObject:@(index)];
@@ -676,7 +676,7 @@
         //: IntimateAppearanceModulus *timeModel = [[IntimateAppearanceModulus alloc] init];
         IntimateAppearanceModulus *timeModel = [[IntimateAppearanceModulus alloc] init];
         //: timeModel.messageTime = model.messageTime;
-        timeModel.coreLoad = model.snap;
+        timeModel.snap = model.snap;
         //: [self.items insertObject:timeModel atIndex:0];
         [self.run insertObject:timeModel atIndex:0];
     }

@@ -77,7 +77,7 @@
 }
 
 //: - (id)sortKey {
-- (id)comment {
+- (id)strategy {
     //: return [[EntrySteamSource sharedCenter] spellingForString:self.info.showName].shortSpelling;
     return [[EntrySteamSource hour] notGiven:self.observerShould.teamFriendly].arc;
 }
@@ -89,7 +89,7 @@
 }
 
 //: - (NSString *)memberId{
-- (NSString *)until{
+- (NSString *)stream{
     //: return self.info.infoId;
     return self.observerShould.novelEveryday;
 }
@@ -107,7 +107,7 @@
 }
 
 //: - (NSString *)userId{
-- (NSString *)clean{
+- (NSString *)userId{
     //: return self.info.infoId;
     return self.observerShould.novelEveryday;
 }
@@ -126,13 +126,13 @@
 //userId和Vcname必有一个有值，根据有值的状态push进不同的页面
 
 //: - (NSString *)vcName{
-- (NSString *)resign{
+- (NSString *)vcName{
     //: return nil;
     return nil;
 }
 
 //: - (NSString *)groupTitle {
-- (NSString *)material {
+- (NSString *)close {
     //: NSString *title = [[EntrySteamSource sharedCenter] firstLetter:self.info.showName].capitalizedString;
     NSString *title = [[EntrySteamSource hour] deployAll:self.observerShould.teamFriendly].capitalizedString;
     //: unichar character = [title characterAtIndex:0];
@@ -161,7 +161,7 @@
 }
 
 //: - (NSString *)showName{
-- (NSString *)under{
+- (NSString *)identity{
     //: return self.info.showName;
     return self.observerShould.teamFriendly;
 }

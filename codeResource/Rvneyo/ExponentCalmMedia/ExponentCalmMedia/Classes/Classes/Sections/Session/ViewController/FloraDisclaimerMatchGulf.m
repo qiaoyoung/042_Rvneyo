@@ -270,7 +270,7 @@ typedef struct {
 }
 
 //: - (id<SizePackDuskHardy>)sessionConfig
-- (id<SizePackDuskHardy>)grace
+- (id<SizePackDuskHardy>)transitDown
 {
     //: if (_sessionConfig == nil) {
     if (_grace == nil) {

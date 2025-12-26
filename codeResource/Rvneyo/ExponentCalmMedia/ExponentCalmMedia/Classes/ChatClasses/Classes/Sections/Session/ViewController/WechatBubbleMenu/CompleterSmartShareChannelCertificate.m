@@ -80,7 +80,7 @@ Byte widgetPreserveResumeTime[] = {22, 7, 54, 7, 216, 11, 187, 89, 123, 124, 124
         [selectedAllRangeButtons addObject:model];
 
         //: if (item.selctor == @selector(onTapMenuItemCopy:)) {
-        if (item.clipBroadcast == @selector(wallWithoutSpirit:)) {
+        if (item.clipBroadcast == @selector(onTapMenuItemCopy:)) {
             //: [selectedPartRangeButtons addObject:model];
             [selectedPartRangeButtons addObject:model];
         }

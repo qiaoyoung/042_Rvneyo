@@ -16,11 +16,11 @@
 @protocol MountTriumphColumn <NSObject>
 
 //: - (NSString *)groupTitle;
-- (NSString *)shrink;
+- (NSString *)close;
 //: - (NSString *)memberId;
-- (NSString *)trendCompute;
+- (NSString *)stream;
 //: - (id)sortKey;
-- (id)dot;
+- (id)strategy;
 
 //: @end
 @end

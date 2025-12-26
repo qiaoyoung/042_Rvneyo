@@ -1529,7 +1529,7 @@ SaturationOrientationCleverNextDelegate>
 //: #pragma mark - 菜单
 #pragma mark - 菜单
 //: - (void)onTapMenuItemReply:(AnchorFocalHandlerDividerWall *)item
-- (void)unity:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemReply:(AnchorFocalHandlerDividerWall *)item
 {
     //: NIMMessage *menuMessage = [self messageForMenu];
     NIMMessage *menuMessage = [self stern];
@@ -1537,7 +1537,7 @@ SaturationOrientationCleverNextDelegate>
     if ([self.grace respondsToSelector:@selector(setPhotoMaximumsed:)])
     {
         //: [self.sessionConfig setThreadMessage:menuMessage];
-        [self.grace setCapability:menuMessage];
+        [self.grace setPhotoMaximumsed:menuMessage];
     }
 
     //: [self.sessionInputView refreshStatus:MoorNotifierText];
@@ -1559,7 +1559,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)onTapMenuItemRevoke:(AnchorFocalHandlerDividerWall *)item
-- (void)capacityWall:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemRevoke:(AnchorFocalHandlerDividerWall *)item
 {
     //: NIMMessage *message = [self messageForMenu];
     NIMMessage *message = [self stern];
@@ -1578,7 +1578,7 @@ SaturationOrientationCleverNextDelegate>
 
 
 //: - (void)onTapMenuItemForword:(AnchorFocalHandlerDividerWall *)item
-- (void)address:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemForword:(AnchorFocalHandlerDividerWall *)item
 {
     //: MinimalFactoryDuskSymbolDistinction *vc = [[MinimalFactoryDuskSymbolDistinction alloc]init];
     MinimalFactoryDuskSymbolDistinction *vc = [[MinimalFactoryDuskSymbolDistinction alloc]init];
@@ -1925,7 +1925,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)onTapMenuItemMark:(AnchorFocalHandlerDividerWall *)item
-- (void)ownerTo:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemMark:(AnchorFocalHandlerDividerWall *)item
 {
     //: NIMMessage *message = [self messageForMenu];
     NIMMessage *message = [self stern];
@@ -2212,7 +2212,7 @@ SaturationOrientationCleverNextDelegate>
 
 
 //: - (void)onTapMenuItemReport:(AnchorFocalHandlerDividerWall *)item
-- (void)masterFirst:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemReport:(AnchorFocalHandlerDividerWall *)item
 {
     //: [self.view addSubview:self.translateView];
     [self.view addSubview:self.magnitudeactPlace];
@@ -2339,7 +2339,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)showVideo:(NIMMessage *)message
-- (void)oval:(NIMMessage *)message
+- (void)showVideo:(NIMMessage *)message
 {
     //: NIMVideoObject *object = message.messageObject;
     NIMVideoObject *object = message.messageObject;
@@ -2595,7 +2595,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)onTapMenuItemUnpin:(AnchorFocalHandlerDividerWall *)item
-- (void)neutralLimit:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemUnpin:(AnchorFocalHandlerDividerWall *)item
 {
     //: NIMMessage *message = [self messageForMenu];
     NIMMessage *message = [self stern];
@@ -2794,7 +2794,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)onTapMenuItemAudio2Text:(AnchorFocalHandlerDividerWall *)item
-- (void)stone:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemAudio2Text:(AnchorFocalHandlerDividerWall *)item
 {
 
 }
@@ -3231,14 +3231,14 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)onTapMenuItemMutiSelect:(AnchorFocalHandlerDividerWall *)item
-- (void)adjustment:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemMutiSelect:(AnchorFocalHandlerDividerWall *)item
 {
     //: [self switchUIWithSessionState:GraphicJubilantTrainSelect];
     [self constraintBeyond:GraphicJubilantTrainSelect];
 }
 
 //: - (id<SizePackDuskHardy>)sessionConfig
-- (id<SizePackDuskHardy>)grace
+- (id<SizePackDuskHardy>)transitDown
 {
     //: if (_sessionConfig == nil) {
     if (_grace == nil) {
@@ -3379,7 +3379,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)onTapMenuItemPin:(AnchorFocalHandlerDividerWall *)item
-- (void)sum:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemPin:(AnchorFocalHandlerDividerWall *)item
 {
     //: NIMMessage *message = [self messageForMenu];
     NIMMessage *message = [self stern];
@@ -3979,7 +3979,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)onTapMenuItemTranslation:(AnchorFocalHandlerDividerWall *)item
-- (void)remark:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemTranslation:(AnchorFocalHandlerDividerWall *)item
 {
     //: NIMMessage *message = [self messageForMenu];
     NIMMessage *message = [self stern];
@@ -4149,7 +4149,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)showCustom:(NIMMessage *)message
-- (void)voice:(NIMMessage *)message
+- (void)showCustom:(NIMMessage *)message
 {
    //普通的自定义消息点击事件可以在这里做哦~
 
@@ -4257,7 +4257,7 @@ SaturationOrientationCleverNextDelegate>
 //: #pragma mark - Cell Actions
 #pragma mark - Cell Actions
 //: - (void)showImage:(NIMMessage *)message
-- (void)vast:(NIMMessage *)message
+- (void)showImage:(NIMMessage *)message
 {
     //: NIMImageObject *object = message.messageObject;
     NIMImageObject *object = message.messageObject;
@@ -4521,7 +4521,7 @@ SaturationOrientationCleverNextDelegate>
 }
 
 //: - (void)onTapMenuItemDelete:(AnchorFocalHandlerDividerWall *)item
-- (void)expressionClient:(AnchorFocalHandlerDividerWall *)item
+- (void)onTapMenuItemDelete:(AnchorFocalHandlerDividerWall *)item
 {
     //: NIMMessage *message = [self messageForMenu];
     NIMMessage *message = [self stern];

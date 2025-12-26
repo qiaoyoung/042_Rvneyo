@@ -29,8 +29,7 @@ static char moduleMagnitudeMessage;
 }
 
 
-//: - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-- (void)civic:(UIAlertView *)alertView bar:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     //: AlertBlock block = objc_getAssociatedObject(self, &kUIAlertViewBlockAddress);
     AlertBlock block = objc_getAssociatedObject(self, &moduleMagnitudeMessage);

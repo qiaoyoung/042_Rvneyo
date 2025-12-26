@@ -97,7 +97,7 @@
         //: [groupedMembers sortUsingComparator:^NSComparisonResult(id<MountTriumphColumn> member1, id<MountTriumphColumn> member2) {
         [groupedMembers sortUsingComparator:^NSComparisonResult(id<MountTriumphColumn> member1, id<MountTriumphColumn> member2) {
             //: return _groupMemberComparator([member1 sortKey], [member2 sortKey]);
-            return _notebook([member1 dot], [member2 dot]);
+            return _notebook([member1 strategy], [member2 strategy]);
         //: }];
         }];
     //: }];
@@ -116,12 +116,12 @@
     //: for (id<MountTriumphColumn>member in members) {
     for (id<MountTriumphColumn>member in members) {
         //: if ([[member memberId] isEqualToString:me]) {
-        if ([[member trendCompute] isEqualToString:me]) {
+        if ([[member stream] isEqualToString:me]) {
             //: continue;
             continue;
         }
         //: NSString *groupTitle = [member groupTitle];
-        NSString *groupTitle = [member shrink];
+        NSString *groupTitle = [member close];
         //: NSMutableArray *groupedMembers = [tmp objectForKey:groupTitle];
         NSMutableArray *groupedMembers = [tmp objectForKey:groupTitle];
         //: if(!groupedMembers) {
@@ -166,7 +166,7 @@
 //: - (void)removeGroupMember:(id<MountTriumphColumn>)member{
 - (void)bright:(id<MountTriumphColumn>)member{
     //: NSString *groupTitle = [member groupTitle];
-    NSString *groupTitle = [member shrink];
+    NSString *groupTitle = [member close];
     //: NSInteger groupIndex = [_groupTtiles indexOfObject:groupTitle];
     NSInteger groupIndex = [_spectrum indexOfObject:groupTitle];
     //: EntropyAuditWittyLinear *pair = [_groups objectAtIndex:groupIndex];
@@ -201,7 +201,7 @@
         //: for (id<MountTriumphColumn> member in members) {
         for (id<MountTriumphColumn> member in members) {
             //: if ([[member memberId] isEqualToString:uid]) {
-            if ([[member trendCompute] isEqualToString:uid]) {
+            if ([[member stream] isEqualToString:uid]) {
                 //: return member;
                 return member;
             }
@@ -215,7 +215,7 @@
 - (void)consumption:(id<MountTriumphColumn>)member
 {
     //: NSString *groupTitle = [member groupTitle];
-    NSString *groupTitle = [member shrink];
+    NSString *groupTitle = [member close];
     //: NSInteger groupIndex = [_groupTtiles indexOfObject:groupTitle];
     NSInteger groupIndex = [_spectrum indexOfObject:groupTitle];
     //: EntropyAuditWittyLinear *pair = [_groups objectAtIndex:groupIndex];

@@ -349,7 +349,7 @@ typedef struct {
 
 
     //: if (self.config.showSelectHeaderview) {
-    if (self.verseProfile.calendar) {
+    if (self.verseProfile.core) {
 
         //: [self.view addSubview:self.setGroupnameView];
         [self.view addSubview:self.hidden];
@@ -600,7 +600,7 @@ typedef struct {
     if ([self.verseProfile respondsToSelector:@selector(mustSecondary)])
     {
         //: _selectecContacts = [[self.config alreadySelectedMemberId] mutableCopy];
-        _box = [[self.verseProfile equal] mutableCopy];
+        _box = [[self.verseProfile mustSecondary] mutableCopy];
     }
 
     //: _selectecContacts = _selectecContacts.count ? _selectecContacts : [NSMutableArray array];

@@ -90,7 +90,7 @@
 @property (nonatomic,strong) NIMSession *wealthy;
 
 //: @property (nonatomic,weak) id<PerimeterDiagram> delegate;
-@property (nonatomic,weak) id<PerimeterDiagram> curveExactses;
+@property (nonatomic,weak) id<PerimeterDiagram> document;
 
 //: @property (nonatomic,strong) UIRefreshControl *refreshControl;
 @property (nonatomic,strong) UIRefreshControl *owl;
@@ -403,10 +403,10 @@
 - (void)scopeCloseAccelerate:(id)sender
 {
     //: if ([self.delegate respondsToSelector:@selector(onRefresh)])
-    if ([self.curveExactses respondsToSelector:@selector(rainDeploy)])
+    if ([self.document respondsToSelector:@selector(rainDeploy)])
     {
         //: [self.delegate onRefresh];
-        [self.curveExactses rainDeploy];
+        [self.document rainDeploy];
     }
 }
 

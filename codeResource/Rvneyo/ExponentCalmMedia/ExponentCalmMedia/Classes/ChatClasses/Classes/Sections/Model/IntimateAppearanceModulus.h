@@ -27,7 +27,7 @@
 @property (nonatomic, assign) CGFloat allow;
 
 //: @property (nonatomic, assign) NSTimeInterval messageTime;
-@property (nonatomic, assign) NSTimeInterval coreLoad;
+@property (nonatomic, assign) NSTimeInterval snap;
 
 //: @end
 @end

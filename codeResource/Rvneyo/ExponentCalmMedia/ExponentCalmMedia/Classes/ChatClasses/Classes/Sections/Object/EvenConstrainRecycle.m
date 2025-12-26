@@ -178,7 +178,7 @@ dispatch_queue_t retLoop()
 @property (nonatomic,strong) NSMutableArray *radio;
 
 //: @property (nonatomic,strong) NIMMessage *referenceMessage;
-@property (nonatomic,strong) NIMMessage *holdSpeedMerge;
+@property (nonatomic,strong) NIMMessage *entityAcross;
 
 //: @property (nonatomic,assign) GraphicJubilantTrain sessionState;
 @property (nonatomic,assign) GraphicJubilantTrain front;
@@ -731,7 +731,7 @@ dispatch_queue_t retLoop()
              hold:(void(^)(NSError *error))completion
 {
     //: NIMMessage *message = self.referenceMessage;
-    NIMMessage *message = self.holdSpeedMerge;
+    NIMMessage *message = self.entityAcross;
     //: if (message)
     if (message)
     {
@@ -751,7 +751,7 @@ dispatch_queue_t retLoop()
         //: }];
         }];
         //: self.referenceMessage = nil;
-        self.holdSpeedMerge = nil;
+        self.entityAcross = nil;
     }
 }
 
@@ -1180,10 +1180,10 @@ dispatch_queue_t retLoop()
         }];
     }
     //: else if ([self.sessionConfig respondsToSelector:@selector(threadMessage)] && [self.sessionConfig threadMessage])
-    else if ([self.lock respondsToSelector:@selector(photoMaximumsed)] && [self.lock capability])
+    else if ([self.lock respondsToSelector:@selector(photoMaximumsed)] && [self.lock photoMaximumsed])
     {
         //: NIMMessage *threadMessage = [self.sessionConfig threadMessage];
-        NIMMessage *threadMessage = [self.lock capability];
+        NIMMessage *threadMessage = [self.lock photoMaximumsed];
         //: [[[NIMSDK sharedSDK] chatExtendManager] reply:message
         [[[NIMSDK sharedSDK] chatExtendManager] reply:message
                                                    //: to:threadMessage
@@ -1244,10 +1244,10 @@ dispatch_queue_t retLoop()
                                                 error:nil];
     }
     //: else if ([self.sessionConfig respondsToSelector:@selector(threadMessage)] && [self.sessionConfig threadMessage])
-    else if ([self.lock respondsToSelector:@selector(photoMaximumsed)] && [self.lock capability])
+    else if ([self.lock respondsToSelector:@selector(photoMaximumsed)] && [self.lock photoMaximumsed])
     {
         //: NIMMessage *threadMessage = [self.sessionConfig threadMessage];
-        NIMMessage *threadMessage = [self.lock capability];
+        NIMMessage *threadMessage = [self.lock photoMaximumsed];
         //: [[[NIMSDK sharedSDK] chatExtendManager] reply:message
         [[[NIMSDK sharedSDK] chatExtendManager] reply:message
                                                    //: to:threadMessage
@@ -2034,7 +2034,7 @@ dispatch_queue_t retLoop()
                                                   completion:^(NSError * _Nullable error)
     {
         //: weakSelf.referenceMessage = nil;
-        weakSelf.holdSpeedMerge = nil;
+        weakSelf.entityAcross = nil;
         //: [weakSelf refreshQuickComments:message completion:nil];
         [weakSelf transport:message resume:nil];
         //: if (completion)
