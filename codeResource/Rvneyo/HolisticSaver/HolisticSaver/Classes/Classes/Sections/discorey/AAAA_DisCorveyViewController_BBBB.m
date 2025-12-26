@@ -1,9 +1,9 @@
 //
 //  AAAA_DisCorveyViewController_BBBB.m
-//  Riverla
+//  Rvneyo
 //
 //  Created by mac on 2025/3/31.
-//  Copyright © 2025 Riverla. All rights reserved.
+//  Copyright © 2025 Rvneyo. All rights reserved.
 //
 
 #import "AAAA_DisCorveyViewController_BBBB.h"

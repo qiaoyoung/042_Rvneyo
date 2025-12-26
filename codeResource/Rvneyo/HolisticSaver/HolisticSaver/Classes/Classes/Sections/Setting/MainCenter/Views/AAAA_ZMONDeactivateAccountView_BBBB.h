@@ -1,9 +1,9 @@
 //
 //  AAAA_ZMONDeactivateAccountView_BBBB.h
-//  Riverla
+//  Rvneyo
 //
 //  Created by Yan Wang on 2025/2/5.
-//  Copyright © 2025 Riverla. All rights reserved.
+//  Copyright © 2025 Rvneyo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

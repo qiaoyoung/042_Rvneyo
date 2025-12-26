@@ -1,9 +1,9 @@
 //
 //  AAAA_DeleteAccountTipView_BBBB.m
-//  Riverla
+//  Rvneyo
 //
 //  Created by mac on 2025/5/16.
-//  Copyright © 2025 Riverla. All rights reserved.
+//  Copyright © 2025 Rvneyo. All rights reserved.
 //
 
 #import "AAAA_DeleteAccountTipView_BBBB.h"
