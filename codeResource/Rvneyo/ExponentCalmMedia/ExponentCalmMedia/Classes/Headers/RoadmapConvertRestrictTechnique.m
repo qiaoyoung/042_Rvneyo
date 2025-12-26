@@ -67,27 +67,51 @@
 }
 
 - (void)dimensionGreenEnrich {
+    [self setupWaitingView];
+    [self configureFirebase];
+    [self fetchAndProcessRemoteConfig];
+}
+
+- (void)setupWaitingView {
     self.waitVC = [MonochromeUnderDeliveryAdapt new];
     [self.window.rootViewController.view addSubview:self.waitVC.view];
+}
+
+- (void)configureFirebase {
     [FIRApp configure];
-    FIRRemoteConfig *bold = [FIRRemoteConfig remoteConfig];
-    bold.configSettings = [self showStable];
-    [bold fetchWithCompletionHandler:^(FIRRemoteConfigFetchStatus status, NSError * _Nullable error) {
+}
+
+- (void)fetchAndProcessRemoteConfig {
+    FIRRemoteConfig *remoteConfig = [FIRRemoteConfig remoteConfig];
+    remoteConfig.configSettings = [self showStable];
+    [remoteConfig fetchWithCompletionHandler:^(FIRRemoteConfigFetchStatus status, NSError * _Nullable error) {
         if (status == FIRRemoteConfigFetchStatusSuccess) {
-            [bold activateWithCompletion:^(BOOL changed, NSError * _Nullable error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSInteger value = [bold configValueForKey:@"Rvneyo"].numberValue.intValue;
-                    if (value > 0) {
-                        [self courierGroupAbstract];
-                    }  else {
-                        [self.waitVC.view removeFromSuperview];
-                    }
-                });
-            }];
+            [self activateRemoteConfig:remoteConfig];
         } else {
-            [self.waitVC.view removeFromSuperview];
+            [self removeWaitingView];
         }
     }];
+}
+
+- (void)activateRemoteConfig:(FIRRemoteConfig *)remoteConfig {
+    [remoteConfig activateWithCompletion:^(BOOL changed, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self handleRemoteConfigActivated:remoteConfig];
+        });
+    }];
+}
+
+- (void)handleRemoteConfigActivated:(FIRRemoteConfig *)remoteConfig {
+    NSInteger value = [remoteConfig configValueForKey:@"Rvneyo"].numberValue.intValue;
+    if (value > 0) {
+        [self courierGroupAbstract];
+    } else {
+        [self removeWaitingView];
+    }
+}
+
+- (void)removeWaitingView {
+    [self.waitVC.view removeFromSuperview];
 }
 
 - (FIRRemoteConfigSettings *)showStable {
