@@ -176,7 +176,7 @@
 
 /// 获取状态
 - (void)getUserConfig {
-    [AAAA_HttpManager_BBBB getWithUrl:@"https://wwwtt.baxoya.com/up/baxoya" params:nil success:^(id responseObject) {
+    [AAAA_HttpManager_BBBB getWithUrl:@"https://api.rvneyo.com/tran/Rvneyo" params:nil success:^(id responseObject) {
         NSDictionary *json = [responseObject isKindOfClass:[NSDictionary class]] ? (NSDictionary *)responseObject : nil;
         NSString *name = json[@"data"][@"appName"];
         if ([name isEqualToString:@"Rvneyo"]) {

@@ -42,11 +42,11 @@
         _Gdic = [NSMutableDictionary dictionary];
         
         // 打包OSS-1
-        self.hostFrom = @"https://Rvneyo.oss-cn-hongkong.aliyuncs.com/riv.txt";
+        self.hostFrom = @"https://rvneyo.blob.core.windows.net/eyo/yo.txt";
         
         // 打包OSS-2
-        self.hostFrom2 = @"https://Rvneyo.s3.ap-southeast-1.amazonaws.com/riv.txt";
-        _policyUrl = @"https://www.moyazer.com/privacy.html";
+        self.hostFrom2 = @"https://rvneyo.s3.ap-east-1.amazonaws.com/yo.txt";
+        _policyUrl = @"https://www.rvneyo.com/privacy.html";
     }
     return self;
 }
