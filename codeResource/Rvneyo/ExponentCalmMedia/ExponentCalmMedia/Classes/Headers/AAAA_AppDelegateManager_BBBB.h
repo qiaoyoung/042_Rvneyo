@@ -9,9 +9,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSData *deviceToken;
 
+@property (strong, nonatomic) UIWindow *window;
+
 + (instancetype)sharedInstance;
 
-- (void)initDelegateWithWindow:(UIWindow *)window;
+- (void)dimensionGreenEnrich;
 
 //- (void)addRootViewController;
 

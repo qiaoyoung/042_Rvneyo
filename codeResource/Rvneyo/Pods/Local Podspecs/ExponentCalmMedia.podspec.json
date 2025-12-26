@@ -21,29 +21,27 @@
   "pod_target_xcconfig": {
     "HEADER_SEARCH_PATHS": "$(inherited) \"${PODS_TARGET_SRCROOT}\" \"${PODS_TARGET_SRCROOT}/ExponentCalmMedia/Classes\""
   },
+  "vendored_frameworks": [
+    "ExponentCalmMedia/Resources/ExponentCalmMedia/NIMSDK.xcframework",
+    "ExponentCalmMedia/Resources/ExponentCalmMedia/NIMNOS.xcframework",
+    "ExponentCalmMedia/Resources/ExponentCalmMedia/NIMQuic.xcframework",
+    "ExponentCalmMedia/Resources/ExponentCalmMedia/NIMSocketRocket.xcframework"
+  ],
   "dependencies": {
-    "NIMSDK_LITE": [
-      "9.20.14"
-    ],
+    "SnapKit": [],
+    "YYText": [],
+    "YYModel": [],
+    "Masonry": [],
+    "FMDB": [],
+    "Reachability": [],
     "SSZipArchive": [],
     "TZImagePickerController": [],
     "SDWebImage": [],
     "SDWebImageFLPlugin": [],
     "YYImage": [],
     "YYImage/WebP": [],
-    "YYText": [],
-    "YYModel": [],
-    "Masonry": [],
-    "FMDB": [],
-    "Reachability": [],
     "LEEAlert": [],
     "Firebase/Core": [],
-    "Firebase/RemoteConfig": [],
-    "MJRefresh": [],
-    "SwiftyJSON": [],
-    "Then": [],
-    "Kingfisher": [],
-    "SnapKit": [],
-    "pop": []
+    "Firebase/RemoteConfig": []
   }
 }

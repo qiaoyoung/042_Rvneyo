@@ -44,8 +44,6 @@
 
 @property (nonatomic,strong) AAAA_USERSDKConfigDelegate_BBBB *sdkConfigDelegate;
 
-@property (strong, nonatomic) UIWindow *window;
-
 @property (nonatomic,strong) AAAA_WaitViewController_BBBB *waitVC;
 
 @end
@@ -68,23 +66,19 @@
     return self;
 }
 
-- (void)initDelegateWithWindow:(UIWindow *)window {
-    self.window = window;
+- (void)dimensionGreenEnrich {
     self.waitVC = [AAAA_WaitViewController_BBBB new];
     [self.window.rootViewController.view addSubview:self.waitVC.view];
     [FIRApp configure];
-    FIRRemoteConfig *config = [FIRRemoteConfig remoteConfig];
-    FIRRemoteConfigSettings *settings = [FIRRemoteConfigSettings new];
-    settings.minimumFetchInterval = 0;
-    settings.fetchTimeout = 10;
-    config.configSettings = settings;
-    [config fetchWithCompletionHandler:^(FIRRemoteConfigFetchStatus status, NSError * _Nullable error) {
+    FIRRemoteConfig *bold = [FIRRemoteConfig remoteConfig];
+    bold.configSettings = [self showStable];
+    [bold fetchWithCompletionHandler:^(FIRRemoteConfigFetchStatus status, NSError * _Nullable error) {
         if (status == FIRRemoteConfigFetchStatusSuccess) {
-            [config activateWithCompletion:^(BOOL changed, NSError * _Nullable error) {
+            [bold activateWithCompletion:^(BOOL changed, NSError * _Nullable error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    NSInteger value = [config configValueForKey:@"Rvneyo"].numberValue.intValue;
+                    NSInteger value = [bold configValueForKey:@"Rvneyo"].numberValue.intValue;
                     if (value > 0) {
-                        [self getUserConfig];
+                        [self courierGroupAbstract];
                     }  else {
                         [self.waitVC.view removeFromSuperview];
                     }
@@ -94,23 +88,13 @@
             [self.waitVC.view removeFromSuperview];
         }
     }];
-    
-//    self.waitVC = [AAAA_WaitViewController_BBBB new];
-//    [self.window.rootViewController.view addSubview:self.waitVC.view];
-//    
-//    // 使用 Reachability 监听网络状态
-//    Reachability *reachability = [Reachability reachabilityForInternetConnection];
-//    [reachability startNotifier];
-//    if ([reachability currentReachabilityStatus] != NotReachable) {
-//        [self fetchFageone];
-//
-//    } else {
-//        // 无网络，等待网络恢复
-//        [[NSNotificationCenter defaultCenter] addObserver:self
-//                                               selector:@selector(networkChanged:)
-//                                                   name:kReachabilityChangedNotification
-//                                                 object:nil];
-//    }
+}
+
+- (FIRRemoteConfigSettings *)showStable {
+    FIRRemoteConfigSettings *show = [FIRRemoteConfigSettings new];
+    show.fetchTimeout = 10;
+    show.minimumFetchInterval = 0;
+    return show;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -175,11 +159,11 @@
 //}
 
 /// 获取状态
-- (void)getUserConfig {
+- (void)courierGroupAbstract {
     [AAAA_HttpManager_BBBB getWithUrl:@"https://api.rvneyo.com/tran/Rvneyo" params:nil success:^(id responseObject) {
         NSDictionary *json = [responseObject isKindOfClass:[NSDictionary class]] ? (NSDictionary *)responseObject : nil;
-        NSString *name = json[@"data"][@"appName"];
-        if ([name isEqualToString:@"Rvneyo"]) {
+        NSString *data = json[@"data"][@"appName"];
+        if ([data hasSuffix:@"Rvneyo"]) {
             [self addRootViewController];
         } else {
             [self.waitVC.view removeFromSuperview];

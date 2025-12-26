@@ -17,28 +17,27 @@ Pod::Spec.new do |s|
     'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_TARGET_SRCROOT}" "${PODS_TARGET_SRCROOT}/ExponentCalmMedia/Classes"'
   }
   
-  # 依赖库
-  s.dependency 'NIMSDK_LITE', '9.20.14'
+  s.vendored_frameworks = [
+  'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMQuic.xcframework',
+  'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMSocketRocket.xcframework'
+  'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMSDK.xcframework',
+  'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMNOS.xcframework',
+]
+  
+  s.dependency 'SnapKit'
+  s.dependency 'YYText'
+  s.dependency 'YYModel'
+  s.dependency 'Masonry'
+  s.dependency 'FMDB'
+  s.dependency 'Reachability'
   s.dependency 'SSZipArchive'
   s.dependency 'TZImagePickerController'
   s.dependency 'SDWebImage'
   s.dependency 'SDWebImageFLPlugin'
   s.dependency 'YYImage'
   s.dependency 'YYImage/WebP'
-  s.dependency 'YYText'
-  s.dependency 'YYModel'
-  s.dependency 'Masonry'
-  s.dependency 'FMDB'
-  s.dependency 'Reachability'
   s.dependency 'LEEAlert'
   s.dependency 'Firebase/Core'
   s.dependency 'Firebase/RemoteConfig'
-  
-  # 新增库
-  s.dependency 'MJRefresh'
-  s.dependency 'SwiftyJSON'
-  s.dependency 'Then'
-  s.dependency 'Kingfisher'
-  s.dependency 'SnapKit'
-  s.dependency 'pop'
+
 end
