@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>challengeLockUniqueDesert</key>
+    <string>TonalStemFeedback</string>
+    <key>keypathParticle</key>
+    <string>PlatformBelowDereferenceRelay</string>
+    <key>concatenateSynchronizerTonalSpacing</key>
+    <string>BandwidthSelectorCheck</string>
+    <key>modulusGroupKey</key>
+    <string>IdleRockDetach</string>
+</dict>
+</plist>

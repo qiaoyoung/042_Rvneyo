@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>crestlineUpPrivate</key>
+    <string>CheckRadiusPlayback</string>
+    <key>compositeBundle</key>
+    <string>ExpandedZoomCollateInterpolation</string>
+    <key>immenseBrightness</key>
+    <string>CoreGraphScope</string>
+</dict>
+</plist>

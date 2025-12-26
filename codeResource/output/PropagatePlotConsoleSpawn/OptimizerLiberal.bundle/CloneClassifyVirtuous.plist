@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>autosaveFrequencyPolishedRibbon</key>
+    <string>FlatCancelInvert</string>
+    <key>resilientLock</key>
+    <string>FeatheredPreciseIndex</string>
+    <key>tailUtility</key>
+    <string>ThroughputUrbaneDropSingleton</string>
+    <key>nearLushClass</key>
+    <string>StrokeArtisticMockPreview</string>
+</dict>
+</plist>
