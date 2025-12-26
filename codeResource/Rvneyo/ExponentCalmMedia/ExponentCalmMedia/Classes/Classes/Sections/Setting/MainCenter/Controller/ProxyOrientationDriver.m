@@ -290,7 +290,7 @@
         //: _textView.textColor = [UIColor colorWithHexString:@"#333333"];
         _realmMerge.textColor = [UIColor directTo:[Table_Data sharedInstance].cacheUrbanID];
         //: _textView.placeholder = [CommandAlongsideLocation getTextWithKey:@"activity_set_bio_title"];
-        _realmMerge.locationImmediatelied = [CommandAlongsideLocation notebook:[Table_Data sharedInstance].themePriorityAlert];
+        _realmMerge.placeholder = [CommandAlongsideLocation notebook:[Table_Data sharedInstance].themePriorityAlert];
         //: _textView.delegate = self;
         _realmMerge.delegate = self;
 //        _textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20);

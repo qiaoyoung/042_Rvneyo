@@ -381,7 +381,7 @@ Button_Data commonLinkFutureFormatConfig = (Button_Data){250, (Byte []){157, 136
         //: item.title = dic[[ExquisiteEasyRing getTeamHelperText]];
         item.wisdom = dic[[ExquisiteEasyRing kind]];
         //: item.img = dic[[ExquisiteEasyRing getTeamHelperImg]];
-        item.evenContact = dic[[ExquisiteEasyRing net]];
+        item.representation = dic[[ExquisiteEasyRing net]];
         //: item.selected = (selectValue == [dic[[ExquisiteEasyRing getTeamHelperValue]] integerValue]);
         item.wallThumbMaterial = (selectValue == [dic[[ExquisiteEasyRing sumense]] integerValue]);
         //: [items addObject:item];

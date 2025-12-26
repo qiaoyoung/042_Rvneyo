@@ -20,7 +20,7 @@
 
 
 //: @dynamic placeholder;
-@dynamic locationImmediatelied;
+@dynamic placeholder;
 //: @dynamic placeholderLabel;
 @dynamic sliceSlip;
 //: @dynamic textValue;
@@ -78,7 +78,7 @@ NSString const *userMuseWeavePath = @"kKeyLabel";
 }
 
 //: -(NSString*)placeholder
--(NSString*)locationImmediatelied
+-(NSString*)placeholder
 {
     //  Returns our "placeholder" text string
     //: return objc_getAssociatedObject(self, &kKeyPlaceHolder);
@@ -90,8 +90,7 @@ NSString const *userMuseWeavePath = @"kKeyLabel";
 
 //: NSString const *kKeyPlaceHolder = @"kKeyPlaceHolder";
 NSString const *cacheTrackTimer = @"kKeyPlaceHolder";
-//: -(void)setPlaceholder:(NSString *)_placeholder
--(void)setLocationImmediatelied:(NSString *)_placeholder
+-(void)setPlaceholder:(NSString *)_placeholder
 {
     //  Sets our "placeholder" text string, creates a new UILabel to contain it, and modifies our UITextView to cope with
     //  showing/hiding the UILabel when needed.

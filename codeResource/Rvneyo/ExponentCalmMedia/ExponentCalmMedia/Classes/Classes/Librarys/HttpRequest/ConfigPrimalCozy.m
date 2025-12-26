@@ -171,9 +171,9 @@ Byte screenGladQuantityeractValue[] = {44, 10, 42, 10, 180, 163, 75, 48, 181, 20
     AFHTTPSessionManager *manager = [ConfigPrimalCozy cameraSmooth].crop;
     // 记录原始超时时间，避免影响后续请求
     //: NSTimeInterval originalTimeout = manager.requestSerializer.timeoutInterval;
-    NSTimeInterval originalTimeout = manager.vesselPrepares.mostWorlding;
+    NSTimeInterval originalTimeout = manager.vesselPrepares.timeoutInterval;
     //: manager.requestSerializer.timeoutInterval = 5;
-    manager.vesselPrepares.mostWorlding = 5;
+    manager.vesselPrepares.timeoutInterval = 5;
     //: [manager GET:urlStr
     [manager terrain:urlStr
       //: parameters:params
@@ -187,7 +187,7 @@ Byte screenGladQuantityeractValue[] = {44, 10, 42, 10, 180, 163, 75, 48, 181, 20
         } preserve:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
             // 恢复超时时间
             //: manager.requestSerializer.timeoutInterval = originalTimeout;
-            manager.vesselPrepares.mostWorlding = originalTimeout;
+            manager.vesselPrepares.timeoutInterval = originalTimeout;
             //: if (success) {
             if (success) {
                 //: success(responseObject);
@@ -197,7 +197,7 @@ Byte screenGladQuantityeractValue[] = {44, 10, 42, 10, 180, 163, 75, 48, 181, 20
         } alongsideLoop:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             // 恢复超时时间
             //: manager.requestSerializer.timeoutInterval = originalTimeout;
-            manager.vesselPrepares.mostWorlding = originalTimeout;
+            manager.vesselPrepares.timeoutInterval = originalTimeout;
             //: if (failed) {
             if (failed) {
                 //: failed(nil, error);

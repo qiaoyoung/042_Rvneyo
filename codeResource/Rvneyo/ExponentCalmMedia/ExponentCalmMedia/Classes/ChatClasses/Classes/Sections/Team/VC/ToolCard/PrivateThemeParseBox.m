@@ -427,9 +427,9 @@ ScaleStretchData globalSlopePath = (ScaleStretchData){117, (Byte []){23, 20, 22,
     //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //: cell.iconImageView.image = [UIImage imageNamed:bodyData.img];
-    cell.realmMenu.image = [UIImage imageNamed:bodyData.notebookInLandscape];
+    cell.realmMenu.image = [UIImage imageNamed:bodyData.representation];
     //: cell.titleLabel.text = bodyData.title;
-    cell.below.text = bodyData.heaven;
+    cell.below.text = bodyData.wisdom;
     //: cell.arrowsImageView.hidden = ![bodyData selected];
     cell.behind.hidden = ![bodyData gradual];
 

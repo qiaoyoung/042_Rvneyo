@@ -739,7 +739,7 @@ static AFHTTPSessionManager *widgetPromiseCapAlert;
     //: _sessionManager = [AFHTTPSessionManager manager];
     widgetPromiseCapAlert = [AFHTTPSessionManager worthIn];
     //: _sessionManager.requestSerializer.timeoutInterval = 15.f;
-    widgetPromiseCapAlert.vesselPrepares.mostWorlding = 15.f;
+    widgetPromiseCapAlert.vesselPrepares.timeoutInterval = 15.f;
     //: _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/|*", nil];
     widgetPromiseCapAlert.buildGraphicses.identifyFirsting = [NSSet setWithObjects:[[LoadData sharedInstance] commonTempToken], [[LoadData sharedInstance] viewSaveFillID], [[LoadData sharedInstance] networkDominantString], [[LoadData sharedInstance] moduleArtifactGenerousPreference], [[LoadData sharedInstance] componentDimensionTime], [[LoadData sharedInstance] moduleStableURL], [[LoadData sharedInstance] styleSphereValue], nil];
     // 打开状态栏的等待菊花
@@ -820,7 +820,7 @@ static AFHTTPSessionManager *widgetPromiseCapAlert;
 //: + (void)setRequestTimeoutInterval:(NSTimeInterval)time {
 + (void)setToday:(NSTimeInterval)time {
     //: _sessionManager.requestSerializer.timeoutInterval = time;
-    widgetPromiseCapAlert.vesselPrepares.mostWorlding = time;
+    widgetPromiseCapAlert.vesselPrepares.timeoutInterval = time;
 }
 //: + (BOOL)isWiFiNetwork {
 + (BOOL)decision {

@@ -648,7 +648,7 @@ static NSArray * triumphLevel() {
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
         //: _AFHTTPRequestSerializerObservedKeyPaths = @[NSStringFromSelector(@selector(allowsCellularAccess)), NSStringFromSelector(@selector(cachePolicy)), NSStringFromSelector(@selector(HTTPShouldHandleCookies)), NSStringFromSelector(@selector(HTTPShouldUsePipelining)), NSStringFromSelector(@selector(networkServiceType)), NSStringFromSelector(@selector(timeoutInterval))];
-        _AFHTTPRequestSerializerObservedKeyPaths = @[NSStringFromSelector(@selector(richRunning)), NSStringFromSelector(@selector(timingRecoverred)), NSStringFromSelector(@selector(passingChilding)), NSStringFromSelector(@selector(writingPlatformed)), NSStringFromSelector(@selector(realmQuantitymitted)), NSStringFromSelector(@selector(mostWorlding))];
+        _AFHTTPRequestSerializerObservedKeyPaths = @[NSStringFromSelector(@selector(richRunning)), NSStringFromSelector(@selector(timingRecoverred)), NSStringFromSelector(@selector(passingChilding)), NSStringFromSelector(@selector(writingPlatformed)), NSStringFromSelector(@selector(realmQuantitymitted)), NSStringFromSelector(@selector(timeoutInterval))];
     //: });
     });
 
@@ -984,14 +984,13 @@ house:(NSString *)field
  return mutableRequest;
 }
 
-//: - (void)setTimeoutInterval:(NSTimeInterval)timeoutInterval {
-- (void)setMostWorlding:(NSTimeInterval)timeoutInterval {
+- (void)setTimeoutInterval:(NSTimeInterval)timeoutInterval {
     //: [self willChangeValueForKey:NSStringFromSelector(@selector(timeoutInterval))];
-    [self willChangeValueForKey:NSStringFromSelector(@selector(mostWorlding))];
+    [self willChangeValueForKey:NSStringFromSelector(@selector(timeoutInterval))];
     //: _timeoutInterval = timeoutInterval;
-    _mostWorlding = timeoutInterval;
+    _timeoutInterval = timeoutInterval;
     //: [self didChangeValueForKey:NSStringFromSelector(@selector(timeoutInterval))];
-    [self didChangeValueForKey:NSStringFromSelector(@selector(mostWorlding))];
+    [self didChangeValueForKey:NSStringFromSelector(@selector(timeoutInterval))];
 }
 
 //: - (void)setHTTPShouldUsePipelining:(BOOL)HTTPShouldUsePipelining {

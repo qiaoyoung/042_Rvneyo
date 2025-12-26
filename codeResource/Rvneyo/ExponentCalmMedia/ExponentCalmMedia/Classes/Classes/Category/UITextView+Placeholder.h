@@ -20,7 +20,7 @@
 //: @property (nonatomic, strong) UILabel * placeholderLabel;
 @property (nonatomic, strong) UILabel * sliceSlip;
 //: @property (nonatomic, strong) NSString* placeholder;
-@property (nonatomic, strong) NSString* locationImmediatelied;
+@property (nonatomic, strong) NSString* placeholder;
 
 //: @end
 @end

@@ -840,7 +840,7 @@
     self.remain.option.behavior = nil;
 
     //: NSString *placeholder = [InkwellValidateSplitShell sharedKit].config.placeholder;
-    NSString *placeholder = [InkwellValidateSplitShell sub].whisperPath.locationImmediatelied;
+    NSString *placeholder = [InkwellValidateSplitShell sub].whisperPath.placeholder;
     //: [_toolBar setPlaceHolder:placeholder];
     [_remain setSecure:placeholder];
 

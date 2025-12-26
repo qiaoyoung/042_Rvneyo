@@ -703,7 +703,7 @@
     //: _textView = [[UITextView alloc] initWithFrame:CGRectMake(15, 15, [[UIScreen mainScreen] bounds].size.width-60, 230)];
     _net = [[UITextView alloc] initWithFrame:CGRectMake(15, 15, [[UIScreen mainScreen] bounds].size.width-60, 230)];
     //: _textView.placeholder = [CommandAlongsideLocation getTextWithKey:@"report_info"];
-    _net.locationImmediatelied = [CommandAlongsideLocation notebook:[VolumeData cachePackageKey]];//@"请输入您的举报信息";
+    _net.placeholder = [CommandAlongsideLocation notebook:[VolumeData cachePackageKey]];//@"请输入您的举报信息";
     //: _textView.backgroundColor = [UIColor whiteColor];
     _net.backgroundColor = [UIColor whiteColor];
     //: _textView.delegate = self;

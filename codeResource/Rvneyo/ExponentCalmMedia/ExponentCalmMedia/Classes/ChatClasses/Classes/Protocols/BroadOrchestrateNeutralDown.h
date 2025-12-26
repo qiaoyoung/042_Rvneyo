@@ -93,13 +93,13 @@ typedef NS_ENUM(NSInteger, DisplayMarshWander) {
 @protocol YearOrnateScenario <NSObject>
 
 //: - (id)value;
-- (id)thePick;
+- (id)beginBold;
 
 //: - (NSString *)title;
-- (NSString *)heaven;
+- (NSString *)wisdom;
 
 //: - (NSString *)img;
-- (NSString *)notebookInLandscape;
+- (NSString *)representation;
 
 //: - (BOOL)selected;
 - (BOOL)gradual;
@@ -114,19 +114,19 @@ typedef NS_ENUM(NSInteger, DisplayMarshWander) {
 @protocol SourceParticleInstantiate <NSObject>
 
 //: - (NSString *)title;
-- (NSString *)opera;
+- (NSString *)wisdom;
 
 //: - (id)value;
-- (id)convertEnd;
+- (id)beginBold;
 
 //: - (DisplayMarshWander)type;
-- (DisplayMarshWander)skillAcross;
+- (DisplayMarshWander)rate;
 
 //: - (CGFloat)rowHeight;
-- (CGFloat)hint;
+- (CGFloat)awake;
 
 //: - (NIMTeamCardRowSelectedBlock)selectedBlock;
-- (NIMTeamCardRowSelectedBlock)abovePlateValuable;
+- (NIMTeamCardRowSelectedBlock)table;
 
 //: - (NSMutableArray <id <YearOrnateScenario>> *)optionItems;
 - (NSMutableArray <id <YearOrnateScenario>> *)pressure;
@@ -134,7 +134,7 @@ typedef NS_ENUM(NSInteger, DisplayMarshWander) {
 //: @optional
 @optional
 //: - (NSString *)subTitle;
-- (NSString *)mission;
+- (NSString *)tail;
 
 //: - (UIImage *)img;
 - (UIImage *)representation;
@@ -143,10 +143,10 @@ typedef NS_ENUM(NSInteger, DisplayMarshWander) {
 - (SEL)sphere;
 
 //: - (BOOL)actionDisabled;
-- (BOOL)natural;
+- (BOOL)memoryTrued;
 
 //: - (BOOL)switchOn;
-- (BOOL)quantityBy;
+- (BOOL)winter;
 
 //: - (NSInteger)identify;
 - (NSInteger)condition;

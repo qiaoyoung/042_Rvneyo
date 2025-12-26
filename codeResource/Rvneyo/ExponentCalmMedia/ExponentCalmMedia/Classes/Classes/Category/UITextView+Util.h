@@ -31,7 +31,7 @@ typedef void(^textViewHeightDidChangedBlock)(CGFloat currentTextViewHeight);
 //: @property (nonatomic, assign) CGFloat maxHeight;
 @property (nonatomic, assign) CGFloat likelyWild;
 //: @property (nonatomic, copy) NSString *placeholder;
-@property (nonatomic, copy) NSString *locationImmediatelied;
+@property (nonatomic, copy) NSString *placeholder;
 /* 插入一张图片 image:要添加的图片 multiple:放大／缩小的倍数 index:插入的位置 */
 //: - (void)insertImage:(UIImage *)image multiple:(CGFloat)multiple index:(NSInteger)index;
 - (void)peaceful:(UIImage *)image textSurf:(CGFloat)multiple relative:(NSInteger)index;

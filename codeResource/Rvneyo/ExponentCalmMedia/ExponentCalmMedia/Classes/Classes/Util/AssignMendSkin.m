@@ -708,7 +708,7 @@
     //: AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager worthIn];
     //: sessionManager.requestSerializer.timeoutInterval = 5.f;
-    sessionManager.vesselPrepares.mostWorlding = 5.f;
+    sessionManager.vesselPrepares.timeoutInterval = 5.f;
     //: sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/|*", nil];
     sessionManager.buildGraphicses.identifyFirsting = [NSSet setWithObjects:[Construct_Data sharedInstance].appTitleMessage, [Construct_Data sharedInstance].networkInspectFormat, [Construct_Data sharedInstance].componentSineOriginAlert, [Construct_Data sharedInstance].layoutDeleteShapeCollectorNumber, [Construct_Data sharedInstance].cacheThreadToken, [Construct_Data sharedInstance].kHeadDict, [Construct_Data sharedInstance].networkSpaceDict, nil];
     //: [sessionManager setResponseSerializer:[AFHTTPResponseSerializer serializer]];

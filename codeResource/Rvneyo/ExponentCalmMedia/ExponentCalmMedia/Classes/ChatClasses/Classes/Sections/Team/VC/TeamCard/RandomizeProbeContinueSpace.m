@@ -224,7 +224,7 @@
     //: UITableViewCell * cell;
     UITableViewCell * cell;
     //: DisplayMarshWander type = bodyData.type;
-    DisplayMarshWander type = bodyData.skillAcross;
+    DisplayMarshWander type = bodyData.rate;
     //: switch (type) {
     switch (type) {
         //: case DisplayMarshWanderCommon:
@@ -384,7 +384,7 @@
     //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //: cell.titleLabel.text = bodyData.title;
-    cell.file.text = bodyData.opera;
+    cell.file.text = bodyData.wisdom;
     //: cell.iconImageView.image = bodyData.img;
     cell.keyVastPeacefulView.image = bodyData.representation;
 //    cell.contentLabel.text = bodyData.subTitle;
@@ -456,7 +456,7 @@
     //: cell.button.style = MultiplyChooserSupremeFormalStyleRed;
     cell.insight.power = MultiplyChooserSupremeFormalStyleRed;
     //: [cell.button setTitle:bodyData.title forState:UIControlStateNormal];
-    [cell.insight setTitle:bodyData.opera forState:UIControlStateNormal];
+    [cell.insight setTitle:bodyData.wisdom forState:UIControlStateNormal];
     //: return cell;
     return cell;
 }
@@ -513,7 +513,7 @@
     //: cell.button.style = MultiplyChooserSupremeFormalStyleBlue;
     cell.insight.power = MultiplyChooserSupremeFormalStyleBlue;
     //: [cell.button setTitle:bodyData.title forState:UIControlStateNormal];
-    [cell.insight setTitle:bodyData.opera forState:UIControlStateNormal];
+    [cell.insight setTitle:bodyData.wisdom forState:UIControlStateNormal];
     //: return cell;
     return cell;
 }
@@ -548,7 +548,7 @@
     //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //: cell.textLabel.text = [NSString stringWithFormat:@"%@(%@)",bodyData.title,bodyData.subTitle];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@(%@)",bodyData.opera,bodyData.mission];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@(%@)",bodyData.wisdom,bodyData.tail];
     //: cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     //: cell.textLabel.textColor = [UIColor blackColor];
@@ -557,7 +557,7 @@
 //    cell.imageView.image = bodyData.img;
 
     //: if ([bodyData respondsToSelector:@selector(actionDisabled)] && bodyData.actionDisabled) {
-    if ([bodyData respondsToSelector:@selector(memoryTrued)] && bodyData.natural) {
+    if ([bodyData respondsToSelector:@selector(memoryTrued)] && bodyData.memoryTrued) {
         //: cell.accessoryType = UITableViewCellAccessoryNone;
         cell.accessoryType = UITableViewCellAccessoryNone;
     //: }else{
@@ -626,7 +626,7 @@
     sep.hidden = (indexPath.row + 1 == [self.region numberOfRowsInSection:indexPath.section]);
 
     //: cell.textLabel.text = bodyData.title;
-    cell.textLabel.text = bodyData.opera;
+    cell.textLabel.text = bodyData.wisdom;
     //: cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     //: cell.textLabel.textColor = [UIColor colorWithHexString:@"#2C3042"];
@@ -635,7 +635,7 @@
     cell.imageView.image = bodyData.representation;
 
     //: cell.switcher.on = bodyData.switchOn;
-    cell.lock.on = bodyData.quantityBy;
+    cell.lock.on = bodyData.winter;
     //: cell.identify = bodyData.identify;
     cell.galaxy = bodyData.condition;
 
@@ -735,7 +735,7 @@
     //: id<SourceParticleInstantiate> bodyData = [self bodyDataAtIndexPath:indexPath];
     id<SourceParticleInstantiate> bodyData = [self red:indexPath];
     //: return bodyData.rowHeight;
-    return bodyData.hint;
+    return bodyData.awake;
 }
 
 //: #pragma mark - 旋转处理 (iOS8 or above)
@@ -795,22 +795,22 @@
     //: id<SourceParticleInstantiate> bodyData = [self bodyDataAtIndexPath:indexPath];
     id<SourceParticleInstantiate> bodyData = [self red:indexPath];
     //: if ([bodyData respondsToSelector:@selector(actionDisabled)] && bodyData.actionDisabled) {
-    if ([bodyData respondsToSelector:@selector(memoryTrued)] && bodyData.natural) {
+    if ([bodyData respondsToSelector:@selector(memoryTrued)] && bodyData.memoryTrued) {
         //: return;
         return;
     }
     //: if (bodyData.type == DisplayMarshWanderSelected) {
-    if (bodyData.skillAcross == DisplayMarshWanderSelected) {
+    if (bodyData.rate == DisplayMarshWanderSelected) {
         //: PrivateThemeParseBox *vc = [PrivateThemeParseBox instanceWithTitle:bodyData.title
-        PrivateThemeParseBox *vc = [PrivateThemeParseBox cur:bodyData.opera
+        PrivateThemeParseBox *vc = [PrivateThemeParseBox cur:bodyData.wisdom
                                                                                //: items:bodyData.optionItems
                                                                                memory:bodyData.pressure
                                                                               //: result:^(id<YearOrnateScenario> _Nonnull item) {
                                                                               lean:^(id<YearOrnateScenario> _Nonnull item) {
               //: if (bodyData.selectedBlock) {
-              if (bodyData.abovePlateValuable) {
+              if (bodyData.table) {
                   //: bodyData.selectedBlock(item);
-                  bodyData.abovePlateValuable(item);
+                  bodyData.table(item);
               }
           //: }];
           }];

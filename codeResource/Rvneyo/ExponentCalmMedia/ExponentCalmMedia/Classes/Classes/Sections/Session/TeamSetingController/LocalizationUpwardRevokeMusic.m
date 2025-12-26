@@ -896,14 +896,14 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamShareCart.subTitle = self.teamListManager.team.teamName;
     teamShareCart.tail = self.quantityeractForbid.formal.teamName;
     //: teamShareCart.action = @selector(sendGroupCart);
-    teamShareCart.organicTechnique = @selector(alreadyExternal);
+    teamShareCart.sphere = @selector(alreadyExternal);
     //: teamShareCart.rowHeight = 50.f;
     teamShareCart.awake = 50.f;
     //: teamShareCart.type = DisplayMarshWanderCommon;
     teamShareCart.rate = DisplayMarshWanderCommon;
 //    teamShareCart.actionDisabled = !canEdit;
     //: teamShareCart.img = [UIImage imageNamed:@"ic_card_share"];
-    teamShareCart.evenContact = [UIImage imageNamed:[OuterData screenArcError]];
+    teamShareCart.representation = [UIImage imageNamed:[OuterData screenArcError]];
 
     //: EnhanceYardTwistOn *teamMembers = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *teamMembers = [[EnhanceYardTwistOn alloc] init];
@@ -912,7 +912,7 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamMembers.subTitle = self.teamListManager.team.teamName;
     teamMembers.tail = self.quantityeractForbid.formal.teamName;
     //: teamMembers.action = @selector(enterMemberCard);
-    teamMembers.organicTechnique = @selector(willingUrban);
+    teamMembers.sphere = @selector(willingUrban);
     //: teamMembers.rowHeight = 50.f;
     teamMembers.awake = 50.f;
     //: teamMembers.type = DisplayMarshWanderCommon;
@@ -920,7 +920,7 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamMembers.actionDisabled = !self.canAddFriend;
     teamMembers.memoryTrued = !self.supplyCheck;
     //: teamMembers.img = [UIImage imageNamed:@"ic_group_members"];
-    teamMembers.evenContact = [UIImage imageNamed:[OuterData styleEngineNatureString]];
+    teamMembers.representation = [UIImage imageNamed:[OuterData styleEngineNatureString]];
 
     //: EnhanceYardTwistOn *teamAnnoucement = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *teamAnnoucement = [[EnhanceYardTwistOn alloc] init];
@@ -929,14 +929,14 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamAnnoucement.subTitle = self.teamListManager.team.teamName;
     teamAnnoucement.tail = self.quantityeractForbid.formal.teamName;
     //: teamAnnoucement.action = @selector(updateTeamAnnouncement);
-    teamAnnoucement.organicTechnique = @selector(elmImmediately);
+    teamAnnoucement.sphere = @selector(elmImmediately);
     //: teamAnnoucement.rowHeight = 50.f;
     teamAnnoucement.awake = 50.f;
     //: teamAnnoucement.type = DisplayMarshWanderCommon;
     teamAnnoucement.rate = DisplayMarshWanderCommon;
 //    teamAnnoucement.actionDisabled = !canEdit;
     //: teamAnnoucement.img = [UIImage imageNamed:@"ic_announcement"];
-    teamAnnoucement.evenContact = [UIImage imageNamed:[OuterData k_withHelper]];
+    teamAnnoucement.representation = [UIImage imageNamed:[OuterData k_withHelper]];
 
     //: EnhanceYardTwistOn *teamName = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *teamName = [[EnhanceYardTwistOn alloc] init];
@@ -945,7 +945,7 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamName.subTitle = self.teamListManager.team.teamName;
     teamName.tail = self.quantityeractForbid.formal.teamName;
     //: teamName.action = @selector(updateTeamName);
-    teamName.organicTechnique = @selector(previousConfirm);
+    teamName.sphere = @selector(previousConfirm);
     //: teamName.rowHeight = 50.f;
     teamName.awake = 50.f;
     //: teamName.type = DisplayMarshWanderCommon;
@@ -953,7 +953,7 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamName.actionDisabled = !canEdit;
     teamName.memoryTrued = !canEdit;
     //: teamName.img = [UIImage imageNamed:@"ic_group_edit"];
-    teamName.evenContact = [UIImage imageNamed:[OuterData userFineMessage]];
+    teamName.representation = [UIImage imageNamed:[OuterData userFineMessage]];
 
 
     //: EnhanceYardTwistOn *teamNick = [[EnhanceYardTwistOn alloc] init];
@@ -963,13 +963,13 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamNick.subTitle = self.teamListManager.myTeamInfo.nickname;
     teamNick.tail = self.quantityeractForbid.observerJungleWrite.nickname;
     //: teamNick.action = @selector(updateTeamNick);
-    teamNick.organicTechnique = @selector(promiseFeature);
+    teamNick.sphere = @selector(promiseFeature);
     //: teamNick.rowHeight = 50.f;
     teamNick.awake = 50.f;
     //: teamNick.type = DisplayMarshWanderCommon;
     teamNick.rate = DisplayMarshWanderCommon;
     //: teamNick.img = [UIImage imageNamed:@"ic_group_nick"];
-    teamNick.evenContact = [UIImage imageNamed:[OuterData themeLengthTime]];
+    teamNick.representation = [UIImage imageNamed:[OuterData themeLengthTime]];
 
     //: EnhanceYardTwistOn *teamIntro = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *teamIntro = [[EnhanceYardTwistOn alloc] init];
@@ -978,7 +978,7 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamIntro.subTitle = self.teamListManager.team.intro.length ? self.teamListManager.team.intro : (canEdit ? [CommandAlongsideLocation getTextWithKey:@"team_info_set_activity_default_group_tip"] : @"");
     teamIntro.tail = self.quantityeractForbid.formal.intro.length ? self.quantityeractForbid.formal.intro : (canEdit ? [CommandAlongsideLocation notebook:[OuterData widgetSnowResult]] : @"");
     //: teamIntro.action = @selector(updateTeamIntro);
-    teamIntro.organicTechnique = @selector(announcementOrStair);
+    teamIntro.sphere = @selector(announcementOrStair);
     //: teamIntro.rowHeight = 50.f;
     teamIntro.awake = 50.f;
     //: teamIntro.type = DisplayMarshWanderCommon;
@@ -986,7 +986,7 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamIntro.actionDisabled = !canEdit;
     teamIntro.memoryTrued = !canEdit;
     //: teamIntro.img = [UIImage imageNamed:@"ic_group_introduction"];
-    teamIntro.evenContact = [UIImage imageNamed:[OuterData dataStoryNumber]];
+    teamIntro.representation = [UIImage imageNamed:[OuterData dataStoryNumber]];
 
 //    EnhanceYardTwistOn *teamAnnouncement = [[EnhanceYardTwistOn alloc] init];
 //    teamAnnouncement.title = @"群公告".nim_localized;
@@ -1010,19 +1010,19 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamMute.type = DisplayMarshWanderSwitch;
     teamMute.rate = DisplayMarshWanderSwitch;
     //: teamMute.optionItems = [ExquisiteEasyRing teamMuteItemsWithSeleced:inAllMuteMode];
-    teamMute.wealthyHard = [ExquisiteEasyRing location:inAllMuteMode];
+    teamMute.pressure = [ExquisiteEasyRing location:inAllMuteMode];
     //: teamMute.actionDisabled = !canEdit;
     teamMute.memoryTrued = !canEdit;
     //: teamMute.selectedBlock = ^(id<YearOrnateScenario> item) {
     teamMute.table = ^(id<YearOrnateScenario> item) {
         //: [weakSelf didUpdateTeamMute:[item.value integerValue]];
-        [weakSelf contact:[item.thePick integerValue]];
+        [weakSelf contact:[item.beginBold integerValue]];
     //: };
     };
     //: teamMute.identify = PathwayPageNaturalMarkMute;
-    teamMute.defineMovie = PathwayPageNaturalMarkMute;
+    teamMute.condition = PathwayPageNaturalMarkMute;
     //: teamMute.img = [UIImage imageNamed:@"ic_group_all"];
-    teamMute.evenContact = [UIImage imageNamed:[OuterData kSignatureAlert]];
+    teamMute.representation = [UIImage imageNamed:[OuterData kSignatureAlert]];
 
     //: EnhanceYardTwistOn *teamMuteList = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *teamMuteList = [[EnhanceYardTwistOn alloc] init];
@@ -1033,9 +1033,9 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamMuteList.type = DisplayMarshWanderCommon;
     teamMuteList.rate = DisplayMarshWanderCommon;
     //: teamMuteList.action = @selector(enterMuteList);
-    teamMuteList.organicTechnique = @selector(channelSun);
+    teamMuteList.sphere = @selector(channelSun);
     //: teamMuteList.img = [UIImage imageNamed:@"ic_card_black"];
-    teamMuteList.evenContact = [UIImage imageNamed:[OuterData componentBrokerURL]];
+    teamMuteList.representation = [UIImage imageNamed:[OuterData componentBrokerURL]];
 
     //: EnhanceYardTwistOn *teamNotify = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *teamNotify = [[EnhanceYardTwistOn alloc] init];
@@ -1048,15 +1048,15 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamNotify.type = DisplayMarshWanderSelected;
     teamNotify.rate = DisplayMarshWanderSelected;
     //: teamNotify.optionItems = [ExquisiteEasyRing notifyStateItemsWithSeleced:self.teamListManager.team.notifyStateForNewMsg];
-    teamNotify.wealthyHard = [ExquisiteEasyRing deliverExpression:self.quantityeractForbid.formal.notifyStateForNewMsg];
+    teamNotify.pressure = [ExquisiteEasyRing deliverExpression:self.quantityeractForbid.formal.notifyStateForNewMsg];
     //: teamNotify.selectedBlock = ^(id<YearOrnateScenario> item) {
     teamNotify.table = ^(id<YearOrnateScenario> item) {
         //: [weakSelf didUpdateNotifiyState:[item.value integerValue]];
-        [weakSelf build:[item.thePick integerValue]];
+        [weakSelf build:[item.beginBold integerValue]];
     //: };
     };
     //: teamNotify.img = [UIImage imageNamed:@"ic_card_notice"];
-    teamNotify.evenContact = [UIImage imageNamed:[OuterData widgetOfStrengthTimer]];
+    teamNotify.representation = [UIImage imageNamed:[OuterData widgetOfStrengthTimer]];
 
 
     //: EnhanceYardTwistOn *itemAuth = [[EnhanceYardTwistOn alloc] init];
@@ -1072,15 +1072,15 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: itemAuth.type = DisplayMarshWanderSelected;
     itemAuth.rate = DisplayMarshWanderSelected;
     //: itemAuth.optionItems = [ExquisiteEasyRing joinModeItemsWithSeleced:self.teamListManager.team.joinMode];
-    itemAuth.wealthyHard = [ExquisiteEasyRing runGreen:self.quantityeractForbid.formal.joinMode];
+    itemAuth.pressure = [ExquisiteEasyRing runGreen:self.quantityeractForbid.formal.joinMode];
     //: itemAuth.selectedBlock = ^(id<YearOrnateScenario> item) {
     itemAuth.table = ^(id<YearOrnateScenario> item) {
         //: [weakSelf didupdateTeamJoinMode:[item.value integerValue]];
-        [weakSelf speed:[item.thePick integerValue]];
+        [weakSelf speed:[item.beginBold integerValue]];
     //: };
     };
     //: itemAuth.img = [UIImage imageNamed:@"ic_identity_authentication"];
-    itemAuth.evenContact = [UIImage imageNamed:[OuterData componentTargetBrainVersion]];
+    itemAuth.representation = [UIImage imageNamed:[OuterData componentTargetBrainVersion]];
 
     //: EnhanceYardTwistOn *itemInvite = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *itemInvite = [[EnhanceYardTwistOn alloc] init];
@@ -1095,15 +1095,15 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: itemInvite.type = DisplayMarshWanderSelected;
     itemInvite.rate = DisplayMarshWanderSelected;
     //: itemInvite.optionItems = [ExquisiteEasyRing InviteModeItemsWithSeleced:self.teamListManager.team.inviteMode];
-    itemInvite.wealthyHard = [ExquisiteEasyRing exception:self.quantityeractForbid.formal.inviteMode];
+    itemInvite.pressure = [ExquisiteEasyRing exception:self.quantityeractForbid.formal.inviteMode];
     //: itemInvite.selectedBlock = ^(id<YearOrnateScenario> item) {
     itemInvite.table = ^(id<YearOrnateScenario> item) {
         //: [weakSelf didUpdateTeamInviteMode:[item.value integerValue]];
-        [weakSelf artisticThroughPine:[item.thePick integerValue]];
+        [weakSelf artisticThroughPine:[item.beginBold integerValue]];
     //: };
     };
     //: itemInvite.img = [UIImage imageNamed:@"ic_invite"];
-    itemInvite.evenContact = [UIImage imageNamed:[OuterData dataSortTime]];
+    itemInvite.representation = [UIImage imageNamed:[OuterData dataSortTime]];
 
     //: EnhanceYardTwistOn *itemUpdateInfo = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *itemUpdateInfo = [[EnhanceYardTwistOn alloc] init];
@@ -1118,15 +1118,15 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: itemUpdateInfo.type = DisplayMarshWanderSelected;
     itemUpdateInfo.rate = DisplayMarshWanderSelected;
     //: itemUpdateInfo.optionItems = [ExquisiteEasyRing updateInfoModeItemsWithSeleced:self.teamListManager.team.updateInfoMode];
-    itemUpdateInfo.wealthyHard = [ExquisiteEasyRing theory:self.quantityeractForbid.formal.updateInfoMode];
+    itemUpdateInfo.pressure = [ExquisiteEasyRing theory:self.quantityeractForbid.formal.updateInfoMode];
     //: itemUpdateInfo.selectedBlock = ^(id<YearOrnateScenario> item) {
     itemUpdateInfo.table = ^(id<YearOrnateScenario> item) {
         //: [weakSelf didUpdateTeamInfoMode:[item.value integerValue]];
-        [weakSelf property:[item.thePick integerValue]];
+        [weakSelf property:[item.beginBold integerValue]];
     //: };
     };
     //: itemUpdateInfo.img = [UIImage imageNamed:@"ic_modify"];
-    itemUpdateInfo.evenContact = [UIImage imageNamed:[OuterData layoutNormViaResource]];
+    itemUpdateInfo.representation = [UIImage imageNamed:[OuterData layoutNormViaResource]];
 
     //: EnhanceYardTwistOn *itemBeInvite = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *itemBeInvite = [[EnhanceYardTwistOn alloc] init];
@@ -1141,15 +1141,15 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: itemBeInvite.type = DisplayMarshWanderSelected;
     itemBeInvite.rate = DisplayMarshWanderSelected;
     //: itemBeInvite.optionItems = [ExquisiteEasyRing beInviteModeItemsWithSeleced:self.teamListManager.team.beInviteMode];
-    itemBeInvite.wealthyHard = [ExquisiteEasyRing topicCondition:self.quantityeractForbid.formal.beInviteMode];
+    itemBeInvite.pressure = [ExquisiteEasyRing topicCondition:self.quantityeractForbid.formal.beInviteMode];
     //: itemBeInvite.selectedBlock = ^(id<YearOrnateScenario> item) {
     itemBeInvite.table = ^(id<YearOrnateScenario> item) {
         //: [weakSelf didUpdateTeamBeInviteMode:[item.value integerValue]];
-        [weakSelf skin:[item.thePick integerValue]];
+        [weakSelf skin:[item.beginBold integerValue]];
     //: };
     };
     //: itemBeInvite.img = [UIImage imageNamed:@"ic_invitee_verification"];
-    itemBeInvite.evenContact = [UIImage imageNamed:[OuterData layoutChannelMessage]];
+    itemBeInvite.representation = [UIImage imageNamed:[OuterData layoutChannelMessage]];
 
     //: EnhanceYardTwistOn *itemTop = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *itemTop = [[EnhanceYardTwistOn alloc] init];
@@ -1162,9 +1162,9 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: itemTop.type = DisplayMarshWanderSwitch;
     itemTop.rate = DisplayMarshWanderSwitch;
     //: itemTop.identify = PathwayPageNaturalMarkTop;
-    itemTop.defineMovie = PathwayPageNaturalMarkTop;
+    itemTop.condition = PathwayPageNaturalMarkTop;
     //: itemTop.img = [UIImage imageNamed:@"ic_group_top"];
-    itemTop.evenContact = [UIImage imageNamed:[OuterData k_contextKey]];
+    itemTop.representation = [UIImage imageNamed:[OuterData k_contextKey]];
 
 //        EnhanceYardTwistOn *itemQuit = [[EnhanceYardTwistOn alloc] init];
 //        itemQuit.title = @"退出高级群".nim_localized;
@@ -1178,13 +1178,13 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
         //: itemDismiss.title = [CommandAlongsideLocation getTextWithKey:@"group_info_activity_jiesan"];
         itemDismiss.wisdom = [CommandAlongsideLocation notebook:[OuterData colorCandidDict]];
         //: itemDismiss.action = @selector(dismissTeam);
-        itemDismiss.organicTechnique = @selector(environmentAmend);
+        itemDismiss.sphere = @selector(environmentAmend);
         //: itemDismiss.rowHeight = 50.f;
         itemDismiss.awake = 50.f;
         //: itemDismiss.type = DisplayMarshWanderRedButton;
         itemDismiss.rate = DisplayMarshWanderRedButton;
     //: itemDismiss.img = [UIImage imageNamed:@"ic_announcement"];
-    itemDismiss.evenContact = [UIImage imageNamed:[OuterData k_withHelper]];
+    itemDismiss.representation = [UIImage imageNamed:[OuterData k_withHelper]];
 
     //: EnhanceYardTwistOn *teamChange = [[EnhanceYardTwistOn alloc] init];
     EnhanceYardTwistOn *teamChange = [[EnhanceYardTwistOn alloc] init];
@@ -1195,9 +1195,9 @@ HappyTacticParser,RouterBrilliantDisplayCloseDelegate,UINavigationControllerDele
     //: teamChange.type = DisplayMarshWanderCommon;
     teamChange.rate = DisplayMarshWanderCommon;
     //: teamChange.action = @selector(onMore);
-    teamChange.organicTechnique = @selector(factorThis);
+    teamChange.sphere = @selector(factorThis);
     //: teamChange.img = [UIImage imageNamed:@"ic_group_transfer"];
-    teamChange.evenContact = [UIImage imageNamed:[OuterData screenNormDate]];
+    teamChange.representation = [UIImage imageNamed:[OuterData screenNormDate]];
 
 
     //: if (isOwner) {

@@ -282,7 +282,7 @@
     //: self.contentTextView.delegate = self;
     self.echo.delegate = self;
     //: self.contentTextView.placeholder = [CommandAlongsideLocation getTextWithKey:@"Please_enter_content"];
-    self.echo.locationImmediatelied = [CommandAlongsideLocation notebook:[Compose_Data sharedInstance].kWordToken];
+    self.echo.placeholder = [CommandAlongsideLocation notebook:[Compose_Data sharedInstance].kWordToken];
     //: self.contentTextView.text = self.defaultContent;
     self.echo.text = self.neutral;
     //: [contentView addSubview:self.contentTextView];

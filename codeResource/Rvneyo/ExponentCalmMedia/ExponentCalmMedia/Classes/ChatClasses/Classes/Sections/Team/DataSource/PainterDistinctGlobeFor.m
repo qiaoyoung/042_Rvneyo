@@ -268,7 +268,7 @@
 @interface PainterDistinctGlobeFor ()<NIMTeamManagerDelegate>
 
 //: @property (nonatomic, strong) NIMSession *session;
-@property (nonatomic, strong) NIMSession *personal;
+@property (nonatomic, strong) NIMSession *master;
 
 //: @property (nonatomic, strong) NIMTeam *team;
 @property (nonatomic, strong) NIMTeam *formal;
@@ -1680,7 +1680,7 @@
         //: _team = team;
         _formal = team;
         //: _session = session;
-        _personal = session;
+        _master = session;
         //: if (team.type == NIMTeamTypeSuper) {
         if (team.type == NIMTeamTypeSuper) {
             //: [[NIMSDK sharedSDK].superTeamManager addDelegate:self];

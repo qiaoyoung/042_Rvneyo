@@ -127,7 +127,7 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  @see NSMutableURLRequest -setTimeoutInterval:
  */
 //: @property (nonatomic, assign) NSTimeInterval timeoutInterval;
-@property (nonatomic, assign) NSTimeInterval mostWorlding;
+@property (nonatomic, assign) NSTimeInterval timeoutInterval;
 
 /**
  Whether created requests can use the device’s cellular radio (if present). `YES` by default.

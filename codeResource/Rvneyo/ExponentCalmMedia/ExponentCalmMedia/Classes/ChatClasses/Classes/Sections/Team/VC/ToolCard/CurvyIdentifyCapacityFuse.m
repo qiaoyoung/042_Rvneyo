@@ -374,7 +374,7 @@
     //: self.contentTextView.delegate = self;
     self.faint.delegate = self;
     //: self.contentTextView.placeholder = [CommandAlongsideLocation getTextWithKey:@"Please_enter_content"];
-    self.faint.locationImmediatelied = [CommandAlongsideLocation notebook:[[StairData sharedInstance] screenLimitURL]];
+    self.faint.placeholder = [CommandAlongsideLocation notebook:[[StairData sharedInstance] screenLimitURL]];
     //: self.contentTextView.text = self.defaultContent;
     self.faint.text = self.property;
     //: [contentView addSubview:self.contentTextView];

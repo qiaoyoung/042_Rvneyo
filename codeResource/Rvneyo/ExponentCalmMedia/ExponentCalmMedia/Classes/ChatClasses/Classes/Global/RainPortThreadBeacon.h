@@ -98,7 +98,7 @@ typedef NS_ENUM(NSInteger,PathwayDrainCohesiveDismissSpiralType) {
  *  输入框的占位符
  */
 //: @property (nonatomic, copy) NSString *placeholder;
-@property (nonatomic, copy) NSString *locationImmediatelied;
+@property (nonatomic, copy) NSString *placeholder;
 
 /**
  *  输入框能容纳的最大字符长度

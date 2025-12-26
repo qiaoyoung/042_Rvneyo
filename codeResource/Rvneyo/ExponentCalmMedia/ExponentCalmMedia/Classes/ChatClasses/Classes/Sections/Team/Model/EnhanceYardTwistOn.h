@@ -21,7 +21,7 @@ typedef void(^NIMTeamCardRowSelectedBlock)(id <YearOrnateScenario> item);
 @interface EnhanceYardTwistOn : NSObject
 
 //: @property(nonatomic,copy) UIImage *img;
-@property(nonatomic,copy) UIImage *evenContact;
+@property(nonatomic,copy) UIImage *representation;
 
 //: @property(nonatomic,assign) CGFloat rowHeight;
 @property(nonatomic,assign) CGFloat awake;
@@ -36,16 +36,16 @@ typedef void(^NIMTeamCardRowSelectedBlock)(id <YearOrnateScenario> item);
 @property(nonatomic,strong) id beginBold;
 
 //: @property(nonatomic,assign) NSInteger identify;
-@property(nonatomic,assign) NSInteger defineMovie;
+@property(nonatomic,assign) NSInteger condition;
 
 //: @property(nonatomic,assign) SEL action;
-@property(nonatomic,assign) SEL organicTechnique;
+@property(nonatomic,assign) SEL sphere;
 
 //: @property(nonatomic,copy) NSString *subTitle;
 @property(nonatomic,copy) NSString *tail;
 
 //: @property(nonatomic,assign) BOOL disableUserInteraction;
-@property(nonatomic,assign) BOOL insightWord;
+@property(nonatomic,assign) BOOL transfer;
 
 //: @property(nonatomic,assign) BOOL selected;
 @property(nonatomic,assign) BOOL wallThumbMaterial;
@@ -60,7 +60,7 @@ typedef void(^NIMTeamCardRowSelectedBlock)(id <YearOrnateScenario> item);
 @property(nonatomic,strong) NIMTeamCardRowSelectedBlock table;
 
 //: @property(nonatomic,strong) NSMutableArray <id <YearOrnateScenario>> *optionItems;
-@property(nonatomic,strong) NSMutableArray <id <YearOrnateScenario>> *wealthyHard;
+@property(nonatomic,strong) NSMutableArray <id <YearOrnateScenario>> *pressure;
 
 //: @end
 @end

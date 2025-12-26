@@ -46,7 +46,7 @@ NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
 @implementation BindScrollerConvert
 
 //: @synthesize placeholder = _placeholder;
-@synthesize locationImmediatelied = _skilled;
+@synthesize placeholder = _skilled;
 //: @synthesize placeholderLabel = _placeholderLabel;
 @synthesize sliceSlip = _tenderCheck;
 //: @synthesize placeholderTextColor = _placeholderTextColor;
@@ -142,8 +142,7 @@ NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
     return originalRect;
 }
 
-//: -(void)setPlaceholder:(NSString *)placeholder
--(void)setLocationImmediatelied:(NSString *)placeholder
+-(void)setPlaceholder:(NSString *)placeholder
 {
     //: _placeholder = placeholder;
     _skilled = placeholder;
