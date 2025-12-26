@@ -95,14 +95,7 @@ typedef void (^ValidateCompositionInterpolationTowardDismissCompletion)(void);
 
 //: @interface ValidateCompositionInterpolationToward : UIView
 @interface ValidateCompositionInterpolationToward : UIView
-
-//: #pragma mark - Customization
-#pragma mark - Customization
-
-/// Represents the default style for the HUD.
-/// @discussion Default: ValidateCompositionInterpolationTowardStyleAutomatic.
-__attribute__((annotate("ui_appearance_selector")));
-
+ 
 /// Font used for text within the HUD.
 /// @discussion Default: [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline].
 //: @property (strong, nonatomic, nonnull) UIFont *font __attribute__((annotate("ui_appearance_selector")));
@@ -142,10 +135,10 @@ __attribute__((annotate("ui_appearance_selector")));
 /// Duration of the fade-in animation when showing the HUD.
 /// @discussion Default: 0.15.
 //: @property (assign, nonatomic) NSTimeInterval fadeInAnimationDuration __attribute__((annotate("ui_appearance_selector")));
-@property (assign, nonatomic) NSTimeInterval calendar /// The minimum amount of time in seconds the HUD will display.
+@property (assign, nonatomic) NSTimeInterval calendar; /// The minimum amount of time in seconds the HUD will display.
 /// @discussion Default: 5.0 seconds.
 //: @property (assign, nonatomic) NSTimeInterval minimumDismissTimeInterval;
-@property (assign, nonatomic) NSTimeInterval infoTransition;
+@property (assign, nonatomic) NSTimeInterval infoTransition
  __attribute__((annotate("ui_appearance_selector")));
 
 /// Color for any foreground images in the HUD.
@@ -161,7 +154,7 @@ __attribute__((annotate("ui_appearance_selector")));
 /// Foreground color used for content in the HUD.
 /// @discussion Default: [UIColor blackColor].
 //: @property (strong, nonatomic, nonnull) UIColor *foregroundColor __attribute__((annotate("ui_appearance_selector")));
-@property (strong, nonatomic, nonnull) UIColor *notebook /// The minimum size for the HUD. Useful for maintaining a consistent size when the message might cause resizing.
+@property (strong, nonatomic, nonnull) UIColor *notebook; /// The minimum size for the HUD. Useful for maintaining a consistent size when the message might cause resizing.
 /// @discussion Default: CGSizeZero.
 //: @property (assign, nonatomic) CGSize minimumSize __attribute__((annotate("ui_appearance_selector")));
 @property (assign, nonatomic) CGSize figure __attribute__((annotate("ui_appearance_selector")));
@@ -178,7 +171,7 @@ __attribute__((annotate("ui_appearance_selector")));
 /// The interval in seconds to wait before displaying the HUD. If the HUD is displayed before this time elapses, this timer is reset.
 /// @discussion Default: 0 seconds.
 //: @property (assign, nonatomic) NSTimeInterval graceTimeInterval;
-@property (assign, nonatomic) NSTimeInterval agreePrefer;
+@property (assign, nonatomic) NSTimeInterval agreePrefer
  __attribute__((annotate("ui_appearance_selector")));
 
 /// The container view used for displaying the HUD. If nil, the default window level is used.
@@ -187,13 +180,13 @@ __attribute__((annotate("ui_appearance_selector")));
  /// Indicates if motion effects should be applied to the HUD.
 /// @discussion Default: YES.
 //: @property (assign, nonatomic) BOOL motionEffectEnabled;
-@property (assign, nonatomic) BOOL graph;
+@property (assign, nonatomic) BOOL graph
  __attribute__((annotate("ui_appearance_selector")));
 
 /// The image displayed when showing success messages.
 /// @discussion Default: checkmark from SF Symbols (iOS 13+) or the bundled success image provided by Freepik.
 //: @property (strong, nonatomic, nonnull) UIImage *successImage __attribute__((annotate("ui_appearance_selector")));
-@property (strong, nonatomic, nonnull) UIImage *albumSkirt /// The maximum amount of time in seconds the HUD will display.
+@property (strong, nonatomic, nonnull) UIImage *albumSkirt; /// The maximum amount of time in seconds the HUD will display.
 /// @discussion Default: CGFLOAT_MAX.
 //: @property (assign, nonatomic) NSTimeInterval maximumDismissTimeInterval;
 @property (assign, nonatomic) NSTimeInterval cancel;
@@ -237,7 +230,7 @@ __attribute__((annotate("ui_appearance_selector")));
 /// Indicates whether images within the HUD should be tinted.
 /// @discussion Default: YES.
 //: @property (assign, nonatomic) BOOL shouldTintImages __attribute__((annotate("ui_appearance_selector")));
-@property (assign, nonatomic) BOOL healthyHonest
+@property (assign, nonatomic) BOOL healthyHonest;
 /// Indicates if haptic feedback should be used.
 /// @discussion Default: NO.
 //: @property (assign, nonatomic) BOOL hapticsEnabled;

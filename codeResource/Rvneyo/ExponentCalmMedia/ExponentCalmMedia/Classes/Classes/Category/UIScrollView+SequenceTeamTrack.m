@@ -501,7 +501,7 @@ static char k_basicCoverValue;
         //: CGPoint origin = CGPointMake(roundf((self.bounds.size.width-viewBounds.size.width)/2), roundf((self.bounds.size.height-viewBounds.size.height)/2));
         CGPoint origin = CGPointMake(roundf((self.bounds.size.width-viewBounds.size.width)/2), roundf((self.bounds.size.height-viewBounds.size.height)/2));
         //: [customView setFrame:CGRectMake(origin.x, origin.y, viewBounds.size.width, viewBounds.size.height)];
-        [customView setFrame:CGRectMake(origin.x, origin.part, viewBounds.size.width, viewBounds.size.height)];
+        [customView setFrame:CGRectMake(origin.x, origin.y, viewBounds.size.width, viewBounds.size.height)];
     }
     //: else {
     else {
@@ -677,7 +677,7 @@ static char k_basicCoverValue;
 //: - (void)setScrollViewContentInsetForLoading {
 - (void)should {
     //: CGFloat offset = ((self.scrollView.contentOffset.y * -1) > (0) ? (self.scrollView.contentOffset.y * -1) : (0));
-    CGFloat offset = ((self.thread.contentOffset.part * -1) > (0) ? (self.thread.contentOffset.part * -1) : (0));
+    CGFloat offset = ((self.thread.contentOffset.y * -1) > (0) ? (self.thread.contentOffset.y * -1) : (0));
     //: UIEdgeInsets currentInsets = self.scrollView.contentInset;
     UIEdgeInsets currentInsets = self.thread.contentInset;
     //: switch (self.position) {
@@ -964,7 +964,7 @@ static char k_basicCoverValue;
             //: case SequenceTeamTrackPositionTop:
             case SequenceTeamTrackPositionTop:
                 //: scrollOffsetThreshold = self.frame.origin.y - self.originalTopInset;
-                scrollOffsetThreshold = self.frame.origin.part - self.special;
+                scrollOffsetThreshold = self.frame.origin.y - self.special;
                 //: break;
                 break;
             //: case SequenceTeamTrackPositionBottom:
@@ -980,19 +980,19 @@ static char k_basicCoverValue;
             //: self.state = SequenceTeamTrackStateLoading;
             self.eraseInvited = SequenceTeamTrackStateLoading;
         //: else if(contentOffset.y < scrollOffsetThreshold && self.scrollView.isDragging && self.state == SequenceTeamTrackStateStopped && self.position == SequenceTeamTrackPositionTop)
-        else if(contentOffset.part < scrollOffsetThreshold && self.thread.isDragging && self.eraseInvited == SequenceTeamTrackStateStopped && self.personal == SequenceTeamTrackPositionTop)
+        else if(contentOffset.y < scrollOffsetThreshold && self.thread.isDragging && self.eraseInvited == SequenceTeamTrackStateStopped && self.personal == SequenceTeamTrackPositionTop)
             //: self.state = SequenceTeamTrackStateTriggered;
             self.eraseInvited = SequenceTeamTrackStateTriggered;
         //: else if(contentOffset.y >= scrollOffsetThreshold && self.state != SequenceTeamTrackStateStopped && self.position == SequenceTeamTrackPositionTop)
-        else if(contentOffset.part >= scrollOffsetThreshold && self.eraseInvited != SequenceTeamTrackStateStopped && self.personal == SequenceTeamTrackPositionTop)
+        else if(contentOffset.y >= scrollOffsetThreshold && self.eraseInvited != SequenceTeamTrackStateStopped && self.personal == SequenceTeamTrackPositionTop)
             //: self.state = SequenceTeamTrackStateStopped;
             self.eraseInvited = SequenceTeamTrackStateStopped;
         //: else if(contentOffset.y > scrollOffsetThreshold && self.scrollView.isDragging && self.state == SequenceTeamTrackStateStopped && self.position == SequenceTeamTrackPositionBottom)
-        else if(contentOffset.part > scrollOffsetThreshold && self.thread.isDragging && self.eraseInvited == SequenceTeamTrackStateStopped && self.personal == SequenceTeamTrackPositionBottom)
+        else if(contentOffset.y > scrollOffsetThreshold && self.thread.isDragging && self.eraseInvited == SequenceTeamTrackStateStopped && self.personal == SequenceTeamTrackPositionBottom)
             //: self.state = SequenceTeamTrackStateTriggered;
             self.eraseInvited = SequenceTeamTrackStateTriggered;
         //: else if(contentOffset.y <= scrollOffsetThreshold && self.state != SequenceTeamTrackStateStopped && self.position == SequenceTeamTrackPositionBottom)
-        else if(contentOffset.part <= scrollOffsetThreshold && self.eraseInvited != SequenceTeamTrackStateStopped && self.personal == SequenceTeamTrackPositionBottom)
+        else if(contentOffset.y <= scrollOffsetThreshold && self.eraseInvited != SequenceTeamTrackStateStopped && self.personal == SequenceTeamTrackPositionBottom)
             //: self.state = SequenceTeamTrackStateStopped;
             self.eraseInvited = SequenceTeamTrackStateStopped;
     //: } else {
@@ -1006,7 +1006,7 @@ static char k_basicCoverValue;
             //: case SequenceTeamTrackPositionTop:
             case SequenceTeamTrackPositionTop:
                 //: offset = ((self.scrollView.contentOffset.y * -1) > (0.0f) ? (self.scrollView.contentOffset.y * -1) : (0.0f));
-                offset = ((self.thread.contentOffset.part * -1) > (0.0f) ? (self.thread.contentOffset.part * -1) : (0.0f));
+                offset = ((self.thread.contentOffset.y * -1) > (0.0f) ? (self.thread.contentOffset.y * -1) : (0.0f));
                 //: offset = ((offset) < (self.originalTopInset + self.bounds.size.height) ? (offset) : (self.originalTopInset + self.bounds.size.height));
                 offset = ((offset) < (self.special + self.bounds.size.height) ? (offset) : (self.special + self.bounds.size.height));
                 //: contentInset = self.scrollView.contentInset;
@@ -1120,7 +1120,7 @@ static char k_basicCoverValue;
         case SequenceTeamTrackPositionTop:
 
             //: if((fabs(self.scrollView.contentOffset.y) < 1.19209290e-7F)) {
-            if((fabs(self.thread.contentOffset.part) < 1.19209290e-7F)) {
+            if((fabs(self.thread.contentOffset.y) < 1.19209290e-7F)) {
                 //: [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, -self.frame.size.height) animated:YES];
                 [self.thread setContentOffset:CGPointMake(self.thread.contentOffset.x, -self.frame.size.height) animated:YES];
                 //: self.wasTriggeredByUser = NO;
@@ -1137,11 +1137,11 @@ static char k_basicCoverValue;
         case SequenceTeamTrackPositionBottom:
 
             //: if(((fabs(self.scrollView.contentOffset.y) < 1.19209290e-7F) && self.scrollView.contentSize.height < self.scrollView.bounds.size.height)
-            if(((fabs(self.thread.contentOffset.part) < 1.19209290e-7F) && self.thread.contentSize.height < self.thread.bounds.size.height)
+            if(((fabs(self.thread.contentOffset.y) < 1.19209290e-7F) && self.thread.contentSize.height < self.thread.bounds.size.height)
                //: || (fabs((self.scrollView.contentOffset.y) - (self.scrollView.contentSize.height - self.scrollView.bounds.size.height)) < 1.19209290e-7F)) {
-               || (fabs((self.thread.contentOffset.part) - (self.thread.contentSize.height - self.thread.bounds.size.height)) < 1.19209290e-7F)) {
+               || (fabs((self.thread.contentOffset.y) - (self.thread.contentSize.height - self.thread.bounds.size.height)) < 1.19209290e-7F)) {
                 //: [self.scrollView setContentOffset:(CGPoint){.y = ((self.scrollView.contentSize.height - self.scrollView.bounds.size.height) > (0.0f) ? (self.scrollView.contentSize.height - self.scrollView.bounds.size.height) : (0.0f)) + self.frame.size.height} animated:YES];
-                [self.scrollView setContentOffset:(CGPoint){.part = ((self.scrollView.contentSize.height - self.scrollView.bounds.size.height) > (0.0f) ? (self.scrollView.contentSize.height - self.scrollView.bounds.size.height) : (0.0f)) + self.frame.size.height} animated:YES];
+                [self.thread setContentOffset:(CGPoint){.y = ((self.thread.contentSize.height - self.thread.bounds.size.height) > (0.0f) ? (self.thread.contentSize.height - self.thread.bounds.size.height) : (0.0f)) + self.frame.size.height} animated:YES];
                 //: self.wasTriggeredByUser = NO;
                 self.mobile = NO;
             }

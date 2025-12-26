@@ -1396,7 +1396,7 @@ NSTimeInterval const colorStableAdvancedValue (NSString *value) {
 //: @property (nonatomic, strong) NSInputStream *inputStream;
 @property (nonatomic, strong) NSInputStream *activeSpan;
 //: @property (nonatomic, assign) BOOL hasInitialBoundary;
-@property (nonatomic, assign) BOOL color;
+@property (nonatomic, assign) BOOL viewColor;
 
 //: @property (nonatomic, strong) id body;
 @property (nonatomic, strong) id fleetGreat;
@@ -1822,13 +1822,13 @@ NSTimeInterval const colorStableAdvancedValue (NSString *value) {
         //: for (AFHTTPBodyPart *bodyPart in self.HTTPBodyParts) {
         for (AFHTTPBodyPart *bodyPart in self.entryMajor) {
             //: bodyPart.hasInitialBoundary = NO;
-            bodyPart.color = NO;
+            bodyPart.viewColor = NO;
             //: bodyPart.hasFinalBoundary = NO;
             bodyPart.associate = NO;
         }
 
         //: [[self.HTTPBodyParts firstObject] setHasInitialBoundary:YES];
-        [[self.entryMajor firstObject] setColor:YES];
+        [[self.entryMajor firstObject] setViewColor:YES];
         //: [[self.HTTPBodyParts lastObject] setHasFinalBoundary:YES];
         [[self.entryMajor lastObject] setAssociate:YES];
     }
@@ -2068,7 +2068,7 @@ typedef enum {
     unsigned long long length = 0;
 
     //: NSData *encapsulationBoundaryData = [([self hasInitialBoundary] ? AFMultipartFormInitialBoundary(self.boundary) : AFMultipartFormEncapsulationBoundary(self.boundary)) dataUsingEncoding:self.stringEncoding];
-    NSData *encapsulationBoundaryData = [([self color] ? portBefore(self.tree) : receiveTween(self.tree)) dataUsingEncoding:self.brain];
+    NSData *encapsulationBoundaryData = [([self viewColor] ? portBefore(self.tree) : receiveTween(self.tree)) dataUsingEncoding:self.brain];
     //: length += [encapsulationBoundaryData length];
     length += [encapsulationBoundaryData length];
 
@@ -2228,7 +2228,7 @@ typedef enum {
     //: if (_phase == AFEncapsulationBoundaryPhase) {
     if (_tacticComplex == AFEncapsulationBoundaryPhase) {
         //: NSData *encapsulationBoundaryData = [([self hasInitialBoundary] ? AFMultipartFormInitialBoundary(self.boundary) : AFMultipartFormEncapsulationBoundary(self.boundary)) dataUsingEncoding:self.stringEncoding];
-        NSData *encapsulationBoundaryData = [([self color] ? portBefore(self.tree) : receiveTween(self.tree)) dataUsingEncoding:self.brain];
+        NSData *encapsulationBoundaryData = [([self viewColor] ? portBefore(self.tree) : receiveTween(self.tree)) dataUsingEncoding:self.brain];
         //: totalNumberOfBytesRead += [self readData:encapsulationBoundaryData intoBuffer:&buffer[totalNumberOfBytesRead] maxLength:(length - (NSUInteger)totalNumberOfBytesRead)];
         totalNumberOfBytesRead += [self project:encapsulationBoundaryData fraction:&buffer[totalNumberOfBytesRead] underDark:(length - (NSUInteger)totalNumberOfBytesRead)];
     }

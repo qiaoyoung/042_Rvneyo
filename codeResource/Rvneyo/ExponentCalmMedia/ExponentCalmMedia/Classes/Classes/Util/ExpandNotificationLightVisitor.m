@@ -93,8 +93,8 @@ static void presentationSecondary(SystemSoundID soundID, void *data)
     {
         //: SEL selector = NSSelectorFromString(@"vibrate");
         SEL selector = NSSelectorFromString([ManageDuring_Data sharedInstance].k_pleasantVersion);
-        //: SuppressPerformSelectorLeakWarning([(ExpandNotificationLightVisitor *)notifier performSelector:selector withObject:nil afterDelay:1.0]);
-        SuppressPerformSelectorLeakWarning([(ExpandNotificationLightVisitor *)notifier performSelector:selector withObject:nil afterDelay:1.0]);
+        //:  ([(ExpandNotificationLightVisitor *)notifier performSelector:selector withObject:nil afterDelay:1.0]);
+         ([(ExpandNotificationLightVisitor *)notifier performSelector:selector withObject:nil afterDelay:1.0]);
     }
 }
 

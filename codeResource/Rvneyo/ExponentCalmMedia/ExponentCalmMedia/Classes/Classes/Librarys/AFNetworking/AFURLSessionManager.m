@@ -615,7 +615,7 @@ API_AVAILABLE(ios(10), macosx(10.12), watchos(3), tvos(10));
 //: @property (nonatomic, weak) AFURLSessionManager *manager;
 @property (nonatomic, weak) AFURLSessionManager *isolateColorful;
 //: @property (nonatomic, strong) NSURLSessionTaskMetrics *sessionTaskMetrics API_AVAILABLE(ios(10), macosx(10.12), watchos(3), tvos(10));
-@property (nonatomic, strong) NSURLSessionTaskMetrics *tagResponse//: @property (nonatomic, copy) AFURLSessionTaskProgressBlock uploadProgressBlock;
+@property (nonatomic, strong) NSURLSessionTaskMetrics *tagResponse;//: @property (nonatomic, copy) AFURLSessionTaskProgressBlock uploadProgressBlock;
 @property (nonatomic, copy) AFURLSessionTaskProgressBlock fail;
 //: @end
 @end
@@ -1166,7 +1166,7 @@ static NSString * const networkHealthyString (NSString *value) {
 //: @property (readwrite, nonatomic, copy) AFURLSessionTaskAuthenticationChallengeBlock authenticationChallengeHandler;
 @property (readwrite, nonatomic, copy) AFURLSessionTaskAuthenticationChallengeBlock size;
 //: @property (readwrite, nonatomic, copy) AFURLSessionDidFinishEventsForBackgroundURLSessionBlock didFinishEventsForBackgroundURLSession API_UNAVAILABLE(macos);
-@property (readwrite, nonatomic, copy) AFURLSessionDidFinishEventsForBackgroundURLSessionBlock willingBrain//: @property (readwrite, nonatomic, copy) AFURLSessionDataTaskDidBecomeDownloadTaskBlock dataTaskDidBecomeDownloadTask;
+@property (readwrite, nonatomic, copy) AFURLSessionDidFinishEventsForBackgroundURLSessionBlock willingBrain;//: @property (readwrite, nonatomic, copy) AFURLSessionDataTaskDidBecomeDownloadTaskBlock dataTaskDidBecomeDownloadTask;
 @property (readwrite, nonatomic, copy) AFURLSessionDataTaskDidBecomeDownloadTaskBlock eliteGood;
 //: @property (readwrite, nonatomic, copy) AFURLSessionDidBecomeInvalidBlock sessionDidBecomeInvalid;
 @property (readwrite, nonatomic, copy) AFURLSessionDidBecomeInvalidBlock counterest;
@@ -1207,7 +1207,7 @@ static NSString * const networkHealthyString (NSString *value) {
 //: @property (readwrite, nonatomic, copy) AFURLSessionTaskNeedNewBodyStreamBlock taskNeedNewBodyStream;
 @property (readwrite, nonatomic, copy) AFURLSessionTaskNeedNewBodyStreamBlock bold;
 //: @property (readwrite, nonatomic, copy) AFURLSessionTaskDidFinishCollectingMetricsBlock taskDidFinishCollectingMetrics API_AVAILABLE(ios(10), macosx(10.12), watchos(3), tvos(10));
-@property (readwrite, nonatomic, copy) AFURLSessionTaskDidFinishCollectingMetricsBlock selecter//: @end
+@property (readwrite, nonatomic, copy) AFURLSessionTaskDidFinishCollectingMetricsBlock selecter;//: @end
 @end
 
 //: @implementation AFURLSessionManager

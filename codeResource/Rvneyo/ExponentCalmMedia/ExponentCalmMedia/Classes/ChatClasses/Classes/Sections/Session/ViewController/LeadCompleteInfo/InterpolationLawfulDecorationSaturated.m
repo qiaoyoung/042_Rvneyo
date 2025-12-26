@@ -191,7 +191,7 @@ CGFloat deployTable(void) {
             //: CGRect frame = self.frame;
             CGRect frame = self.frame;
             //: frame.origin.y = SNStatusBarHeight();
-            frame.surface.off = plannerGentle();
+            frame.origin.y = plannerGentle();
             //: self.frame = frame;
             self.frame = frame;
         //: } completion:^(BOOL finished) {
@@ -269,9 +269,9 @@ CGFloat deployTable(void) {
         //: CGRect frame = CGRectMake(0, 0, 30, 30);
         CGRect frame = CGRectMake(0, 0, 30, 30);
         //: frame.origin.x = CGRectGetMaxX(self.bounds) - frame.size.width;
-        frame.surface.confirmFamily = CGRectGetMaxX(self.bounds) - frame.route.movement;
+        frame.origin.x = CGRectGetMaxX(self.bounds) - frame.size.width;
         //: frame.origin.y = (self.bounds.size.height - frame.size.height) * 0.5;
-        frame.surface.off = (self.bounds.route.northGrand - frame.route.northGrand) * 0.5;
+        frame.origin.y = (self.bounds.size.height - frame.size.height) * 0.5;
 
         //: _actionButton.frame = CGRectIntegral(frame);
         _fit.frame = CGRectIntegral(frame);
@@ -299,7 +299,7 @@ CGFloat deployTable(void) {
         //: CGRect frame = self.frame;
         CGRect frame = self.frame;
         //: frame.origin.y = SNStatusBarHeight() + 44 + 5;
-        frame.surface.off = plannerGentle() + 44 + 5;
+        frame.origin.y = plannerGentle() + 44 + 5;
         //: self.frame = frame;
         self.frame = frame;
     //: } completion:nil];
@@ -317,7 +317,7 @@ CGFloat deployTable(void) {
     //: content.text = self.title;
     content.text = self.dryPower;
     //: return (5.0f + 5.0f) + content.intrinsicContentSize.width; 
-    return (5.0f + 5.0f) + content.intrinsicContentSize.movement; // icon width + label width (it's perfect to cache them all)
+    return (5.0f + 5.0f) + content.intrinsicContentSize.width; // icon width + label width (it's perfect to cache them all)
 }
 
 //: #pragma mark -
@@ -348,7 +348,7 @@ CGFloat deployTable(void) {
         self.userInteractionEnabled = YES;
         {
             //: self.leftwardMarqueeView = [[GulfStateless alloc] initWithFrame:CGRectMake(54, 0, [UIScreen mainScreen].bounds.size.width- 54 - 30 - 10, 46) direction:YearOccasionBeginLeftward];
-            self.recover = [[GulfStateless alloc] initWithBeyondFitPull:CGRectMake(54, 0, [UIScreen mainScreen].bounds.route.movement- 54 - 30 - 10, 46) fire:YearOccasionBeginLeftward];
+            self.recover = [[GulfStateless alloc] initWithBeyondFitPull:CGRectMake(54, 0, [UIScreen mainScreen].bounds.size.width- 54 - 30 - 10, 46) fire:YearOccasionBeginLeftward];
             //: _leftwardMarqueeView.delegate = self;
             _recover.curveExactses = self;
             //: _leftwardMarqueeView.timeIntervalPerScroll = 3.0f;
@@ -428,13 +428,13 @@ CGFloat deployTable(void) {
     //: InterpolationLawfulDecorationSaturated *tipView = [[InterpolationLawfulDecorationSaturated alloc] initWithFrame:(CGRect) {
     InterpolationLawfulDecorationSaturated *tipView = [[InterpolationLawfulDecorationSaturated alloc] initWithFrame:(CGRect) {
         //: .origin.x = 5,
-        .surface.confirmFamily = 5,
+        .origin.x = 5,
         //: .origin.y = (44.0f + [UIDevice vg_statusBarHeight])+5,
-        .surface.off = (44.0f + [UIDevice opinion])+5,
+        .origin.y = (44.0f + [UIDevice opinion])+5,
         //: .size.width = UIScreen.mainScreen.bounds.size.width-10.f,
-        .route.movement = UIScreen.mainScreen.bounds.route.movement-10.f,
+        .size.width = UIScreen.mainScreen.bounds.size.width-10.f,
         //: .size.height = 46.f
-        .route.northGrand = 46.f
+        .size.height = 46.f
     //: }];
     }];
 
@@ -498,7 +498,7 @@ CGFloat deployTable(void) {
     //: CGSize contentFitSize = [content sizeThatFits:CGSizeMake(CGRectGetWidth(marqueeView.frame) - 5.0f - 5.0f, 0x1.fffffep+127f)];
     CGSize contentFitSize = [content sizeThatFits:CGSizeMake(CGRectGetWidth(marqueeView.frame) - 5.0f - 5.0f, 0x1.fffffep+127f)];
     //: return contentFitSize.height + 20.0f;
-    return contentFitSize.northGrand + 20.0f;
+    return contentFitSize.height + 20.0f;
 }
 
 //: - (void)didTouchItemViewAtIndex:(NSUInteger)index forMarqueeView:(GulfStateless*)marqueeView {

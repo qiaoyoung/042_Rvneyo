@@ -83,9 +83,7 @@ typedef struct {
 /** 重写setMenuModel---对控件进行赋值 */
 //: - (void)setMenuModel:(id)menuModel {
 - (void)setA:(id)menuModel {
-    //: _menuModel = menuModel;
-    _menuModel = menuModel;
-
+ 
     //: FairElementalPaletteModel *realMenuModel = (FairElementalPaletteModel *)menuModel;
     FairElementalPaletteModel *realMenuModel = (FairElementalPaletteModel *)menuModel;
     //: self.customTitleLabel.text = realMenuModel.menuItemTitle;

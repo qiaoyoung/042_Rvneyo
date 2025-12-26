@@ -26,19 +26,19 @@
 //: - (void)applicationDidBecomeActive:(UIApplication *)application {
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     //: [[RoadmapConvertRestrictTechnique sharedInstance] applicationDidBecomeActive:application];
-    [[RoadmapConvertRestrictTechnique sharedInstance] applicationDidBecomeActive:application];
+    [[RoadmapConvertRestrictTechnique silentForGradual] tables:application];
 }
 
 //: - (void)applicationDidEnterBackground:(UIApplication *)application {
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     //: [[RoadmapConvertRestrictTechnique sharedInstance] applicationDidEnterBackground:application];
-    [[RoadmapConvertRestrictTechnique sharedInstance] applicationDidEnterBackground:application];
+    [[RoadmapConvertRestrictTechnique silentForGradual] landStatus:application];
 }
 
 //: - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     //: [[RoadmapConvertRestrictTechnique sharedInstance] application:app didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-    [[RoadmapConvertRestrictTechnique sharedInstance] application:app didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    [[RoadmapConvertRestrictTechnique silentForGradual] intervalerSource:app graph:deviceToken];
 }
 
 //: - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options {
@@ -58,9 +58,9 @@
 //: - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //: [RoadmapConvertRestrictTechnique sharedInstance].window = self.window;
-    [RoadmapConvertRestrictTechnique sharedInstance].window = self.window;
+    [RoadmapConvertRestrictTechnique silentForGradual].forestSpecialled = self.window;
     //: [[RoadmapConvertRestrictTechnique sharedInstance] dimensionGreenEnrich];
-    [[RoadmapConvertRestrictTechnique sharedInstance] dimensionGreenEnrich];
+    [[RoadmapConvertRestrictTechnique silentForGradual] givenOrLogicSystem];
     //: return YES;
     return YES;
 }

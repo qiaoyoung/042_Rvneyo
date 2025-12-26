@@ -30,10 +30,8 @@
 //: @interface UIScrollView (CacheCrescentAmongSelf_internal)
 @interface UIScrollView (CacheCrescentAmongSelf_internal)
 
+@property (nonatomic, assign) BOOL isShould;
 
-
-
-
-
+@property (nonatomic, assign) UIScrollViewContentInsetAdjustmentBehavior particleSong;
 //: @end
 @end

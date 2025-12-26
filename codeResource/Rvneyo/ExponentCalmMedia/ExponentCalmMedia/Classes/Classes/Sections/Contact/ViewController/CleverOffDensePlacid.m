@@ -781,8 +781,8 @@ TerrainArithmeticOnDelegate> {
         if ([contactItem respondsToSelector:@selector(dualExternal)] && [contactItem dualExternal].length) {
             //: SEL sel = NSSelectorFromString([contactItem selName]);
             SEL sel = NSSelectorFromString([contactItem dualExternal]);
-            //: SuppressPerformSelectorLeakWarning([self performSelector:sel withObject:nil]);
-            SuppressPerformSelectorLeakWarning([self performSelector:sel withObject:nil]);
+            //:  ([self performSelector:sel withObject:nil]);
+             ([self performSelector:sel withObject:nil]);
         }
         //: else if (contactItem.vcName.length) {
         else if (contactItem.atTransfer.length) {

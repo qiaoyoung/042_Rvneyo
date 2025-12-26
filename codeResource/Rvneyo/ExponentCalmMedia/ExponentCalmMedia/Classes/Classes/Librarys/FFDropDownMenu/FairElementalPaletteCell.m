@@ -88,9 +88,7 @@ Byte cacheLeanPath[] = {29, 143, 82, 10, 38, 165, 182, 235, 15, 147, 92, 92, 127
 
 //: - (void)setMenuModel:(id)menuModel {
 - (void)setA:(id)menuModel {
-    //: _menuModel = menuModel;
-    _menuModel = menuModel;
-
+ 
     //: FairElementalPaletteModel *realMenuModel = (FairElementalPaletteModel *)menuModel;
     FairElementalPaletteModel *realMenuModel = (FairElementalPaletteModel *)menuModel;
     //: self.customTitleLabel.text = realMenuModel.menuItemTitle;

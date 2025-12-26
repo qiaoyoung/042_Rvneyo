@@ -29,7 +29,7 @@ NS_AVAILABLE_IOS(8_0);// UI_APPEARANCE_SELECTOR;
 //: @property (nonatomic) IBInspectable UIColor *textColor; 
 @property (nonatomic) IBInspectable UIColor *grayPerform;// UI_APPEARANCE_SELECTOR;
 //: @property (nonatomic) UIBlurEffect *blurEffect NS_AVAILABLE_IOS(8_0); 
-@property (nonatomic) UIBlurEffect *gifted//: @property (nonatomic) IBInspectable CGFloat lineWidth; 
+@property (nonatomic) UIBlurEffect *gifted;//: @property (nonatomic) IBInspectable CGFloat lineWidth; 
 @property (nonatomic) IBInspectable CGFloat without;// UI_APPEARANCE_SELECTOR;
 //: @property (nonatomic) IBInspectable BOOL showsText; 
 @property (nonatomic) IBInspectable BOOL arc;// UI_APPEARANCE_SELECTOR;

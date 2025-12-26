@@ -9,8 +9,8 @@
 //
 
 // __M_A_C_R_O__
-//: #import "CircuitProudArtifactToastTrace.h"
-#import "CircuitProudArtifactToastTrace.h"
+//:  
+#import "CosineTransformableReflectBlueprint.h"
 
 //: @interface CosineTransformableReflectBlueprint (InkwellValidateSplitShell)
 @interface CosineTransformableReflectBlueprint (InkwellValidateSplitShell)

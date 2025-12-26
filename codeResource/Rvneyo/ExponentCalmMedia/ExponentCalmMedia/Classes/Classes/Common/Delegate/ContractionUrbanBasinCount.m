@@ -70,8 +70,8 @@ Byte cacheCoordinatorPreference[] = {53, 11, 62, 5, 209, 55, 53, 39, 5, 46, 39, 
     BOOL use = NO;
     //: if ([vc respondsToSelector:sel]) {
     if ([vc respondsToSelector:sel]) {
-        //: SuppressPerformSelectorLeakWarning(use = (BOOL)[vc performSelector:sel]);
-        SuppressPerformSelectorLeakWarning(use = (BOOL)[vc performSelector:sel]);
+        //:  (use = (BOOL)[vc performSelector:sel]);
+         (use = (BOOL)[vc performSelector:sel]);
     }
     //: return use;
     return use;
@@ -207,8 +207,8 @@ Byte cacheCoordinatorPreference[] = {53, 11, 62, 5, 209, 55, 53, 39, 5, 46, 39, 
     BOOL use = NO;
     //: if ([vc respondsToSelector:sel]) {
     if ([vc respondsToSelector:sel]) {
-        //: SuppressPerformSelectorLeakWarning(use = (BOOL)[vc performSelector:sel]);
-        SuppressPerformSelectorLeakWarning(use = (BOOL)[vc performSelector:sel]);
+        //:  (use = (BOOL)[vc performSelector:sel]);
+         (use = (BOOL)[vc performSelector:sel]);
     }
     //: return use;
     return use;

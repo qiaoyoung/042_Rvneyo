@@ -43,8 +43,8 @@ Byte dataTopicSternHelper[] = {98, 15, 77, 10, 233, 5, 160, 34, 222, 11, 38, 24,
 #import "MirrorFlashCurveOpen.h"
 //: #import "BaseHistoryCorrect.h"
 #import "BaseHistoryCorrect.h"
-//: #import "CircuitProudArtifactToastTrace.h"
-#import "CircuitProudArtifactToastTrace.h"
+//:  
+ 
 //: #import "TZImageManager.h"
 #import "TZImageManager.h"
 //: #import "TangibleMightKindredInline.h"

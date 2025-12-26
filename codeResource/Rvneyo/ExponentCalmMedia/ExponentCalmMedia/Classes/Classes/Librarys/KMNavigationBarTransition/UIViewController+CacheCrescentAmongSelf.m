@@ -158,7 +158,7 @@
     //: [self.km_transitionNavigationBar removeFromSuperview];
     [self.fleetRock removeFromSuperview];
     //: self.km_transitionNavigationBar = bar;
-    self.km_transitionNavigationBarsetFleetRock = bar;
+    self.fleetRock = bar;
     //: [self km_resizeTransitionNavigationBarFrame];
     [self weave];
     //: if (!self.navigationController.navigationBarHidden && !self.navigationController.navigationBar.hidden) {
@@ -178,11 +178,11 @@
         //: if (scrollView) {
         if (scrollView) {
             //: if (scrollView.km_shouldRestoreContentInsetAdjustmentBehavior) {
-            if (scrollView.km_shouldRestoreContentInsetAdjustmentBehavior) {
+            if (scrollView.isShould) {
                 //: scrollView.contentInsetAdjustmentBehavior = scrollView.km_originalContentInsetAdjustmentBehavior;
-                scrollView.contentInsetAdjustmentBehavior = scrollView.km_originalContentInsetAdjustmentBehavior;
+                scrollView.contentInsetAdjustmentBehavior = scrollView.particleSong;
                 //: scrollView.km_shouldRestoreContentInsetAdjustmentBehavior = NO;
-                scrollView.km_shouldRestoreContentInsetAdjustmentBehavior = NO;
+                scrollView.isShould = NO;
             }
         }
     }
@@ -348,11 +348,11 @@
             //: if (contentInsetAdjustmentBehavior != UIScrollViewContentInsetAdjustmentNever) {
             if (contentInsetAdjustmentBehavior != UIScrollViewContentInsetAdjustmentNever) {
                 //: scrollView.km_originalContentInsetAdjustmentBehavior = contentInsetAdjustmentBehavior;
-                scrollView.km_originalContentInsetAdjustmentBehavior = contentInsetAdjustmentBehavior;
+                scrollView.particleSong = contentInsetAdjustmentBehavior;
                 //: scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
                 scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
                 //: scrollView.km_shouldRestoreContentInsetAdjustmentBehavior = YES;
-                scrollView.km_shouldRestoreContentInsetAdjustmentBehavior = YES;
+                scrollView.isShould = YES;
             }
         }
     }
@@ -443,7 +443,7 @@
             //: [self.km_transitionNavigationBar removeFromSuperview];
             [self.fleetRock removeFromSuperview];
             //: self.km_transitionNavigationBar = nil;
-            self.km_transitionNavigationBarsetFleetRock = nil;
+            self.fleetRock = nil;
         }
     }
     //: if ([transitionViewController isEqual:self]) {

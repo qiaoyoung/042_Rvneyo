@@ -338,7 +338,7 @@ typedef struct {
 //: - (void)leftButtonClicked:(id)sender{
 - (void)overShadow:(id)sender{
     //: Class currentClass = object_getClass(self.delegate);
-    Class currentClass = tweenNetwork(self.curveExactses);
+    Class currentClass = object_getClass(self.curveExactses);
     //: if ((currentClass == delegateClass) && [self.delegate respondsToSelector:@selector(dismissDataPickerView)]) {
     if ((currentClass == dramatic) && [self.curveExactses respondsToSelector:@selector(alongSub)]) {
         //: [self.delegate dismissDataPickerView];
@@ -454,7 +454,7 @@ typedef struct {
 //: - (void)rightButtonClicked:(id)sender{
 - (void)trainned:(id)sender{
     //: Class currentClass = object_getClass(self.delegate);
-    Class currentClass = tweenNetwork(self.curveExactses);
+    Class currentClass = object_getClass(self.curveExactses);
     //: if ((currentClass == delegateClass) && [self.delegate respondsToSelector:@selector(dismissDataPickerView)]) {
     if ((currentClass == dramatic) && [self.curveExactses respondsToSelector:@selector(alongSub)]) {
         //: [self.delegate dismissDataPickerView];
@@ -485,7 +485,7 @@ typedef struct {
     //: self.delegate = delegate;
     self.curveExactses = delegate;
     //: delegateClass = object_getClass(delegate);
-    dramatic = tweenNetwork(delegate);
+    dramatic = object_getClass(delegate);
 }
 
 //: - (void)show{
