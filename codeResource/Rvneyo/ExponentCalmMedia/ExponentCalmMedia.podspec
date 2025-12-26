@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   
   s.vendored_frameworks = [
   'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMQuic.xcframework',
-  'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMSocketRocket.xcframework'
+  'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMSocketRocket.xcframework',
   'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMSDK.xcframework',
   'ExponentCalmMedia/Resources/ExponentCalmMedia/NIMNOS.xcframework',
 ]

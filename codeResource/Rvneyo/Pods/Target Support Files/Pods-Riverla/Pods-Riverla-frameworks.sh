@@ -199,10 +199,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYText/YYText.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMNOS.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMQuic.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSocketRocket.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMNOS.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework"
@@ -228,10 +228,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYText/YYText.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMNOS.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMQuic.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSocketRocket.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMNOS.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

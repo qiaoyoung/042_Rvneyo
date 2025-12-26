@@ -363,10 +363,10 @@
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSDK.framework/NIMSDK",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMNOS.framework/NIMNOS",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMQuic.framework/NIMQuic",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSocketRocket.framework/NIMSocketRocket",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMSDK.framework/NIMSDK",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExponentCalmMedia/NIMNOS.framework/NIMNOS",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -393,10 +393,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMNOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMQuic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMSocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMNOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

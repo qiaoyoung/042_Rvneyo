@@ -1,0 +1,19 @@
+//
+//  CommandNavigatePlanner.h
+//  Rvneyo
+//
+//  Created by mac on 2025/4/9.
+//  Copyright © 2025 Rvneyo. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface CommandNavigatePlanner : UIViewController
+
+@property (nonatomic,strong) NSString *accountName;
+
+@end
+
+NS_ASSUME_NONNULL_END

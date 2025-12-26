@@ -7,28 +7,27 @@
 //
 
 #import "AppDelegate.h"
-#import "AAAA_AppDelegateManager_BBBB.h"
+#import "RoadmapConvertRestrictTechnique.h"
  
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    [GeneratedPluginRegistrant registerWithRegistry:self];
-    [AAAA_AppDelegateManager_BBBB sharedInstance].window = self.window;
-    [[AAAA_AppDelegateManager_BBBB sharedInstance] dimensionGreenEnrich];
+    [RoadmapConvertRestrictTechnique sharedInstance].window = self.window;
+    [[RoadmapConvertRestrictTechnique sharedInstance] dimensionGreenEnrich];
     return YES;
 }
  
 #pragma mark - ApplicationDelegate
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [[AAAA_AppDelegateManager_BBBB sharedInstance] applicationDidBecomeActive:application];
+    [[RoadmapConvertRestrictTechnique sharedInstance] applicationDidBecomeActive:application];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    [[AAAA_AppDelegateManager_BBBB sharedInstance] applicationDidEnterBackground:application];
+    [[RoadmapConvertRestrictTechnique sharedInstance] applicationDidEnterBackground:application];
 }
 
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[AAAA_AppDelegateManager_BBBB sharedInstance] application:app didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    [[RoadmapConvertRestrictTechnique sharedInstance] application:app didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
  
 #pragma mark - openURL

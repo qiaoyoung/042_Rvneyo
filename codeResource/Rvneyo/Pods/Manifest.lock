@@ -187,7 +187,7 @@ EXTERNAL SOURCES:
     :path: ExponentCalmMedia
 
 SPEC CHECKSUMS:
-  ExponentCalmMedia: 495b5eb60b0cb3870d658ea6bb40a72636387014
+  ExponentCalmMedia: ff802958fac88aa6e26041cfd073405f464def0c
   Firebase: cec914dab6fd7b1bd8ab56ea07ce4e03dd251c2d
   FirebaseABTesting: d87f56707159bae64e269757a6e963d490f2eebe
   FirebaseAnalytics: 23717de130b779aa506e757edb9713d24b6ffeda
